@@ -3,6 +3,23 @@
         "name": "Chinese Horror",
         "pfp": "https://theredmineword.github.io/config/primary/src/icon/icon_webhook_ws_v1.webp"
     },
-"hs_data_json":{"in":"1416450312738181140","out":"1416450359232172124"},
-"staridseed": [23,41,49,28,23,14,16]
+    "hs_data_json": {
+        "in": "1416450312738181140",
+        "out": "1416450359232172124"
+    },
+    "staridseed": [
+        23,
+        41,
+        49,
+        28,
+        23,
+        14,
+        16
+    ],
+    "whitestarchannels": {
+        "3dd4906939827fa7537a3e95f8d75948c06b75a98f3c4aab253ea79857d2ce81": {
+            "id": "1416449256902103182",
+            "note": "Osmium star but for now its id of different corporation for testing"
+        }
+    }
 }
