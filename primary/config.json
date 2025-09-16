@@ -18,7 +18,7 @@
     ],
     "whitestarchannels": {
         "subchannels": {
-            "type": 11,
+            "type": 12,
             "invitable": false,
             "auto_archive_duration": 10080,
             "rate_limit_per_user": 2,
