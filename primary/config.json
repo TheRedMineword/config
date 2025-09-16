@@ -17,6 +17,13 @@
         16
     ],
     "whitestarchannels": {
+        "subchannels": {
+            "type": 11,
+            "invitable": false,
+            "auto_archive_duration": 10080,
+            "rate_limit_per_user": 2,
+            "name": "Fallback Error"
+        },
         "3dd4906939827fa7537a3e95f8d75948c06b75a98f3c4aab253ea79857d2ce81": {
             "id": "1416449256902103182",
             "masterping": "<@&1417507653424386169>",
