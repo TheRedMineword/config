@@ -19,7 +19,7 @@
     "whitestarchannels": {
         "subchannels": {
             "type": 12,
-            "invitable": true,
+            "invitable": false,
             "auto_archive_duration": 10080,
             "rate_limit_per_user": 2,
             "name": "Fallback Error"
