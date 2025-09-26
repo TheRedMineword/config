@@ -31,5 +31,11 @@
             "masterping": "<@&1417507653424386169>",
             "note": "Osmium star i think"
         }
-    }
+    },
+    "ws_results":{"type":{
+        "devnote" "1 win, 2 lose, 3 draw",
+        "is1": {},
+        "is2": {"colors":{"hex":"#FBB6C8","dec":""},},
+        "is3": {}
+    }}
 }
