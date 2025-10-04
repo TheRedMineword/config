@@ -1,0 +1,1 @@
+{"ico":"x","name":"Vault Elder's Lantern"}
