@@ -82,14 +82,14 @@
                 {
                     "type": 13,
                     "file": {
-                        "url": "attachment://AllyPlayer.json"
+                        "url": "attachment://AllyPlayer.txt"
                     },
                     "spoiler": false
                 },
                 {
                     "type": 13,
                     "file": {
-                        "url": "attachment://EnemyPlayer.json"
+                        "url": "attachment://EnemyPlayer.txt"
                     },
                     "spoiler": false
                 },
