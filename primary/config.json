@@ -35,15 +35,27 @@
     "ws_results": {
         "type": {
             "devnote": "1 win, 2 lose, 3 draw",
-            "is1": {},
+            "is1": {
+                "colors": {
+                    "hex": "#9FE5FF",
+                    "dec": "53511"
+                },
+                "msg": "b"
+            },
             "is2": {
                 "colors": {
                     "hex": "#FBB6C8",
-                    "dec": ""
+                    "dec": "13697080"
                 },
-                "a": "b"
+                "msg": "b"
             },
-            "is3": {}
+            "is3": {
+                "colors": {
+                    "hex": "#FBB6C8",
+                    "dec": "13697080"
+                },
+                "msg": "b"
+            }
         }
     }
 }
