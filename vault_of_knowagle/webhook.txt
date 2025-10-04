@@ -1,0 +1,172 @@
+{
+    "username": "Vault Elder's Lantern",
+    "avatar_url": "https://theredmineword.github.io/config/vault_of_knowagle/lamp_v2.png",
+    "components": [
+        {
+            "type": 17,
+            "accent_color": 15976794,
+            "spoiler": false,
+            "components": [
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                },
+                {
+                    "type": 10,
+                    "content": "Elder Of Vault Of Knowagle, watches over memories\nHe archived the white star **$$STAR CUSTOM$$** result for us"
+                },
+                {
+                    "type": 12,
+                    "items": [
+                        {
+                            "media": {
+                                "url": "https://theredmineword.github.io/config/vault_of_knowagle/elder1.jpg"
+                            },
+                            "description": null,
+                            "spoiler": false
+                        }
+                    ]
+                },
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                }
+            ]
+        },
+        {
+            "type": 12,
+            "items": [
+                {
+                    "media": {
+                        "url": "attachment://starresult.png"
+                    },
+                    "description": "This is automated generated image",
+                    "spoiler": false
+                }
+            ]
+        },
+        {
+            "type": 17,
+            "accent_color": $$RESULTCOLOR$$,
+            "spoiler": false,
+            "components": [
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                },
+                {
+                    "type": 10,
+                    "content": "White Star Json's:"
+                },
+                {
+                    "type": 13,
+                    "file": {
+                        "url": "attachment://Started.json"
+                    },
+                    "spoiler": false
+                },
+                {
+                    "type": 13,
+                    "file": {
+                        "url": "attachment://Ended.json"
+                    },
+                    "spoiler": false
+                },
+                {
+                    "type": 10,
+                    "content": "Player List:"
+                },
+                {
+                    "type": 13,
+                    "file": {
+                        "url": "attachment://AllyPlayer.json"
+                    },
+                    "spoiler": false
+                },
+                {
+                    "type": 13,
+                    "file": {
+                        "url": "attachment://EnemyPlayer.json"
+                    },
+                    "spoiler": false
+                },
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                }
+            ]
+        },
+        {
+            "type": 17,
+            "accent_color": 15976794,
+            "spoiler": false,
+            "components": [
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                },
+                {
+                    "type": 10,
+                    "content": "This match ended in a **$$IHOPEITSVICTORY$$**"
+                },
+                {
+                    "type": 10,
+                    "content": "Thank you to all players for participating"
+                },
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                },
+                {
+                    "type": 10,
+                    "content": "Timestamps:"
+                },
+                {
+                    "type": 10,
+                    "content": "Started: <t:$$SECSTART$$:F>"
+                },
+                {
+                    "type": 10,
+                    "content": "Ended:   <t:$$SECENDED$$:F>"
+                },
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                },
+                {
+                    "type": 9,
+                    "accessory": {
+                        "type": 2,
+                        "style": 5,
+                        "label": "",
+                        "emoji": {
+                            "name": "🌐",
+                            "id": null
+                        },
+                        "disabled": true,
+                        "url": "https://google.com"
+                    },
+                    "components": [
+                        {
+                            "type": 10,
+                            "content": "-# `Links Are Not Ready Yet`"
+                        }
+                    ]
+                },
+                {
+                    "type": 14,
+                    "divider": true,
+                    "spacing": 1
+                }
+            ]
+        }
+    ],
+    "flags": 32768
+}
