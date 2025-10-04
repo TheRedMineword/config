@@ -1,1 +1,1 @@
-{"ico":"x","name":"Vault Elder's Lantern"}
+{"ico":"https://theredmineword.github.io/config/vault_of_knowagle/lamp_v2.png","name":"Vault Elder's Lantern"}
