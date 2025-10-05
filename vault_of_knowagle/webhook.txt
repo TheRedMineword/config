@@ -147,16 +147,16 @@
                         "style": 5,
                         "label": "",
                         "emoji": {
-                            "name": "🌐",
-                            "id": null
+                            "name": "a2",
+                            "id": "1424373233272098867"
                         },
-                        "disabled": true,
-                        "url": "https://google.com"
+                        "disabled": false,
+                        "url": "$$URLTHREAD$$"
                     },
                     "components": [
                         {
                             "type": 10,
-                            "content": "-# `Links Are Not Ready Yet`"
+                            "content": "`White Star Channel:`"
                         }
                     ]
                 },
