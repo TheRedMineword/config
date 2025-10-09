@@ -21,7 +21,7 @@
     },
     "whitelistedplayersatscanstart": {
         "ban": {
-            "content": "Hi <@$$userid$$>\nIf you get this dm, this mean that you was add to private thread of the white star **$$CUSTOMID$$**\n Unfortunately, in my opinion, you don't have access to this channel so i removed you from it\n\nh-# If you believe this is an error, please contact your first officer"
+            "content": "Hi <@$$userid$$>\nIf you get this dm, this mean that you was add to private thread of the white star **$$CUSTOMID$$**\n Unfortunately, in my opinion, you don't have access to this channel so i removed you from it\n\n-# If you believe this is an error, please contact your first officer"
         },
         "edd3ac94ea8ee1cf441e904ff29c48c21fa5db83af6eb5a6e83ae236b3872b22": {
             "note": "osmium star",
