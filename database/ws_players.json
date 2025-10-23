@@ -35,23 +35,73 @@
         "exist": "yes"
     },
     "bc6d094f601017c1b2905c631b6e94b053420ece9a300b685c92e54e5bf82118": {
-        "id": "",
+        "id": "841499868798124053",
         "note": "Börk",
-        "exist": "no"
+        "exist": "yes"
     },
     "b99489f837bb3dcc430dcc6ea5bb826ac95f2cdefeee1f9dab0c5c2c2a4cf463": {
-        "id": "",
+        "id": "1072092643170975824",
         "note": "Mulan",
-        "exist": "no"
+        "exist": "yes"
     },
     "45a9069b770c69e1a8ddf8baca41fa79d9cf09c22611f97261bba34bea2fda38": {
-        "id": "",
+        "id": "841499868798124053",
         "note": "BörkBörk",
-        "exist": "no"
+        "exist": "yes"
     },
     "255f949054c5767e582003b5bbbe3bcaad68c24917239c992d11ccc828c9d6e9": {
-        "id": "",
+        "id": "1334586637816041655",
         "note": "Sargento_Paiva",
+        "exist": "yes"
+    },
+    "15eba91d93d61f4d6662cc6e810cd8da423b418864a0fe22c21fbbbcbd3aeaa7": {
+        "id": "",
+        "note": "Stef",
+        "exist": "no"
+    },
+    "b513404bbc831644892db809dee0014802a7639d5e46febda36e34ddefdcd9e9": {
+        "id": "",
+        "note": "northernpine81",
+        "exist": "no"
+    },
+    "f750c1ef461ac99df3a9b3660af7d2a63323b60f8105b8a68d8318268e7eae58": {
+        "id": "",
+        "note": "Chambara",
+        "exist": "no"
+    },
+    "dd6d3ebd55e138e681eaa5e12cd172ca22220945e2026f0cc5c0824ac707fe60": {
+        "id": "",
+        "note": "hydrogen",
+        "exist": "no"
+    },
+    "25b341c467dbf593fc19eda84ec9871ffae620020a4e5b06a801f7da543552ce": {
+        "id": "",
+        "note": "Rajpoot ji",
+        "exist": "no"
+    },
+    "2ffde0f2d263114ef56aec7c1bc516d77e1c074344341c9ef33f3fecff43647b": {
+        "id": "",
+        "note": "Suhrat",
+        "exist": "no"
+    },
+    "50aed866344b171295978afdc6253211df36cb8e46f4cd2b14eb05c24c455027": {
+        "id": "",
+        "note": "Rider21",
+        "exist": "no"
+    },
+    "cead22b2b5022c04875f7151480a7337bd7f9bc1a4afc74199bae10a856fae17": {
+        "id": "",
+        "note": "Tahsin",
+        "exist": "no"
+    },
+    "e93d90265677876843ba3b133e97bdf484021c2b532629c9150047b154a102be": {
+        "id": "",
+        "note": "Mayhem1939",
+        "exist": "no"
+    },
+    "934566fd0a3db4f642cbd4ed8cdc08751b058225c0cdc9a1d64aab954172265f": {
+        "id": "",
+        "note": "Rider22",
         "exist": "no"
     },
     "whitelistedplayersatscanstart": {
