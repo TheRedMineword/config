@@ -34,6 +34,26 @@
         "note": "smallocelot123",
         "exist": "yes"
     },
+    "bc6d094f601017c1b2905c631b6e94b053420ece9a300b685c92e54e5bf82118": {
+        "id": "",
+        "note": "Börk",
+        "exist": "no"
+    },
+    "b99489f837bb3dcc430dcc6ea5bb826ac95f2cdefeee1f9dab0c5c2c2a4cf463": {
+        "id": "",
+        "note": "Mulan",
+        "exist": "no"
+    },
+    "45a9069b770c69e1a8ddf8baca41fa79d9cf09c22611f97261bba34bea2fda38": {
+        "id": "",
+        "note": "BörkBörk",
+        "exist": "no"
+    },
+    "255f949054c5767e582003b5bbbe3bcaad68c24917239c992d11ccc828c9d6e9": {
+        "id": "",
+        "note": "Sargento_Paiva",
+        "exist": "no"
+    },
     "whitelistedplayersatscanstart": {
         "ban": {
             "content": "Hi <@$$userid$$>\nIf you get this dm, this mean that you was add to private thread of the white star **$$CUSTOMID$$**\n Unfortunately, in my opinion, you don't have access to this channel so i removed you from it\n\n-# If you believe this is an error, please contact your first officer"
