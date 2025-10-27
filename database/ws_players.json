@@ -55,60 +55,80 @@
         "exist": "yes"
     },
     "15eba91d93d61f4d6662cc6e810cd8da423b418864a0fe22c21fbbbcbd3aeaa7": {
-        "id": "",
+        "id": "728602000354443365",
         "note": "Stef",
-        "exist": "no"
+        "exist": "yes"
     },
     "b513404bbc831644892db809dee0014802a7639d5e46febda36e34ddefdcd9e9": {
-        "id": "",
+        "id": "1003773265971511426",
         "note": "northernpine81",
-        "exist": "no"
+        "exist": "yes"
     },
     "f750c1ef461ac99df3a9b3660af7d2a63323b60f8105b8a68d8318268e7eae58": {
-        "id": "",
+        "id": "260878137972359188",
         "note": "Chambara",
-        "exist": "no"
+        "exist": "yes"
     },
     "dd6d3ebd55e138e681eaa5e12cd172ca22220945e2026f0cc5c0824ac707fe60": {
-        "id": "",
+        "id": "249170098101813248",
         "note": "hydrogen",
-        "exist": "no"
+        "exist": "yes"
     },
     "25b341c467dbf593fc19eda84ec9871ffae620020a4e5b06a801f7da543552ce": {
-        "id": "",
+        "id": "1059538171035144222",
         "note": "Rajpoot ji",
-        "exist": "no"
+        "exist": "yes"
     },
     "2ffde0f2d263114ef56aec7c1bc516d77e1c074344341c9ef33f3fecff43647b": {
-        "id": "",
+        "id": "1188104970948583497",
         "note": "Suhrat",
-        "exist": "no"
+        "exist": "yes"
     },
     "50aed866344b171295978afdc6253211df36cb8e46f4cd2b14eb05c24c455027": {
-        "id": "",
+        "id": "685570800358916129",
         "note": "Rider21",
-        "exist": "no"
+        "exist": "yes"
     },
     "cead22b2b5022c04875f7151480a7337bd7f9bc1a4afc74199bae10a856fae17": {
-        "id": "",
+        "id": "1188104970948583497",
         "note": "Tahsin",
-        "exist": "no"
+        "exist": "yes"
     },
     "e93d90265677876843ba3b133e97bdf484021c2b532629c9150047b154a102be": {
-        "id": "",
+        "id": "468672713364340767",
         "note": "Mayhem1939",
-        "exist": "no"
+        "exist": "yes"
     },
     "934566fd0a3db4f642cbd4ed8cdc08751b058225c0cdc9a1d64aab954172265f": {
-        "id": "",
+        "id": "685570800358916129",
         "note": "Rider22",
-        "exist": "no"
+        "exist": "yes"
     },
     "whitelistedplayersatscanstart": {
         "ban": {
-            "content": "Hi <@$$userid$$>\nIf you get this dm, this mean that you was add to private thread of the white star **$$CUSTOMID$$**\n Unfortunately, in my opinion, you don't have access to this channel so i removed you from it\n\n-# If you believe this is an error, please contact your first officer"
+            "content": "Hi <@$$userid$$>!!",
+            "embeds": [
+                {
+                    "description": "## Notice of removal of access to a private thread",
+                    "color": 15426585,
+                    "footer": {
+                        "text": "Removed from thread: $$CUSTOMID$$",
+                        "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
+                    }
+                },
+                {
+                    "description": "_If you are reading this message...._\nIts means that someone must have added you to the private thread used during the white stars\n\nUnfortunately, due to the information contained in such threads, and the fact that I do not see you on the whitelist...\n\nYour access to this thread has been terminated!!",
+                    "color": 15426585
+                },
+                {
+                    "color": 15426585,
+                    "footer": {
+                        "text": "If you believe this is an error, please contact your first officer",
+                        "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
+                    }
+                }
+            ]
         },
-        "adminsarray": ["987284796789116949"],
         "edd3ac94ea8ee1cf441e904ff29c48c21fa5db83af6eb5a6e83ae236b3872b22": {
             "note": "osmium star",
             "ids": [
