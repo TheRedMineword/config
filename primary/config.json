@@ -1,5 +1,9 @@
 {
     "ws_webhook": {
+        "name": "Headless Horseless Scary Scanner",
+        "pfp": "https://theredmineword.github.io/config/primary/src/icon/128px-Tf_sleepy_holl0wnd.jpg"
+    },
+    "normal_ws_webhook_is": {
         "name": "Bob: The White Star Scanner",
         "pfp": "https://theredmineword.github.io/config/primary/src/icon/bob_the_ws_scanner.png"
     },
