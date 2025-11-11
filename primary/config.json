@@ -70,5 +70,9 @@
                 "msg": "draw"
             }
         }
+    },
+    "discord_bot_looks_like": {
+        "version": "xyz",
+        "api_calls": []
     }
 }
