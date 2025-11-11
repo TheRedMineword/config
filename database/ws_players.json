@@ -104,6 +104,16 @@
         "note": "Rider22",
         "exist": "yes"
     },
+    "8897d2f296c413986d3821adb9a7dda354c4f2ca4edd1b199d7c4c0d53c75684": {
+        "id": "503668492470321179",
+        "note": "pyrotek",
+        "exist": "yes"
+    },
+    "01af1d3b9d2b1033b5412feaeb3234b6636e67f9d6838f1e0998cb737a045bbf4": {
+        "id": "1215093870472462357",
+        "note": "thin man",
+        "exist": "yes"
+    }
     "whitelistedplayersatscanstart": {
         "ban": {
             "content": "Hi <@$$userid$$>!!",
