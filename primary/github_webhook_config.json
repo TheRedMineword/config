@@ -1,10 +1,7 @@
 {
-    "files": [
-        {
-            "path": "test",
-            "webhook": "stars"
-        }
-    ],
+    "file_rules": [
+  { "match": "test", "webhook": "stars" }
+],
     "event_webhook": {
         "none_none": "null"
     },
