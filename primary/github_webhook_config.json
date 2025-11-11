@@ -3,7 +3,7 @@
   { "match": "test", "webhook": "stars" }
 ],
     "event_webhook": {
-        "none_none": "null"
+        "push": "stars"
     },
     "use_custom_handler_for_events": [
         "push"
