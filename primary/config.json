@@ -72,7 +72,7 @@
         }
     },
     "discord_bot_looks_like": {
-        "version": "xyz",
+        "version": "This is first version",
         "api_calls": [
             {
                 "url": "https://discord.com/api/v10/guilds/1102280340879441970/members/@me",
