@@ -5,7 +5,7 @@
             "webhook": "stars"
         }
     ],
-    "event_webhook_routing": {
+    "event_webhook": {
         "none_none": "null"
     },
     "use_custom_handler_for_events": [
