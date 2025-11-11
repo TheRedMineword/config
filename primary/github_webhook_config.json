@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "test",
+            "webhook": "stars"
+        }
+    ],
+    "event_webhook_routing": {
+        "star": "stars"
+    },
+    "use_custom_handler_for_events": [
+        "star"
+    ],
+    "custom_handler_b64": "Ly8gRXhhbXBsZSBjdXN0b20gaGFuZGxlciBmb3Igc3RhcnMKCmVtYmVkcy5wdXNoKHsKICB0aXRsZTogIuKCrCBKdXN0b20gU3RhciBBbmFseXNlIiwKICBkZXNjcmlwdGlvbjogYE5pY2Ugd29yayEgVGhlIGV2ZW50IHdhcyAqKiR7ZXZlbnR9KiogYW5kIHRoZSBzdGFyIGJ5ICoke3BheWxvYWQuc2VuZGVyLmxvZ2lufSogYCwKICBjb2xvcjogMHhmZmQwMDAsCiAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpLnRvSVNPT3N0cmluZygpCn0pCg=="
+}
