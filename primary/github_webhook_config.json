@@ -1,10 +1,9 @@
 {
     "file_rules": [
-  { "match": "test", "webhook": "stars" },
 { "match": "ws_players.json", "webhook": "dbupdate" }
 ],
     "event_webhook": {
-        "push": "stars"
+        "xyz": "stars"
     },
     "use_custom_handler_for_events": [
         "push"
