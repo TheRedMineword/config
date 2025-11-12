@@ -123,7 +123,7 @@
         "id": "1308802340056203284",
         "note": "ap po ne",
         "exist": "yes"
-    }
+    },
     "whitelistedplayersatscanstart": {
         "ban": {
             "content": "Hi <@$$userid$$>!!",
