@@ -1,0 +1,42 @@
+{
+    "embed": {
+        "color": "1234",
+        "banner": "url"
+    },
+    "translation": {
+        "week": {
+            "week1": "Monday"
+        },
+        "month": {
+            "month1": "January"
+        }
+    },
+    "random": {
+        "days": {},
+        "week": [
+            {},
+            {},
+            {
+                "name": "Fallen",
+                "desc": "-# For those who have lost life\n-# So that someone can live"
+            },
+            {},
+            {
+                "name": "Silence",
+                "desc": "-# For those who are no longer here wich us"
+            }
+        ]
+    },
+    "news": {
+        "standard": {
+            "month1_day1": "Happy New Year!!"
+        },
+        "specialoverwrite": {
+            "year9999_month99_day99": "Breaking news"
+        },
+        "quote_format": "## Quote of the day:\n<x> - **<y>**"
+    },
+    "tips": [
+        "When you're digging for gold in the dark stars, it might be worth not having the artifact bonus active?"
+    ]
+}
