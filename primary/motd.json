@@ -175,5 +175,6 @@
     },
     "tips": [
         "When you're digging for gold in the dark stars, it might be worth not having the artifact bonus active?"
-    ]
+    ],
+    "raport": "Last update at $$unix$$, update took $$mscount$$ms!"
 }
