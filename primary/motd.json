@@ -12,7 +12,70 @@
         }
     },
     "random": {
-        "days": {},
+        "days": {
+            "val_pool": {
+                "x": [
+                    "Burning",
+                    "Frozen",
+                    "Shattered",
+                    "Glorious",
+                    "Cursed",
+                    "Ancient",
+                    "Quantum",
+                    "Chaotic",
+                    "Forsaken",
+                    "Moist",
+                    "Suspicious",
+                    "Draconic",
+                    "Galactic",
+                    "Electric",
+                    "Smoldering",
+                    "Crimson",
+                    "Obsidian"
+                ],
+                "y": [
+                    "Cerberus Sentinel",
+                    "Cerberus Guardian",
+                    "Cerberus Interceptor",
+                    "Cerberus Colossus",
+                    "Cerberus Destroyer",
+                    "Cerberus Bomber",
+                    "Cerberus Phoenix",
+                    "Cerberus Storm",
+                    "Cerberus Ghosts",
+                    "Cerberus Hydra",
+                    "Cerberus Carrier"
+                ],
+                "z": [
+                    "Rise",
+                    "Revenge",
+                    "Unleashed",
+                    "Rebirth",
+                    "Electric Boogaloo",
+                    "Protocol",
+                    "Awakening",
+                    "Echoes",
+                    "Curse",
+                    "Gambit",
+                    "Project",
+                    "Ascension",
+                    "Trial",
+                    "Legacy",
+                    "Final March",
+                    "Chronicles",
+                    "Beyond Time"
+                ]
+            },
+            "config_pool": [
+                "<x> <y>",
+                "<x> <y>: <z>",
+                "<z> of the <x> <y>",
+                "The <x> <y> – <z>",
+                "<x> <z> of <y>",
+                "The <y> of <x> <z>",
+                "<x1> <x> <y>: <z>"
+            ]
+        },
         "week": [
             {},
             {},
