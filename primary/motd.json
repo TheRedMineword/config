@@ -1,7 +1,7 @@
 {
     "embed": {
         "color": "3695857",
-        "banner": "https://cdn.discordapp.com/attachments/906157247418220595/1439632067557327058/IMG_1395.jpg?ex=691b3957&is=6919e7d7&hm=fb76e29a0e533361ef816b22c178877deba697f021f49320f666e11bc9210637"
+        "banner": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
     },
     "translation": {
         "week": {
@@ -169,7 +169,8 @@
             "month01_day01": "Happy New Year!!"
         },
         "specialoverwrite": {
-            "year9999_month99_day99": "Breaking news"
+            "year9999_month99_day99": "Breaking news",
+            "year2025_month11_day16": "This is test to see if it updates"
         },
         "quote_format": "## Quote of the day:\n<x> - **<y>**"
     },
