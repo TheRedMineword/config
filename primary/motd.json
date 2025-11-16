@@ -77,16 +77,53 @@
             ]
         },
         "week": [
-            {},
-            {},
+            {
+                "name": "Stillness",
+                "desc": "-# For the rare moments when the world finally stops"
+            },
+            {
+                "name": "Uniqueness",
+                "desc": "-# Everyone is different\n-# Some are more"
+            },
+            {
+                "name": "Hope",
+                "desc": "-# What die last and burns with mighty flame"
+            },
             {
                 "name": "Fallen",
                 "desc": "-# For those who have lost life\n-# So that someone can live"
             },
-            {},
+            {
+                "name": "Daylight",
+                "desc": "-# A reminder that even the longest night ends"
+            },
+            {
+                "name": "Heroes",
+                "desc": "-# For those who stood when others could not"
+            },
+            {
+                "name": "Twilight",
+                "desc": "-# For the moments when everything changes quietly"
+            },
             {
                 "name": "Silence",
-                "desc": "-# For those who are no longer here wich us"
+                "desc": "-# For those who are no longer here with us"
+            },
+            {
+                "name": "Memory",
+                "desc": "-# For the fragments we keep even when the rest is gone"
+            },
+            {
+                "name": "Elders",
+                "desc": "-# For those whose wisdom shaped the path ahead"
+            },
+            {
+                "name": "Echo",
+                "desc": "-# For the things we hear long after they should fade"
+            },
+            {
+                "name": "Turning Point",
+                "desc": "-# For the choices that rewrite everything"
             }
         ]
     },
