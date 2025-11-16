@@ -85,12 +85,11 @@
             },
             "config_pool": [
                 "<x> <y>",
-                "<x> <y>: <z>",
+                "<x> <y> <z>",
                 "<z> of the <x> <y>",
                 "The <x> <y> – <z>",
                 "<x> <z> of <y>",
-                "The <y> of <x> <z>",
-                "<x> <y>: <z>"
+                "The <y> of <x> <z>"
             ]
         },
         "week": [
