@@ -127,6 +127,14 @@
             }
         ]
     },
+    "countdowns": [
+        {
+            "show": "no",
+            "start": "iso",
+            "end": "iso",
+            "display": "This begins in $$left$$!"
+        }
+    ],
     "motd_msg": {
         "config_show_news": "$$motd$$\n\n$$news$$",
         "today": {
