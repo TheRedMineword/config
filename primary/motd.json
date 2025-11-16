@@ -5,10 +5,27 @@
     },
     "translation": {
         "week": {
-            "week1": "Monday"
+            "week1": "Monday",
+            "week2": "Tuesday",
+            "week3": "Wednesday",
+            "week4": "Thursday",
+            "week5": "Friday",
+            "week6": "Saturday",
+            "week7": "Sunday"
         },
         "month": {
-            "month1": "January"
+            "month01": "January",
+            "month02": "February",
+            "month03": "March",
+            "month04": "April",
+            "month05": "May",
+            "month06": "June",
+            "month07": "July",
+            "month08": "August",
+            "month09": "September",
+            "month10": "October",
+            "month11": "November",
+            "month12": "December"
         }
     },
     "random": {
@@ -138,12 +155,18 @@
     "motd_msg": {
         "config_show_news": "$$motd$$\n\n$$news$$",
         "today": {
-            "week1": "Today starts the **Week Of $$weekname$$**!\nIn addition today day is **Day of $$dayname**!!\n\n Today we have `Monday $$dateformated`"
+            "week1": "`Monday $$dateformated`\n\nToday starts the **Week Of $$weekname$$**!\nIn addition today day is **Day of $$dayname**!!",
+            "week2": "`Tuesday $$dateformated`\n\nToday is second day of the **Week Of $$weekname$$**!\nToday is also **Day of $$dayname**!!",
+            "week3": "`Wednesday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins today!!",
+            "week4": "`Thursday  $$dateformated`\n\nHappy **Day of $$dayname** in **Week Of $$weekname$$** @everyone!!",
+            "week5": "`Friday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins today!!\nThe weekend starts today too!! Just hang in there for a few more hours!",
+            "week6": "`Saturday $$dateformated`\n\nThe end of **Week Of $$weekname$$** is approaching...\nToday is **Day of $$dayname**\nHappy Saturday @everyone!!",
+            "week7": "`Sunday $$dateformated`\n\n**Week Of $$weekname$$** ends today and **Day of $$dayname** is last day in this week!"
         }
     },
     "news": {
         "standard": {
-            "month1_day1": "Happy New Year!!"
+            "month01_day01": "Happy New Year!!"
         },
         "specialoverwrite": {
             "year9999_month99_day99": "Breaking news"
