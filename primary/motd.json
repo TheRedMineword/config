@@ -27,6 +27,12 @@
             }
         ]
     },
+    "motd_msg": {
+        "config_show_news": "$$motd$$\n\n$$news$$",
+        "today": {
+            "week1": "Today starts the **Week Of $$weekname$$**!\nIn addition today day is **Day of $$dayname**!!\n\n Today we have `Monday $$dateformated`"
+        }
+    },
     "news": {
         "standard": {
             "month1_day1": "Happy New Year!!"
