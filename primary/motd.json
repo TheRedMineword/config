@@ -3,31 +3,14 @@
         "color": "3695857",
         "banner": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
     },
-    "translation": {
-        "week": {
-            "week1": "Monday",
-            "week2": "Tuesday",
-            "week3": "Wednesday",
-            "week4": "Thursday",
-            "week5": "Friday",
-            "week6": "Saturday",
-            "week7": "Sunday"
-        },
-        "month": {
-            "month01": "January",
-            "month02": "February",
-            "month03": "March",
-            "month04": "April",
-            "month05": "May",
-            "month06": "June",
-            "month07": "July",
-            "month08": "August",
-            "month09": "September",
-            "month10": "October",
-            "month11": "November",
-            "month12": "December"
+    "countdowns": [
+        {
+            "use": "no",
+            "start": "iso",
+            "ends": "iso",
+            "display": "Event begins in $$left$$"
         }
-    },
+    ],
     "random": {
         "days": {
             "val_pool": {
@@ -143,14 +126,6 @@
             }
         ]
     },
-    "countdowns": [
-        {
-            "show": "no",
-            "start": "iso",
-            "end": "iso",
-            "display": "This begins in $$left$$!"
-        }
-    ],
     "motd_msg": {
         "config_show_news": "$$motd$$\n\n$$news$$",
         "today": {
