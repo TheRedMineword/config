@@ -6,8 +6,8 @@
     "countdowns": [
         {
             "use": "no",
-            "start": "iso",
-            "ends": "iso",
+            "start": "2025-11-18T08:14:48.978Z",
+            "ends": "2025-11-18T08:14:48.978Z",
             "display": "Event begins in $$left$$"
         }
     ],
