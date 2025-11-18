@@ -11,6 +11,7 @@
             "display": "Event begins in $$left$$"
         }
     ],
+    "countdowns_limit": 15,
     "random": {
         "days": {
             "val_pool": {
