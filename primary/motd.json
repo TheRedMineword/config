@@ -13,7 +13,7 @@
         {
             "use": "yes",
             "start": "2025-11-18T08:14:48.978Z",
-            "ends": "2025-11-20T00:00:01.000Z",
+            "ends": "2025-11-21T00:00:01.000Z",
             "display": "dev.test value countdown: `$$left$$`"
         }
     ],
