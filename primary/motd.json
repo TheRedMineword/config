@@ -555,11 +555,11 @@
             "year9999_month99_day99": "Breaking news",
             "year2025_month11_day16": "This is test to see if it updates"
         },
-        "quote_format": "## Quote of the day:\n<x> - **<y>**"
+        "quote_format": "## Quote of the day:\n-# <x> - **<y>**"
     },
     "tips": [
         "When you're digging for gold in the dark stars, it might be worth not having the artifact bonus active?",
-        "This is cool tip"
+        "When you're digging for gold in the dark stars, it might be worth not having the artifact bonus active?"
     ],
-    "raport": "Last update at <t:$$unix$$:R>, update took `$$mscount$$`ms!"
+    "raport": "-# Last update at <t:$$unix$$:R>, update took `$$mscount$$`ms!"
 }
