@@ -375,6 +375,12 @@
     "start": "2024-01-00T00:00:00+00:00",
     "ends": "2026-01-01T00:00:01+00:00",
     "display": "`$$left$$` until the new year..."
+  },
+{
+    "use": "yes",
+    "start": "2024-01-00T00:00:00+00:00",
+    "ends": "2027-01-01T00:00:01+00:00",
+    "display": "`$$left$$` until the new year..."
   }
     ],
     "countdowns_limit": 15,
