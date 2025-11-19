@@ -540,9 +540,9 @@
         "today": {
             "week1": "`Monday $$dateformated`\n\nToday starts the **Week Of $$weekname$$**!\nIn addition today day is **Day of $$dayname**!!",
             "week2": "`Tuesday $$dateformated`\n\nToday is second day of the **Week Of $$weekname$$**!\nToday is also **Day of $$dayname**!!",
-            "week3": "`Wednesday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins today!!",
+            "week3": "`Wednesday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins now!!",
             "week4": "`Thursday  $$dateformated`\n\nHappy **Day of $$dayname** in **Week Of $$weekname$$** @everyone!!",
-            "week5": "`Friday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins today!!\nThe weekend starts today too!! Just hang in there for a few more hours!",
+            "week5": "`Friday $$dateformated`\n\n**Week Of $$weekname$$** continues and **Day of $$dayname** begins now!!\nThe weekend starts today too!! Just hang in there for a few more hours!",
             "week6": "`Saturday $$dateformated`\n\nThe end of **Week Of $$weekname$$** is approaching...\nToday is **Day of $$dayname**\nHappy Saturday @everyone!!",
             "week7": "`Sunday $$dateformated`\n\n**Week Of $$weekname$$** ends today and **Day of $$dayname** is last day in this week!"
         }
