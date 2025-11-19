@@ -1,7 +1,8 @@
 {
     "file_rules": [
         { "match": "ws_players.json", "webhook": "dbupdate" },
-    { "match": "primary/config.json", "webhook": "dbupdate" }
+    { "match": "primary/config.json", "webhook": "dbupdate" },
+    { "match": "primary/motd.json", "webhook": "dbupdate" }
 ],
     "event_webhook": {
         "xyz": "stars"
