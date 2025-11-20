@@ -419,7 +419,7 @@
             "display": "- - -"
         }
     ],
-    "countdowns_limit": 17,
+    "countdowns_limit": 20,
     "random": {
         "days": {
             "val_pool": {
