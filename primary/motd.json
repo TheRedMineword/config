@@ -13,7 +13,7 @@
         {
             "use": "yes",
             "start": "2023-11-21T11:00:00+00:00",
-            "ends": "2025-11-21T06:59:00+00:00",
+            "ends": "2025-11-21T07:00:00+00:00",
             "display": "@Orion deadline to setup hades star webhook ends in `$$left$$`!!"
         },
         {
@@ -403,12 +403,12 @@
         {
             "use": "yes",
             "start": "2023-11-21T11:00:00+00:00",
-            "ends": "2025-11-30T23:59:00+00:00",
+            "ends": "2025-12-01T00:00:00+00:00",
             "display": "Osmium Purge Will Begun in `$$left$$`!!"
         },
         {
             "use": "yes",
-            "start": "2025-11-21T07:00:00+00:00",
+            "start": "2025-12-01T00:00:00+00:00",
             "ends": "2025-12-01T23:59:00+00:00",
             "display": "**Great Osmium Purge Is Now In Progress**"
         },
