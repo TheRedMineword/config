@@ -9,5 +9,5 @@
 },
     "list": [{"type":"combat","lvl":"7","boost":"167","amount-math":1},{"type":"combat","lvl":"8","boost":"167","amount-math":2},{"type":"combat","lvl":"8","boost":"183","amount-math":1},{"type":"combat","lvl":"7","boost":"183","amount-math":2},{"type":"miner","lvl":"8","boost":"167","amount-math":2},{"type":"miner","lvl":"8","boost":"183","amount-math":3},{"type":"drone","lvl":"7","boost":"183","amount-math":5},{"type":"transport","lvl":"8","boost":"183","amount-math":2},{"type":"transport","lvl":"6","boost":"183","amount-math":2},{"type":"transport","lvl":"7","boost":"183","amount-math":2},{"type":"shield","lvl":"8","boost":"183","amount-math":3},{"type":"shield","lvl":"7","boost":"183","amount-math":1},{"type":"weapon","lvl":"7","boost":"167","amount-math":1},{"type":"weapon","lvl":"8","boost":"167","amount-math":3},{"type":"weapon","lvl":"8","boost":"183","amount-math":1}],
     "ismore": true,
-    "find_where": "There is full star system more to find at DrMineword (Osmium Star llc) star system"
+    "find_where": "There is full star system more to find at DrMineword (Osmium Star llc) star system\n(The first few planets have been counted)"
 }
