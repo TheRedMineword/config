@@ -1,0 +1,13 @@
+{
+    "icons_map": {
+    "combat": "https://theredmineword.github.io/config/tournament/src/arts_icons/combat.png",
+    "miner": "https://theredmineword.github.io/config/tournament/src/arts_icons/miner.png",
+    "drone": "https://theredmineword.github.io/config/tournament/src/arts_icons/drone.png",
+    "transport": "https://theredmineword.github.io/config/tournament/src/arts_icons/transport.png",
+    "shield": "https://theredmineword.github.io/config/tournament/src/arts_icons/shield.png",
+    "weapon": "https://theredmineword.github.io/config/tournament/src/arts_icons/weapon.png"
+},
+    "list": [{"type":"combat","lvl":"7","boost":"167","amount-math":1},{"type":"combat","lvl":"8","boost":"167","amount-math":2},{"type":"combat","lvl":"8","boost":"183","amount-math":1},{"type":"combat","lvl":"7","boost":"183","amount-math":2},{"type":"miner","lvl":"8","boost":"167","amount-math":2},{"type":"miner","lvl":"8","boost":"183","amount-math":3},{"type":"drone","lvl":"7","boost":"183","amount-math":5},{"type":"transport","lvl":"8","boost":"183","amount-math":2},{"type":"transport","lvl":"6","boost":"183","amount-math":2},{"type":"transport","lvl":"7","boost":"183","amount-math":2},{"type":"shield","lvl":"8","boost":"183","amount-math":3},{"type":"shield","lvl":"7","boost":"183","amount-math":1},{"type":"weapon","lvl":"7","boost":"167","amount-math":1},{"type":"weapon","lvl":"8","boost":"167","amount-math":3},{"type":"weapon","lvl":"8","boost":"183","amount-math":1}],
+    "ismore": true,
+    "find_where": "There is full star system more to find at DrMineword (Osmium Star llc) star system"
+}
