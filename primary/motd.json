@@ -1,7 +1,8 @@
 {
     "embed": {
         "color": "11056878",
-        "banner": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
+        "banner": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png",
+        "clock": "https://theredmineword.github.io/config/primary/clock/%5Bhh%3Amm%5D.json"
     },
     "countdowns": [
         {
