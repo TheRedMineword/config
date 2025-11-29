@@ -1,1 +1,11 @@
+--help see this command
+usage:
 
+<category> <order> <value>
+
+
+Category
+$music
+
+Orders:
+play <what to play>
