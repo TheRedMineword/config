@@ -1,5 +1,5 @@
 {
-    "timezone": "America/Los_Angeles",
+    "timezone": "UTC",
     "embed": {
         "color": "11056878",
         "banner": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
