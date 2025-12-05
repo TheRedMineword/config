@@ -5,7 +5,8 @@ Violation of the above requirements constitutes a violation of the platform's te
 
 **== Our Rules==**
 In addition, we impose the following rules and guidelines on members of this server:
-- **1§)** You may not distribute content/materials on this server containing
+- **1§)**
+You may not distribute content/materials on this server containing
 -# - - 1 | Pornography
 -# - - 2 | Materials with a sexual context
 -# - - 3 | Gore
@@ -17,10 +18,12 @@ In addition, we impose the following rules and guidelines on members of this ser
 -# - - 9 | Spam
 -# - - 10| Scam and missinformation
 -# - - 11| Highly political materials
- Violation of these rules will result in content removal and further penalties.
-- **2§)** It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
- Violation of these rules will result in disciplinary action
-- **3§)** Follow the rules of Netiquette and Online Safety
+Violation of these rules will result in content removal and further penalties.
+- **2§)**
+It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
+Violation of these rules will result in disciplinary action
+- **3§)**
+Follow the rules of Netiquette and Online Safety
 
 **== Our Community Guidelines ==**
 <Work In Progress>
