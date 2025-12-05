@@ -2,11 +2,14 @@
   "content": null,
   "embeds": [
     {
-      "description": "$$RULES$$",
       "color": 8242624,
       "image": {
         "url": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
       }
+    },
+    {
+      "description": "$$RULES$$",
+      "color": 8242624
     }
   ],
   "attachments": []
