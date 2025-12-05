@@ -3,7 +3,10 @@
   "embeds": [
     {
       "description": "$$RULES$$",
-      "color": null
+      "color": 8242624,
+      "image": {
+        "url": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
+      }
     }
   ],
   "attachments": []
