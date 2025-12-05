@@ -17,9 +17,9 @@ In addition, we impose the following rules and guidelines on members of this ser
 -# - - 9 | Spam
 -# - - 10| Scam and missinformation
 -# - - 11| Highly political materials
-    Violation of these rules will result in content removal and further penalties.
+ Violation of these rules will result in content removal and further penalties.
 - **2§)** It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
-        Violation of these rules will result in disciplinary action
+ Violation of these rules will result in disciplinary action
 - **3§)** Follow the rules of Netiquette and Online Safety
 
 **== Our Community Guidelines ==**
