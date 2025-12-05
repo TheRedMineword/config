@@ -1,5 +1,5 @@
 {
-  "content": null,
+  "content": "** **",
   "embeds": [
     {
       "color": 8242624,
@@ -10,6 +10,10 @@
     {
       "description": "$$RULES$$",
       "color": 8242624
+    },
+    {
+      "description": "-# _Justice is blind_",
+      "color": 5814783
     }
   ],
   "attachments": []
