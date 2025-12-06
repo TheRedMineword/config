@@ -17,6 +17,7 @@ You may not distribute content/materials on this server containing:
 -# - - 8 | Spam
 -# - - 9 | Scam and misinformation
 -# - - 10| Highly political materials
+-# - - 11| Illegal materials
 Violation of these rules will result in content removal and further penalties.
 - **§2)**
 It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
