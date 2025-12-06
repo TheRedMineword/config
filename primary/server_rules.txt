@@ -2,32 +2,39 @@
 
 By using this server you accept the [`Terms Of Service`]( https://discord.com/guidelines ) and [`Community Guidelines`]( https://discord.com/terms ) of Discord
 Violation of the above requirements constitutes a violation of the platform's terms of use and will result in **immediate and irreversible suspension of access to our community/alliance**!!
+In addition, we impose the following rules and guidelines on members of this server:
 
 **== Our Rules==**
-In addition, we impose the following rules and guidelines on members of this server:
-- **1§)**
-You may not distribute content/materials on this server containing
+- **1)** You may not distribute content/materials on this server containing:
 -# - - 1 | Pornography
 -# - - 2 | Materials with a sexual context
 -# - - 3 | Gore
--# - - 4 | Unethical materials
--# - - 5 | Immoral materials
--# - - 6 | Toxicity
--# - - 7 | Hate speech
--# - - 8 | Demoralizing materials
--# - - 9 | Spam
--# - - 10| Scam and missinformation
--# - - 11| Highly political materials
-Violation of these rules will result in content removal and further penalties.
-- **2§)**
-It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
-Violation of these rules will result in disciplinary action
-- **3§)**
-Follow the rules of Netiquette and Online Safety
+-# - - 4 | Unethical/immoral materials
+-# - - 5 | Toxicity
+-# - - 6 | Hate speech
+-# - - 7 | Demoralizing materials
+-# - - 8 | Spam
+-# - - 9 | Scam and misinformation
+-# - - 10| Highly political materials
+    Violation of these rules will result in content removal and further penalties.
+- **2)** It is prohibited to send malicious direct messages to our members. Malicious messages include, but are not limited to, the rules in paragraph 1.
+        Violation of these rules will result in disciplinary action
+- **3)** Follow the rules of Netiquette and Online Safety
 
 **== Our Community Guidelines ==**
-<Work In Progress>
+In order to maintain a safe environmet for all our members, our guidelines are as follows:
+- **1)** Maintain a polite attitude (being silly is fine, until it crosses into disrespect).
+- **2)** Don't spam messages/pings (especially ```@everyone```, ```@member```, ```@ally```).
+- **3)** Don't use mass pings (for example: ```@everyone```, ```@member```) UNLESS you have been given explicit permission from an officer or above, or it is absolutely necessary (it's recommended to get a First Officer to do this).
+- **4)** Do not partake in any kind of harmful/illegal activities on our server. If you see such activities occuring, immediately inform a First Officer.
+- **5)** Do not use the server in order to advertise services (like artwork)(this is due to a Discord exploit that could use this as a vector of attack).
+- **6)** Do not leak/expose/distribute any White Star (WS) plans UNLESS your First Officer allows you.
 
 **== Notice ==**
 -# We reserve the right to take disciplinary action against any user at our discretion, within the bounds of fairness and morality
--# We reserve the right to amend these Rules and Guidelines
+-# Doing things that break what are generally unspoken rules will not be tolerated, and "it wasn't in the rules channel" won't be taken as an excuse
+-# We reserve the right to change/add/remove these Rules and Guidelines as we see fit, however you will be notified that the rules have changed. By that point, the rules are considered in effect unless otherwise stated.
+***NOTE***: The rules and guidelines are currently a work in progress, so expect frequent changes. However, all of the above is considered as active rules unless removed before we fully set them as "active". Any violations will be treated according to their severity.
+We will inform you once the final rules and guidelines have been published
+Thank you for your time 
+-- The Red Defender
