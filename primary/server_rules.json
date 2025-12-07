@@ -1,26 +1,26 @@
 {
-  "content": null,
-  "embeds": [
-    {
-      "color": 8242624,
-      "image": {
-        "url": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
-      }
-    },
-    {
-      "description": "$$RULES$$",
-      "color": 8242624
-    },
-    {
-      "color": 8242624,
-      "image": {
-        "url": "https://theredmineword.github.io/config/primary/src/other/a_edb02d6f98cfbb9ef21dcd8f19f8e609.gif"
-      },
-    {
-      "description": "-# _Justice is blind_",
-      "color": 8242624
-    }
-    }
-  ],
-  "attachments": []
+    "content": null,
+    "embeds": [
+        {
+            "color": 8242624,
+            "image": {
+                "url": "https://raw.githubusercontent.com/TheRedMineword/config/refs/heads/main/primary/src/banners/portrait_PlanetWhiteStar.png"
+            }
+        },
+        {
+            "description": "$$RULES$$",
+            "color": 8242624
+        },
+        {
+            "color": 8242624,
+            "image": {
+                "url": "https://theredmineword.github.io/config/primary/src/other/a_edb02d6f98cfbb9ef21dcd8f19f8e609.gif"
+            }
+        },
+        {
+            "description": "-# _Justice is blind_",
+            "color": 8242624
+        }
+    ],
+    "attachments": []
 }
