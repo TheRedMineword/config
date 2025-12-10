@@ -54,3 +54,7 @@ Use channels for their intended purpose!
 -# We reserve the right to change/add/remove these Rules and Guidelines as we see fit, however you will be notified that the rules have changed. By that point, the rules are considered in effect unless otherwise stated.
 -# We will inform you once the final rules and guidelines have been published
 ***Please report any violations to officers!!***
+
+**== Translations of the Rules==**
+-# Translations powered by Google
+[_LINK_]( <https://theredmineword-github-io.translate.goog/config/primary/server_rules.txt?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp> )
