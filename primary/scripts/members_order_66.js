@@ -325,6 +325,22 @@ function processMember(m) {
     action = 4;
     action_reason_source = "auto_banned_by_config";
   }
+  // --- Kick if user has had no roles for X days ---
+if (
+  roles.length === 0 &&
+  cfg.server_join_checks.kick_if_no_roles_after_days &&
+  server_age_days !== null &&
+  server_age_days >= cfg.server_join_checks.kick_if_no_roles_after_days
+) {
+  triggers.no_roles = "1";
+  reasons.push(
+    `No roles for more than ${cfg.server_join_checks.kick_if_no_roles_after_days} days`
+  );
+  
+  action = 3;
+  action_reason_source = "no_roles_timeout";
+}
+
 
   logDebug(`Member evaluation result for ${username}`, { risk, action, triggers, reasons });
 
