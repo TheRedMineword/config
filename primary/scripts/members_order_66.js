@@ -5,8 +5,8 @@
  *   $input.members
  *   $input.members_config
  *
- * RETURNS:
- *   { results: [...] }
+ * OUTPUT:
+ *   output = { results: [...] }
  */
 
 const DISCORD_EPOCH = 1420070400000n;
@@ -307,5 +307,5 @@ const results = members.map(processMember);
 // Sort high → low risk
 results.sort((a, b) => b.risk_score - a.risk_score);
 
-// FINAL RESULT
-return { results }; // btw this return results
+// FINAL OUTPUT (IMPORTANT: NOT return)
+output = { results };
