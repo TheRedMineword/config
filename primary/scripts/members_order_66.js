@@ -8,6 +8,7 @@
  * OUTPUT:
  *   output = { results: [...] }
  */
+let output = {};
 
 const DISCORD_EPOCH = 1420070400000n;
 
