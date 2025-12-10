@@ -373,8 +373,5 @@ logInfo("Evaluation complete");
 // output = { results, logs };
 // output = { results };
 // Remove members with risk=0 and action=0
-const filteredResults = results.filter(r =>
-  !(r.risk_score === 0 && r.action === 0)
-);
-
+const filteredResults = results.filter(r => r.action_label !== "ignore");
 output = { results: filteredResults };
