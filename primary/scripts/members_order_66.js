@@ -1,7 +1,6 @@
 let output = {};
-const logs = []; // store for debugging if needed
+const logs = [];
 
-// Logger helpers
 function timestamp() {
   return new Date().toISOString();
 }
@@ -26,21 +25,49 @@ function logError(msg) {
   logs.push(line);
 }
 
-// BEGIN MAIN SCRIPT
 logInfo("Starting Discord member evaluation");
 
-const DISCORD_EPOCH = 1420070400000n;
+// ----------------------------
+// Decode Base64 JSON inputs
+// ----------------------------
+let members = [];
+let membersConfig = {};
 
-// Helper: safe get
+try {
+  if ($input.members) {
+    const decodedMembers = atob($input.members); // decode base64
+    members = JSON.parse(decodedMembers);
+    logDebug("Decoded members", members);
+  } else {
+    logInfo("No members input provided");
+  }
+} catch (e) {
+  logError("Failed to decode members input: " + e.message);
+}
+
+try {
+  if ($input.members_config) {
+    const decodedConfig = atob($input.members_config);
+    membersConfig = JSON.parse(decodedConfig);
+    logDebug("Decoded members_config", membersConfig);
+  } else {
+    logInfo("No members_config input provided, using defaults");
+  }
+} catch (e) {
+  logError("Failed to decode members_config input: " + e.message);
+}
+
+// ----------------------------
+// Your default config & helpers
+// ----------------------------
+const DISCORD_EPOCH = 1420070400000n;
 const g = (obj, path, def = null) => {
   try {
     return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), obj) ?? def;
-  } catch (e) {
-    logError("Safe get error: " + e.message);
+  } catch {
     return def;
   }
 };
-
 function snowflakeToDate(snowflake) {
   try {
     const id = BigInt(String(snowflake));
@@ -50,7 +77,6 @@ function snowflakeToDate(snowflake) {
     return null;
   }
 }
-
 function daysSince(iso) {
   if (!iso) return null;
   const now = new Date();
@@ -127,9 +153,12 @@ function merge(a, b) {
   return a;
 }
 
-const cfg = merge(defaultConfig, $input.members_config ?? {});
+const cfg = merge(defaultConfig, membersConfig);
 logDebug("Merged config", cfg);
 
+// ----------------------------
+// Precompile regex
+// ----------------------------
 const spamRegexes =
   cfg.username_spam_detection.enabled && Array.isArray(cfg.username_spam_detection.patterns)
     ? cfg.username_spam_detection.patterns
@@ -140,13 +169,16 @@ const spamRegexes =
               cfg.username_spam_detection.case_insensitive ? "i" : ""
             );
           } catch {
-            logWarn(`Invalid regex pattern skipped: ${p}`);
+            logWarn(`Invalid regex skipped: ${p}`);
             return null;
           }
         })
         .filter(Boolean)
     : [];
 
+// ----------------------------
+// Helpers for action
+// ----------------------------
 function actionLabel(n) {
   return {
     0: "ignore",
@@ -157,7 +189,6 @@ function actionLabel(n) {
     5: "hard-ban",
   }[n] ?? "unknown";
 }
-
 function mapScoreToAction(score, map) {
   for (const key of Object.keys(map)) {
     const [min, max] = key.split("_").map(Number);
@@ -166,6 +197,9 @@ function mapScoreToAction(score, map) {
   return 0;
 }
 
+// ----------------------------
+// Member processor
+// ----------------------------
 function processMember(m) {
   const member = m.member ?? m;
   const user = member.user ?? {};
@@ -203,13 +237,12 @@ function processMember(m) {
   const reasons = [];
   let risk = 0;
 
+  // --- Checks ---
   if (account_age_days !== null && account_age_days < cfg.account_checks.min_account_age_days) {
     triggers.account_new = "1";
     reasons.push("Account is new");
     risk += cfg.risk_weights.account_new;
-    logWarn(`Account new: ${username}`);
   }
-
   if (
     cfg.account_checks.auto_ban_young_account &&
     account_age_days !== null &&
@@ -218,47 +251,35 @@ function processMember(m) {
     triggers.auto_banned_by_config = "1";
     reasons.push("Auto-ban young account");
     risk += 40;
-    logWarn(`Auto-ban young account: ${username}`);
   }
-
   if (server_age_days !== null && server_age_days < cfg.server_join_checks.min_server_age_days) {
     triggers.server_new = "1";
     reasons.push("Recently joined server");
     risk += cfg.risk_weights.server_join_new;
-    logInfo(`New server join: ${username}`);
   }
-
   if (cfg.profile_checks.require_avatar && !avatar) {
     triggers.missing_avatar = "1";
     reasons.push("Missing avatar");
     risk += cfg.risk_weights.missing_avatar;
-    logInfo(`Missing avatar: ${username}`);
   }
-
   if (cfg.profile_checks.require_banner && !banner) {
     triggers.missing_banner = "1";
     reasons.push("Missing banner");
     risk += cfg.risk_weights.missing_banner;
-    logInfo(`Missing banner: ${username}`);
   }
-
   const nameTest = globalName || username;
   for (const rx of spamRegexes) {
     if (rx.test(nameTest)) {
       triggers.suspicious_name = "1";
       reasons.push("Suspicious username");
       risk += cfg.risk_weights.suspicious_name;
-      logWarn(`Suspicious username detected: ${nameTest}`);
       break;
     }
   }
-
   if (cfg.role_checks.check_for_no_roles && roles.length === 0) {
     triggers.no_roles = "1";
     reasons.push("No roles");
     risk += cfg.risk_weights.no_roles;
-    logInfo(`Member has no roles: ${username}`);
-
     if (
       cfg.server_join_checks.auto_ban_no_roles.enabled &&
       server_age_days !== null &&
@@ -267,40 +288,31 @@ function processMember(m) {
       triggers.auto_banned_by_config = "1";
       reasons.push("Auto-ban: new user with no roles");
       risk += 35;
-      logWarn(`Auto-ban new user with no roles: ${username}`);
     }
   }
-
   if (unusualDM) {
     triggers.unusual_dm = "1";
     reasons.push("Unusual DM activity");
     risk += cfg.risk_weights.unusual_dm;
-    logWarn(`Unusual DM activity: ${username}`);
   }
-
   if (commDisabled) {
     triggers.communication_disabled = "1";
     reasons.push("Communication disabled");
     risk += cfg.risk_weights.communication_disabled;
-    logWarn(`Communication disabled: ${username}`);
   }
-
   if (risk > 100) risk = 100;
   if (risk < 0) risk = 0;
 
   let action = mapScoreToAction(risk, cfg.action_map);
   let action_reason_source = "score_map";
-
   if (triggers.unusual_dm === "1") {
     action = cfg.unusual_activity_checks.unusual_dm_action;
     action_reason_source = "unusual_dm";
   }
-
   if (triggers.communication_disabled === "1") {
     action = cfg.unusual_activity_checks.communication_disabled_action;
     action_reason_source = "communication_disabled";
   }
-
   if (triggers.auto_banned_by_config === "1") {
     action = 4;
     action_reason_source = "auto_banned_by_config";
@@ -326,10 +338,13 @@ function processMember(m) {
   };
 }
 
-const members = Array.isArray($input.members) ? $input.members : [];
+// ----------------------------
+// Run evaluation
+// ----------------------------
 logInfo(`Total members to process: ${members.length}`);
 const results = members.map(processMember);
 results.sort((a, b) => b.risk_score - a.risk_score);
 
 logInfo("Evaluation complete");
-output = { results, logs };
+// output = { results, logs };
+output = { results };
