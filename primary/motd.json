@@ -520,8 +520,8 @@
             "use": "yes",
             "timezone": 1,
             "start": "2025-11-21T07:00:00+00:00",
-            "ends": "2025-12-10T17:00:00+00:00",
-            "display": "[TF2 Secret Santa]( https://scrap.tf/santa ) confirm entry at december 10, DrMineword i beg you dont forget\n\\- - - -"
+            "ends": "2025-12-10T11:10:00+00:00",
+            "display": "[TF2 Secret Santa]( https://scrap.tf/santa ) confirm entry at december 10, DrMineword i beg you dont forget\n-# Debug:$$left$$\n\\- - - -"
         }
     ],
     "countdowns_limit": 20,
