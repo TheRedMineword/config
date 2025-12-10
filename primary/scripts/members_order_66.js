@@ -220,7 +220,7 @@ function processMember(m) {
   const banner = g(user, "banner");
   const joinedAt = g(member, "joined_at");
   const commDisabled = g(member, "communication_disabled_until");
-  const unusualDM = g(member, "unusual_dm_activity_until");
+const unusualDM = g(member, "unusual_dm_activity_until");
   const roles = Array.isArray(member.roles) ? member.roles : [];
 
   const account_created_at = cfg.account_checks.check_discord_creation_time
@@ -304,7 +304,7 @@ function processMember(m) {
  //   risk += cfg.risk_weights.unusual_dm;
  // }
 
-const unusualDM = g(member, "unusual_dm_activity_until");
+// const unusualDM = g(member, "unusual_dm_activity_until"); // Yeah it fuck up script so keep it noted out
 if (unusualDM && new Date(unusualDM) > new Date()) {
     triggers.unusual_dm = "1";
     reasons.push("Unusual DM activity");
