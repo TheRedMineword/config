@@ -1,14 +1,33 @@
-/**
- * Xano Lambda – Advanced Discord Member Risk Scorer
- *
- * INPUT:
- *   $input.members
- *   $input.members_config
- *
- * OUTPUT:
- *   output = { results: [...] }
- */
 let output = {};
+const logs = []; // store for debugging if needed
+
+// Logger helpers
+function timestamp() {
+  return new Date().toISOString();
+}
+function logInfo(msg) {
+  const line = `[${timestamp()}] [INFO] ${msg}`;
+  console.log(line);
+  logs.push(line);
+}
+function logWarn(msg) {
+  const line = `[${timestamp()}] [WARN] ${msg}`;
+  console.log(line);
+  logs.push(line);
+}
+function logDebug(msg, obj) {
+  const line = obj ? `[${timestamp()}] [DEBUG] ${msg}: ${JSON.stringify(obj)}` : `[${timestamp()}] [DEBUG] ${msg}`;
+  console.log(line);
+  logs.push(line);
+}
+function logError(msg) {
+  const line = `[${timestamp()}] [ERROR] ${msg}`;
+  console.log(line);
+  logs.push(line);
+}
+
+// BEGIN MAIN SCRIPT
+logInfo("Starting Discord member evaluation");
 
 const DISCORD_EPOCH = 1420070400000n;
 
@@ -17,6 +36,7 @@ const g = (obj, path, def = null) => {
   try {
     return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : null), obj) ?? def;
   } catch (e) {
+    logError("Safe get error: " + e.message);
     return def;
   }
 };
@@ -95,7 +115,6 @@ const defaultConfig = {
   },
 };
 
-// Deep merge
 function merge(a, b) {
   for (const k of Object.keys(b)) {
     if (b[k] !== null && typeof b[k] === "object" && !Array.isArray(b[k])) {
@@ -109,8 +128,8 @@ function merge(a, b) {
 }
 
 const cfg = merge(defaultConfig, $input.members_config ?? {});
+logDebug("Merged config", cfg);
 
-// Compile spam regex
 const spamRegexes =
   cfg.username_spam_detection.enabled && Array.isArray(cfg.username_spam_detection.patterns)
     ? cfg.username_spam_detection.patterns
@@ -121,6 +140,7 @@ const spamRegexes =
               cfg.username_spam_detection.case_insensitive ? "i" : ""
             );
           } catch {
+            logWarn(`Invalid regex pattern skipped: ${p}`);
             return null;
           }
         })
@@ -149,6 +169,7 @@ function mapScoreToAction(score, map) {
 function processMember(m) {
   const member = m.member ?? m;
   const user = member.user ?? {};
+  logDebug("Processing member", user);
 
   const userId = String(g(user, "id") ?? "");
   const username = g(user, "username") ?? "";
@@ -182,11 +203,11 @@ function processMember(m) {
   const reasons = [];
   let risk = 0;
 
-  // Account age
   if (account_age_days !== null && account_age_days < cfg.account_checks.min_account_age_days) {
     triggers.account_new = "1";
     reasons.push("Account is new");
     risk += cfg.risk_weights.account_new;
+    logWarn(`Account new: ${username}`);
   }
 
   if (
@@ -197,44 +218,46 @@ function processMember(m) {
     triggers.auto_banned_by_config = "1";
     reasons.push("Auto-ban young account");
     risk += 40;
+    logWarn(`Auto-ban young account: ${username}`);
   }
 
-  // Server join age
   if (server_age_days !== null && server_age_days < cfg.server_join_checks.min_server_age_days) {
     triggers.server_new = "1";
     reasons.push("Recently joined server");
     risk += cfg.risk_weights.server_join_new;
+    logInfo(`New server join: ${username}`);
   }
 
-  // Avatar/banner
   if (cfg.profile_checks.require_avatar && !avatar) {
     triggers.missing_avatar = "1";
     reasons.push("Missing avatar");
     risk += cfg.risk_weights.missing_avatar;
+    logInfo(`Missing avatar: ${username}`);
   }
 
   if (cfg.profile_checks.require_banner && !banner) {
     triggers.missing_banner = "1";
     reasons.push("Missing banner");
     risk += cfg.risk_weights.missing_banner;
+    logInfo(`Missing banner: ${username}`);
   }
 
-  // Username spam
   const nameTest = globalName || username;
   for (const rx of spamRegexes) {
     if (rx.test(nameTest)) {
       triggers.suspicious_name = "1";
       reasons.push("Suspicious username");
       risk += cfg.risk_weights.suspicious_name;
+      logWarn(`Suspicious username detected: ${nameTest}`);
       break;
     }
   }
 
-  // No roles
   if (cfg.role_checks.check_for_no_roles && roles.length === 0) {
     triggers.no_roles = "1";
     reasons.push("No roles");
     risk += cfg.risk_weights.no_roles;
+    logInfo(`Member has no roles: ${username}`);
 
     if (
       cfg.server_join_checks.auto_ban_no_roles.enabled &&
@@ -244,27 +267,27 @@ function processMember(m) {
       triggers.auto_banned_by_config = "1";
       reasons.push("Auto-ban: new user with no roles");
       risk += 35;
+      logWarn(`Auto-ban new user with no roles: ${username}`);
     }
   }
 
-  // DM suspension
   if (unusualDM) {
     triggers.unusual_dm = "1";
     reasons.push("Unusual DM activity");
     risk += cfg.risk_weights.unusual_dm;
+    logWarn(`Unusual DM activity: ${username}`);
   }
 
   if (commDisabled) {
     triggers.communication_disabled = "1";
     reasons.push("Communication disabled");
     risk += cfg.risk_weights.communication_disabled;
+    logWarn(`Communication disabled: ${username}`);
   }
 
-  // Clamp
-  if (risk < 0) risk = 0;
   if (risk > 100) risk = 100;
+  if (risk < 0) risk = 0;
 
-  // Map to final action
   let action = mapScoreToAction(risk, cfg.action_map);
   let action_reason_source = "score_map";
 
@@ -282,6 +305,8 @@ function processMember(m) {
     action = 4;
     action_reason_source = "auto_banned_by_config";
   }
+
+  logDebug(`Member evaluation result for ${username}`, { risk, action, triggers, reasons });
 
   return {
     user_id: userId,
@@ -301,12 +326,10 @@ function processMember(m) {
   };
 }
 
-// MAIN EXECUTION
 const members = Array.isArray($input.members) ? $input.members : [];
+logInfo(`Total members to process: ${members.length}`);
 const results = members.map(processMember);
-
-// Sort high → low risk
 results.sort((a, b) => b.risk_score - a.risk_score);
 
-// FINAL OUTPUT (IMPORTANT: NOT return)
-output = { results };
+logInfo("Evaluation complete");
+output = { results, logs };
