@@ -27,6 +27,13 @@ function logError(msg) {
 
 logInfo("Starting Discord member evaluation");
 
+
+
+const base64Members = "$$$base64Members$$$";
+const base64Config = "$$$base64Config$$$";
+
+
+
 // ----------------------------
 // Decode Base64 JSON inputs
 // ----------------------------
@@ -34,28 +41,29 @@ let members = [];
 let membersConfig = {};
 
 try {
-  if ($input.members) {
-    const decodedMembers = atob($input.members); // decode base64
+  if (base64Members && base64Members.trim() !== "") {
+    const decodedMembers = atob(base64Members); // decode base64
     members = JSON.parse(decodedMembers);
     logDebug("Decoded members", members);
   } else {
-    logInfo("No members input provided");
+    logInfo("No base64Members provided");
   }
 } catch (e) {
   logError("Failed to decode members input: " + e.message);
 }
 
 try {
-  if ($input.members_config) {
-    const decodedConfig = atob($input.members_config);
+  if (base64Config && base64Config.trim() !== "") {
+    const decodedConfig = atob(base64Config);
     membersConfig = JSON.parse(decodedConfig);
     logDebug("Decoded members_config", membersConfig);
   } else {
-    logInfo("No members_config input provided, using defaults");
+    logInfo("No base64Config provided, using defaults");
   }
 } catch (e) {
   logError("Failed to decode members_config input: " + e.message);
 }
+
 
 // ----------------------------
 // Your default config & helpers
