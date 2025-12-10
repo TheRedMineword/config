@@ -298,11 +298,20 @@ function processMember(m) {
       risk += 35;
     }
   }
-  if (unusualDM) {
+//  if (unusualDM) {
+//    triggers.unusual_dm = "1";
+ //   reasons.push("Unusual DM activity");
+ //   risk += cfg.risk_weights.unusual_dm;
+ // }
+
+const unusualDM = g(member, "unusual_dm_activity_until");
+if (unusualDM && new Date(unusualDM) > new Date()) {
     triggers.unusual_dm = "1";
     reasons.push("Unusual DM activity");
     risk += cfg.risk_weights.unusual_dm;
-  }
+}
+
+  
 //  if (commDisabled) {
 //    triggers.communication_disabled = "1";
  //   reasons.push("Communication disabled");
