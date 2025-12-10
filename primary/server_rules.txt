@@ -57,4 +57,4 @@ Use channels for their intended purpose!
 
 **== Translations of the Rules==**
 -# Translations powered by Google
-[_LINK_]( <https://theredmineword-github-io.translate.goog/config/primary/server_rules.txt?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp> )
+[_LINK_]( <https://theredmineword-github-io.translate.goog/config/primary/server_rules.txt?_x_tr_sl=en&_x_tr_tl=pl&_x_tr_hl=en&_x_tr_pto=wapp> )
