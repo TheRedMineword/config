@@ -303,11 +303,23 @@ function processMember(m) {
     reasons.push("Unusual DM activity");
     risk += cfg.risk_weights.unusual_dm;
   }
-  if (commDisabled) {
-    triggers.communication_disabled = "1";
-    reasons.push("Communication disabled");
-    risk += cfg.risk_weights.communication_disabled;
-  }
+//  if (commDisabled) {
+//    triggers.communication_disabled = "1";
+ //   reasons.push("Communication disabled");
+ //   risk += cfg.risk_weights.communication_disabled;
+//  }
+
+  const isCommunicationDisabled =
+    member.communication_disabled_until &&
+    new Date(member.communication_disabled_until) > new Date();
+
+if (isCommunicationDisabled) {
+    triggers.communication_disabled = 1;
+    risk += weights.communication_disabled;
+    action = config.unusual_activity_checks.communication_disabled_action;
+}
+
+  
   if (risk > 100) risk = 100;
   if (risk < 0) risk = 0;
 
