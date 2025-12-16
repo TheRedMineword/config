@@ -276,14 +276,37 @@ const unusualDM = g(member, "unusual_dm_activity_until");
     risk += cfg.risk_weights.missing_banner;
   }
   const nameTest = globalName || username;
+
+const susNameGraceDays = cfg.server_join_checks.sus_names_warn_gone_days;
+const susNameStillApplies =
+  susNameGraceDays == null ||
+  server_age_days == null ||
+  server_age_days < susNameGraceDays;
+
+if (susNameStillApplies) {
   for (const rx of spamRegexes) {
     if (rx.test(nameTest)) {
       triggers.suspicious_name = "1";
-      reasons.push("Suspicious username");
+
+      if (susNameGraceDays != null && server_age_days != null) {
+        const remainingDays = Math.max(
+          0,
+          susNameGraceDays - server_age_days
+        ).toFixed(2);
+
+        reasons.push(
+          `Suspicious username (expires in ${remainingDays} days)`
+        );
+      } else {
+        reasons.push("Suspicious username");
+      }
+
       risk += cfg.risk_weights.suspicious_name;
       break;
     }
   }
+}
+
   if (cfg.role_checks.check_for_no_roles && roles.length === 0) {
     triggers.no_roles = "1";
     reasons.push("No roles");
