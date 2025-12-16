@@ -30,8 +30,8 @@
         "enabled": true,
         "patterns": [
             "^[a-z]{8,12}\\d{3,5}$",
-            "^(?:discord|nitro|boost|cp|mega|links|free|gift|steam|roblox|airdrop|giveaway|crypto|wallet|click|here|invite|invite\\.gg|server|join|earn|money|paypal|doge|btc|bitcoin|token|hack|mod|cheat|bio)[^a-z]*$",
-            "^[\\w]{18,}$"
+            "^(?:discord|nitro|boost|CP|MEGA|links|LINKS|free|gift|steam|roblox|airdrop|giveaway|crypto|wallet|click|here|invite|invite\\.gg|server|join|earn|money|paypal|doge|btc|bitcoins|crypto|wallets|discordapp|discord\\.gg|token|hack|mod|cheat|bio)[^a-z]*$",
+            "^[\\w]{16,}$"
         ],
         "case_insensitive": true
     },
