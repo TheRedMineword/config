@@ -376,10 +376,10 @@ results.sort((a, b) => b.risk_score - a.risk_score);
 
 logInfo("Evaluation complete");
 // output = { results, logs };
-output = { results };
+// output = { results };
 
 
 // Remove members with risk=0 and action=0
-//const filteredResults = results.filter(r => r.action_label !== "ignore");
-//output = { results: filteredResults };
+const filteredResults = results.filter(r => r.action_label !== "ignore");
+output = { results: filteredResults };
 // Un note two above pls
