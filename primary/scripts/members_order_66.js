@@ -44,7 +44,7 @@ try {
   if (base64Members && base64Members.trim() !== "") {
     const decodedMembers = atob(base64Members); // decode base64
     members = JSON.parse(decodedMembers);
-    logDebug("Decoded members", members);
+    logDebug("Decoded members");
   } else {
     logInfo("No base64Members provided");
   }
@@ -56,7 +56,7 @@ try {
   if (base64Config && base64Config.trim() !== "") {
     const decodedConfig = atob(base64Config);
     membersConfig = JSON.parse(decodedConfig);
-    logDebug("Decoded members_config", membersConfig);
+    logDebug("Decoded members_config");
   } else {
     logInfo("No base64Config provided, using defaults");
   }
