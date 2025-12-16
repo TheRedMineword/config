@@ -389,7 +389,7 @@
         "timezone": 13,
         "start": "2025-12-28T11:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in New Zealand will happen in $$x$$"
+        "display": "New Year in New Zealand will happen in $$left$$"
     },
     {
         "country": "Australia (Sydney)",
@@ -397,7 +397,7 @@
         "timezone": 11,
         "start": "2025-12-28T13:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Australia will happen in $$x$$"
+        "display": "New Year in Australia will happen in $$left$$"
     },
     {
         "country": "Japan",
@@ -405,7 +405,7 @@
         "timezone": 9,
         "start": "2025-12-28T15:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Japan will happen in $$x$$"
+        "display": "New Year in Japan will happen in $$left$$"
     },
     {
         "country": "China (Beijing)",
@@ -413,7 +413,7 @@
         "timezone": 8,
         "start": "2025-12-28T16:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in China will happen in $$x$$"
+        "display": "New Year in China will happen in $$left$$"
     },
     {
         "country": "India",
@@ -421,7 +421,7 @@
         "timezone": 5.5,
         "start": "2025-12-28T18:30:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in India will happen in $$x$$"
+        "display": "New Year in India will happen in $$left$$"
     },
     {
         "country": "Germany",
@@ -429,7 +429,7 @@
         "timezone": 1,
         "start": "2025-12-28T23:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Germany will happen in $$x$$"
+        "display": "New Year in Germany will happen in $$left$$"
     },
     {
         "country": "Poland",
@@ -437,7 +437,7 @@
         "timezone": 1,
         "start": "2025-12-28T23:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Poland will happen in $$x$$"
+        "display": "New Year in Poland will happen in $$left$$"
     },
     {
         "country": "France",
@@ -445,7 +445,7 @@
         "timezone": 1,
         "start": "2025-12-28T23:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in France will happen in $$x$$"
+        "display": "New Year in France will happen in $$left$$"
     },
     {
         "country": "United Kingdom",
@@ -453,7 +453,7 @@
         "timezone": 0,
         "start": "2025-12-29T00:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in United Kingdom will happen in $$x$$"
+        "display": "New Year in United Kingdom will happen in $$left$$"
     },
     {
         "country": "Canada (Toronto)",
@@ -461,7 +461,7 @@
         "timezone": -5,
         "start": "2025-12-29T05:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Canada will happen in $$x$$"
+        "display": "New Year in Canada will happen in $$left$$"
     },
     {
         "country": "United States (New York)",
@@ -469,7 +469,7 @@
         "timezone": -5,
         "start": "2025-12-29T05:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in United States will happen in $$x$$"
+        "display": "New Year in United States will happen in $$left$$"
     },
     {
         "country": "Brazil (São Paulo)",
@@ -477,7 +477,7 @@
         "timezone": -3,
         "start": "2025-12-29T03:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Brazil will happen in $$x$$"
+        "display": "New Year in Brazil will happen in $$left$$"
     },
     {
         "country": "Argentina",
@@ -485,7 +485,7 @@
         "timezone": -3,
         "start": "2025-12-29T03:00:00+00:00",
         "ends": "2026-01-01T00:00:00+00:00",
-        "display": "New Year in Argentina will happen in $$x$$"
+        "display": "New Year in Argentina will happen in $$left$$"
     },
         {
             "use": "yes",
