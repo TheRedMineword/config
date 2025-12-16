@@ -9,10 +9,10 @@
         "min_server_age_days": 2,
         "auto_ban_no_roles": {
             "enabled": true,
-            "min_server_days": 7
+            "min_server_days": 10
         },
         "kick_if_no_roles_after_days": 7,
-        "sus_names_warn_gone_days": 14
+        "sus_names_warn_gone_days": 14999
     },
     "profile_checks": {
         "require_avatar": true,
@@ -30,8 +30,8 @@
         "enabled": true,
         "patterns": [
             "^[a-z]{8,12}\\d{3,5}$",
-            "^(?:discord|nitro|boost|CP|MEGA|links|LINKS|free|gift|steam|roblox|airdrop|giveaway|crypto|wallet|click|here|invite|invite\\.gg|server|join|earn|money|paypal|doge|btc|bitcoins|crypto|wallets|discordapp|discord\\.gg|token|hack|mod|cheat|bio)[^a-z]*$",
-            "^[\\w]{16,}$"
+            "^(?:discord|nitro|boost|cp|mega|links|free|gift|steam|roblox|airdrop|giveaway|crypto|wallet|click|here|invite|invite\\.gg|server|join|earn|money|paypal|doge|btc|bitcoin|token|hack|mod|cheat|bio)[^a-z]*$",
+            "^[\\w]{18,}$"
         ],
         "case_insensitive": true
     },
@@ -40,20 +40,20 @@
         "treat_no_roles_as_suspicious": true
     },
     "risk_weights": {
-        "account_new": 25,
-        "server_join_new": 20,
-        "missing_avatar": 10,
-        "missing_banner": 5,
-        "suspicious_name": 30,
-        "no_roles": 15,
-        "unusual_dm": 50,
-        "communication_disabled": 40
+        "account_new": 15,
+        "server_join_new": 15,
+        "missing_avatar": 8,
+        "missing_banner": 3,
+        "suspicious_name": 15,
+        "no_roles": 20,
+        "unusual_dm": 70,
+        "communication_disabled": 60
     },
     "action_map": {
-        "0_20": 0,
-        "21_40": 1,
-        "41_60": 2,
-        "61_80": 3,
-        "81_999": 4
+        "0_30": 0,
+        "31_55": 1,
+        "56_75": 2,
+        "76_90": 3,
+        "91_999": 4
     }
 }
