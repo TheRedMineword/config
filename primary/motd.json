@@ -380,21 +380,125 @@
             "use": "yes",
             "timezone": 0,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2026-01-01T00:00:01+00:00",
-            "display": "`$$left$$` until the new year..."
+            "ends": "2025-12-29T00:00:00+00:00",
+            "display": "The extended countdown to the new year will be available in `$$left$$`"
         },
+    {
+        "country": "New Zealand (Auckland)",
+        "use": "yes",
+        "timezone": 13,
+        "start": "2025-12-28T11:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in New Zealand will happen in $$x$$"
+    },
+    {
+        "country": "Australia (Sydney)",
+        "use": "yes",
+        "timezone": 11,
+        "start": "2025-12-28T13:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Australia will happen in $$x$$"
+    },
+    {
+        "country": "Japan",
+        "use": "yes",
+        "timezone": 9,
+        "start": "2025-12-28T15:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Japan will happen in $$x$$"
+    },
+    {
+        "country": "China (Beijing)",
+        "use": "yes",
+        "timezone": 8,
+        "start": "2025-12-28T16:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in China will happen in $$x$$"
+    },
+    {
+        "country": "India",
+        "use": "yes",
+        "timezone": 5.5,
+        "start": "2025-12-28T18:30:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in India will happen in $$x$$"
+    },
+    {
+        "country": "Germany",
+        "use": "yes",
+        "timezone": 1,
+        "start": "2025-12-28T23:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Germany will happen in $$x$$"
+    },
+    {
+        "country": "Poland",
+        "use": "yes",
+        "timezone": 1,
+        "start": "2025-12-28T23:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Poland will happen in $$x$$"
+    },
+    {
+        "country": "France",
+        "use": "yes",
+        "timezone": 1,
+        "start": "2025-12-28T23:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in France will happen in $$x$$"
+    },
+    {
+        "country": "United Kingdom",
+        "use": "yes",
+        "timezone": 0,
+        "start": "2025-12-29T00:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in United Kingdom will happen in $$x$$"
+    },
+    {
+        "country": "Canada (Toronto)",
+        "use": "yes",
+        "timezone": -5,
+        "start": "2025-12-29T05:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Canada will happen in $$x$$"
+    },
+    {
+        "country": "United States (New York)",
+        "use": "yes",
+        "timezone": -5,
+        "start": "2025-12-29T05:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in United States will happen in $$x$$"
+    },
+    {
+        "country": "Brazil (São Paulo)",
+        "use": "yes",
+        "timezone": -3,
+        "start": "2025-12-29T03:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Brazil will happen in $$x$$"
+    },
+    {
+        "country": "Argentina",
+        "use": "yes",
+        "timezone": -3,
+        "start": "2025-12-29T03:00:00+00:00",
+        "ends": "2026-01-01T00:00:00+00:00",
+        "display": "New Year in Argentina will happen in $$x$$"
+    },
         {
             "use": "yes",
             "timezone": 0,
-            "start": "2026-01-00T00:00:00+00:00",
-            "ends": "2027-01-01T00:00:01+00:00",
+            "start": "2026-01-01T05:00+00:00",
+            "ends": "2027-01-01T00:00:00+00:00",
             "display": "`$$left$$` until the new year..."
         },
         {
             "use": "yes",
             "timezone": 0,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2027-01-01T00:00:01+00:00",
+            "ends": "2027-01-01T00:00:00+00:00",
             "display": "- - -"
         },
         {
@@ -412,7 +516,7 @@
             "display": "[TF2 Secret Santa]( https://scrap.tf/santa ) confirm entry at december 10, DrMineword i beg you dont forget\n-# Debug:$$left$$\n\\- - - -"
         }
     ],
-    "countdowns_limit": 20,
+    "countdowns_limit": 30,
     "random": {
         "days": {
             "val_pool": {
