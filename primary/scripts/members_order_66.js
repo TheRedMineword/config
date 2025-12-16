@@ -94,60 +94,7 @@ function daysSince(iso) {
 }
 
 // Default config
-const defaultConfig = {
-  account_checks: {
-    min_account_age_days: 7,
-    max_account_age_days_for_auto_ban: 3,
-    auto_ban_young_account: true,
-    check_discord_creation_time: true,
-  },
-  server_join_checks: {
-    min_server_age_days: 2,
-    auto_ban_no_roles: { enabled: true, min_server_days: 1 },
-  },
-  profile_checks: {
-    require_avatar: true,
-    require_banner: false,
-    require_global_name: true,
-    empty_name_is_suspicious: true,
-  },
-  unusual_activity_checks: {
-    auto_action_on_unusual_dm: true,
-    auto_action_on_communication_disabled: true,
-    unusual_dm_action: 4,
-    communication_disabled_action: 3,
-  },
-  username_spam_detection: {
-    enabled: true,
-    patterns: [
-      "^[a-z]{8,12}\\d{3,5}$",
-      "^(?:discord|nitro|boost)[^a-z]*$",
-      "^[\\w]{16,}$",
-    ],
-    case_insensitive: true,
-  },
-  role_checks: {
-    check_for_no_roles: true,
-    treat_no_roles_as_suspicious: true,
-  },
-  risk_weights: {
-    account_new: 25,
-    server_join_new: 20,
-    missing_avatar: 10,
-    missing_banner: 5,
-    suspicious_name: 30,
-    no_roles: 15,
-    unusual_dm: 50,
-    communication_disabled: 40,
-  },
-  action_map: {
-    "0_20": 0,
-    "21_40": 1,
-    "41_60": 2,
-    "61_80": 3,
-    "81_999": 4,
-  },
-};
+const defaultConfig = {};
 
 function merge(a, b) {
   for (const k of Object.keys(b)) {
@@ -245,6 +192,20 @@ const unusualDM = g(member, "unusual_dm_activity_until");
   const reasons = [];
   let risk = 0;
 
+
+if (user.bot) {
+  logDebug(`Skipping bot user ${user.username}`);
+  return {
+    user_id: String(user.id),
+    username: user.username,
+    action: 0,
+    action_label: "ignore",
+    reasons: ["Bot account"],
+    triggers: {}
+  };
+}
+
+  
   // --- Checks ---
   if (account_age_days !== null && account_age_days < cfg.account_checks.min_account_age_days) {
     triggers.account_new = "1";
