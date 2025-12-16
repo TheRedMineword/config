@@ -192,8 +192,8 @@ const unusualDM = g(member, "unusual_dm_activity_until");
   const reasons = [];
   let risk = 0;
 
-
-if (user.bot) {
+logDebug(`Check bot user ${user.username}`);
+if (user?.bot === true) {
   logDebug(`Skipping bot user ${user.username}`);
   return {
     user_id: String(user.id),
@@ -204,7 +204,7 @@ if (user.bot) {
     triggers: {}
   };
 }
-
+logDebug(`Unpossible for a bot user ${user.username}`);
   
   // --- Checks ---
   if (account_age_days !== null && account_age_days < cfg.account_checks.min_account_age_days) {
