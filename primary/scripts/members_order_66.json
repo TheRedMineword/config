@@ -11,7 +11,8 @@
             "enabled": true,
             "min_server_days": 7
         },
-        "kick_if_no_roles_after_days": 7
+        "kick_if_no_roles_after_days": 7,
+        "sus_names_warn_gone_days": 14
     },
     "profile_checks": {
         "require_avatar": true,
