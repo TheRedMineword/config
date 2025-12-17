@@ -42,6 +42,13 @@
         },
         {
             "use": "yes",
+            "timezone": 1,
+            "start": "2024-01-00T00:00:00+00:00",
+            "ends": "2025-12-18T09:00:00+00:00",
+            "display": "Traveling spirit: **Crab Whisper** will return to home in `$$left$$`\n\\- - - -"
+        },
+        {
+            "use": "yes",
             "timezone": 0,
             "start": "2025-12-07T00:00:00+00:00",
             "ends": "2025-12-20T00:00:00+00:00",
