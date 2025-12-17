@@ -713,7 +713,8 @@
 
         },
         "specialoverwrite": {
-            "year9999_month99_day99": "Breaking news"
+            "year9999_month99_day99": "Breaking news",
+            "year2025_month12_day19": "> _\"The light shines in the darkness, and the darkness has not overcome it.\"_\n> **— John 1:5**\n\nSometimes Advent is just about noticing the light that’s already around you — in people, in small wins, in quiet moments."
         },
         "quote_format": "## Quote of the day:\n-# <x> - **<y>**"
     },
