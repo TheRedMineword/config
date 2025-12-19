@@ -456,7 +456,7 @@ function buildDiscordTextReport(filteredResults = []) {
 const results = buildDiscordTextReport(filteredResults);
 
 // 2️⃣ Extract returned values
-const { charCount, base64, issueCount, txt } = results;
+const { charCount, base64, issueCount, txt } = results2;
 
 // 3️⃣ Build final output object
 const output = {
