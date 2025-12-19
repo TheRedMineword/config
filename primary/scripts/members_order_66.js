@@ -381,5 +381,71 @@ logInfo("Evaluation complete");
 
 // Remove members with risk=0 and action=0
 const filteredResults = results.filter(r => r.action_label !== "ignore");
-output = { results: filteredResults, resultsall: results };
+
+function buildDiscordTextReport(filteredResults = []) {
+  // Empty case
+  if (!Array.isArray(filteredResults) || filteredResults.length === 0) {
+    const txt = "✅ **All clear and safe**";
+    return {
+      issueCount: 0,
+      txt,
+      base64: Buffer.from(txt, "utf8").toString("base64"),
+      charCount: txt.length
+    };
+  }
+
+  const SEPARATOR = "**- - - -**";
+
+  const blocks = filteredResults.map(user => {
+    const id = user.user_id;
+    const username = user.username ?? "unknown";
+    const reasons = Array.isArray(user.reasons) ? user.reasons : [];
+
+    // Timeout status
+    const timeoutActive = user.triggers?.communication_disabled === "1";
+    const timeoutUntil = user.timeout_until
+      ? `<t:${Math.floor(new Date(user.timeout_until).getTime() / 1000)}:F>`
+      : "N/A";
+
+    // Suspicious DM status
+    const suspiciousDm = user.triggers?.unusual_dm === "1";
+    const suspiciousDmUntil = user.unusual_dm_until
+      ? `<t:${Math.floor(new Date(user.unusual_dm_until).getTime() / 1000)}:F>`
+      : "N/A";
+
+    return [
+      SEPARATOR,
+      `-# \`${username}\` (\`${id}\`)`,
+      `-# <@${id}>`,
+      ``,
+      `**Timeout active:** ${timeoutActive ? `Yes (till ${timeoutUntil})` : "No"}`,
+      `**Suspicious DM:** ${suspiciousDm ? `Yes (till ${suspiciousDmUntil})` : "No"}`,
+      ``,
+      `**Flag reasons:**`,
+      reasons.length
+        ? reasons.map(r => `💠 ${r}`).join("\n")
+        : "_None_",
+      ``,
+      `**Triggers debug**`,
+      "```json",
+      JSON.stringify(user.triggers ?? {}, null, 2),
+      "```",
+      SEPARATOR
+    ].join("\n");
+  });
+
+  const txt = blocks.join("\n");
+  const base64 = Buffer.from(txt, "utf8").toString("base64");
+
+  return {
+    issueCount: filteredResults.length,
+    txt,
+    base64,
+    charCount: txt.length
+  };
+}
+
+
+
+output = { results: filteredResults, resultsall: results, txt: { lng: charCount, b64: base64, issuec:  issueCount } };
 // Un note two above pls
