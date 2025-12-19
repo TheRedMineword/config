@@ -382,6 +382,9 @@ logInfo("Evaluation complete");
 // Remove members with risk=0 and action=0
 const filteredResults = results.filter(r => r.action_label !== "ignore");
 
+// ===============================
+// Build Discord text report
+// ===============================
 function buildDiscordTextReport(filteredResults = []) {
   // Empty case
   if (!Array.isArray(filteredResults) || filteredResults.length === 0) {
@@ -445,7 +448,27 @@ function buildDiscordTextReport(filteredResults = []) {
   };
 }
 
+// ===============================
+// USAGE (THIS PART WAS MISSING)
+// ===============================
 
+// 1️⃣ Call the function
+const results = buildDiscordTextReport(filteredResults);
 
-output = { results: filteredResults, resultsall: results, txt: { lng: charCount, b64: base64, issuec:  issueCount } };
-// Un note two above pls
+// 2️⃣ Extract returned values
+const { charCount, base64, issueCount, txt } = results;
+
+// 3️⃣ Build final output object
+const output = {
+  results: filteredResults,
+  resultsall: results,
+  txt: {
+    lng: charCount,
+    b64: base64,
+    issuec: issueCount
+  }
+};
+
+// (Optional) return or console.log output
+// return output;
+
