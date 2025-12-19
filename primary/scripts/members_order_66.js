@@ -375,7 +375,7 @@ const results = members.map(processMember);
 results.sort((a, b) => b.risk_score - a.risk_score);
 
 logInfo("Evaluation complete");
-// output = { results, logs };
+//  = { results, logs };
 // output = { results };
 
 
@@ -459,7 +459,7 @@ const results2 = buildDiscordTextReport(filteredResults);
 const { charCount, base64, issueCount, txt } = results2;
 
 // 3️⃣ Build final output object
-const output = {
+const output2 = {
   results: filteredResults,
   resultsall: results,
   txt: {
@@ -470,5 +470,5 @@ const output = {
 };
 
 // (Optional) return or console.log output
-// return output;
+return output;
 
