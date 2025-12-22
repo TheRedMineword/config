@@ -52,7 +52,7 @@ Use channels for their intended purpose!
 -# We reserve the right to take disciplinary action against any user at our discretion, within the bounds of fairness and morality
 -# Doing things that break what are generally unspoken rules will not be tolerated, and "it wasn't in the rules channel" won't be taken as an excuse
 -# We reserve the right to change/add/remove these Rules and Guidelines as we see fit, however you will be notified that the rules have changed. By that point, the rules are considered in effect unless otherwise stated.
--# While on the server, your activity data will be collected and forwarded to officers for the purpose of researching corporate activity! Any information we hold about you obtained through <@1330979209342091479> is available for review by you upon request
+-# While on the server, your activity data will be collected and forwarded to officers for the purpose of researching corporate activity! Any information we hold about you obtained through `@Social Drone` is available for review by you upon request
 -# We will inform you once the final rules and guidelines have been published
 ***Please report any violations to officers!!***
 
