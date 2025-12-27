@@ -1,7 +1,7 @@
 {
     "ws_webhook": {
-        "name": "Mariah Carey",
-        "pfp": "https://theredmineword.github.io/config/primary/src/icon/ItsTime.png"
+        "name": "Bob: The White Star Scanner",
+        "pfp": "https://theredmineword.github.io/config/primary/src/icon/bob_the_ws_scanner.png"
     },
     "normal_ws_webhook_is": {
         "name": "Bob: The White Star Scanner",
@@ -72,5 +72,6 @@
         }
     }
 }
+
 
 
