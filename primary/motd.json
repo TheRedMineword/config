@@ -44,15 +44,15 @@
             "use": "yes",
             "timezone": 1,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-18T09:00:00+00:00",
-            "display": "Traveling spirit: **Crab Whisper** will return to home in `$$left$$`\n\\- - - -"
+            "ends": "2026-01-01T09:00:00+00:00",
+            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) will return to **Kindom Of Sky** in `$$left$$`\n\\- - - -"
         },
         {
             "use": "yes",
             "timezone": 1,
-            "start": "2025-12-18T09:00:00+00:00",
-            "ends": "2025-12-22T09:00:00+00:00",
-            "display": "Traveling spirit: **Crab Whisper** has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -"
+            "start": "2026-01-01T09:00:00+00:00",
+            "ends": "2026-01-05T09:00:00+00:00",
+            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -"
         },
         {
             "use": "yes",
