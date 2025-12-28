@@ -6,8 +6,9 @@ const DAY = 86400;
 const COUNTDOWN_DAYS = 13;
 const DISPLAY_BEFORE_DAYS = 14;
 const REMOVE_AFTER_HOURS = 24;
+const FUTURE_DAYS = 30; // <-- generate events for next 30 days
 
-// ================= DURATIONS (AUTHORITATIVE) =================
+// ================= DURATIONS =================
 const DUR = {
   "White Star": 4 * DAY,
   "Blue Star": 3 * DAY,
@@ -16,7 +17,6 @@ const DUR = {
 };
 
 // ================= REFERENCE SCHEDULE =================
-// START times only
 const schedule = [
   { name: "Credit Asteroid", start: 1747440000 },
   { name: "Red Star", start: 1748044800 },
@@ -73,6 +73,7 @@ function iso(sec) {
 
 // ================= BUILD OUTPUT =================
 const output = [];
+const futureLimit = nowUnix + FUTURE_DAYS * DAY;
 
 for (const ev of schedule) {
   const dur = DUR[ev.name];
@@ -85,8 +86,9 @@ for (const ev of schedule) {
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
   const displayStart = start - DISPLAY_BEFORE_DAYS * DAY;
 
-  // Countdown window
-  if (nowUnix >= displayStart && nowUnix < start) {
+  // Only consider events whose countdown or active windows fall within next FUTURE_DAYS
+  if (countdownStart <= futureLimit) {
+    // Countdown window
     output.push({
       use: "yes",
       timezone: 0,
@@ -95,10 +97,8 @@ for (const ev of schedule) {
       display: `Special Event: **${ev.name}** starts in $$left$$`,
       advenced: "{\"use_timestampt\": \"value_will_be_later_edited\"}"
     });
-  }
 
-  // Active window
-  if (nowUnix >= start && nowUnix <= removeAfter) {
+    // Active window
     output.push({
       use: "yes",
       timezone: 0,
@@ -109,6 +109,5 @@ for (const ev of schedule) {
     });
   }
 }
-
 
 output;
