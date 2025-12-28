@@ -1,15 +1,12 @@
 // ================= CONFIG =================
-const FUTURE_DAYS_RANGE = 60; // how far ahead to generate
+const FUTURE_DAYS_RANGE = 60;
 const EVENT_DURATION_DAYS = 3;
 const COUNTDOWN_DAYS = 13;
 const DISPLAY_BEFORE_DAYS = 14;
 const REMOVE_AFTER_HOURS = 24;
 const EVENT_INTERVAL_DAYS = 7;
 
-// Base64-encoded unix timestamp (seconds)
-const NOW_UNIX_BASE64 = "$$NOWUNIXHERE$$";
-
-// Rotation order
+// Event rotation order
 const EVENT_ROTATION = [
   "Blue Star",
   "White Star",
@@ -17,35 +14,31 @@ const EVENT_ROTATION = [
   "Red Star"
 ];
 
-// Known reference event start (must be correct)
-const REFERENCE_EVENT_START = 1769212800; // Blue Star start (UTC)
+// Known reference event start (UTC, seconds)
+// Blue Star
+const REFERENCE_EVENT_START = 1769212800;
 
 // =========================================
 
-// Decode base64 unix time
-const nowUnix = parseInt(
-  Buffer.from(NOW_UNIX_BASE64, "base64").toString("utf8"),
-  10
-);
-
+// Decode base64 unix timestamp (seconds)
+const nowUnix = parseInt(atob($input.now_base64), 10);
 const nowMs = nowUnix * 1000;
-const dayMs = 86400000;
 
-// Helper: format ISO UTC
+const DAY_MS = 86400000;
+
+// Format ISO UTC without milliseconds
 function isoUTC(ms) {
   return new Date(ms).toISOString().replace(".000", "");
 }
 
-// Determine how many intervals since reference
+// Calculate where we are in the rotation
 const intervalsSinceRef = Math.floor(
   (nowUnix - REFERENCE_EVENT_START) / (EVENT_INTERVAL_DAYS * 86400)
 );
 
-// Start generation slightly in the past to catch countdowns
+// Start a little earlier to catch countdown windows
 let cursorIndex = intervalsSinceRef - 2;
-
-// End time
-const futureLimitMs = nowMs + FUTURE_DAYS_RANGE * dayMs;
+const futureLimitMs = nowMs + FUTURE_DAYS_RANGE * DAY_MS;
 
 const output = [];
 
@@ -57,13 +50,13 @@ while (true) {
   const eventStartMs = eventStartUnix * 1000;
   if (eventStartMs > futureLimitMs) break;
 
-  const eventEndMs = eventStartMs + EVENT_DURATION_DAYS * dayMs;
+  const eventEndMs = eventStartMs + EVENT_DURATION_DAYS * DAY_MS;
   const removeAfterMs = eventEndMs + REMOVE_AFTER_HOURS * 3600000;
 
   const countdownStartMs =
-    eventStartMs - COUNTDOWN_DAYS * dayMs;
+    eventStartMs - COUNTDOWN_DAYS * DAY_MS;
   const displayStartMs =
-    eventStartMs - DISPLAY_BEFORE_DAYS * dayMs;
+    eventStartMs - DISPLAY_BEFORE_DAYS * DAY_MS;
 
   const eventName =
     EVENT_ROTATION[
@@ -73,10 +66,7 @@ while (true) {
     ];
 
   // Countdown entry
-  if (
-    nowMs <= eventStartMs &&
-    nowMs >= displayStartMs
-  ) {
+  if (nowMs >= displayStartMs && nowMs < eventStartMs) {
     output.push({
       use: "yes",
       timezone: 0,
@@ -88,10 +78,7 @@ while (true) {
   }
 
   // Active entry
-  if (
-    nowMs >= eventStartMs &&
-    nowMs <= removeAfterMs
-  ) {
+  if (nowMs >= eventStartMs && nowMs <= removeAfterMs) {
     output.push({
       use: "yes",
       timezone: 0,
@@ -105,5 +92,5 @@ while (true) {
   cursorIndex++;
 }
 
-// Final result
-console.log(JSON.stringify(output, null, 2));
+// Return result to Xano
+return output;
