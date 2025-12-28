@@ -1,5 +1,5 @@
 // ================= INPUT =================
-const nowUnix = parseInt(atob($input.now_base64), 10);
+const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 
 // ================= CONSTANTS =================
 const DAY = 86400;
