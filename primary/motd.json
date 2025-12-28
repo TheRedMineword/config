@@ -45,14 +45,16 @@
             "timezone": 1,
             "start": "2024-01-00T00:00:00+00:00",
             "ends": "2026-01-01T09:00:00+00:00",
-            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) will return to **Kindom Of Sky** in `$$left$$`\n\\- - - -"
+            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) will return to **Kindom Of Sky** in `$$left$$`\n\\- - - -",
+            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
             "use": "yes",
             "timezone": 1,
             "start": "2026-01-01T09:00:00+00:00",
             "ends": "2026-01-05T09:00:00+00:00",
-            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -"
+            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -",
+            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
             "use": "yes",
