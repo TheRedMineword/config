@@ -56,7 +56,9 @@
             "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -",
             "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
-        {"script_events_here": "yes"}
+        {
+            "script_events_here": "yes"
+        },
         {
             "use": "yes",
             "timezone": 0,
