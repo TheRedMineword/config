@@ -4,9 +4,8 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 // ================= CONSTANTS =================
 const DAY = 86400;
 const COUNTDOWN_DAYS = 13;
-const DISPLAY_BEFORE_DAYS = 14;
 const REMOVE_AFTER_HOURS = 24;
-const FUTURE_DAYS = 30; // <-- generate events for next 30 days
+const FUTURE_DAYS = 30; // generate events only within next 30 days
 
 // ================= DURATIONS =================
 const DUR = {
@@ -66,6 +65,7 @@ const schedule = [
   { name: "White Star", start: 1769472000 }
 ];
 
+
 // ================= HELPERS =================
 function iso(sec) {
   return new Date(sec * 1000).toISOString().replace(".000", "");
@@ -82,13 +82,14 @@ for (const ev of schedule) {
   const start = ev.start;
   const end = start + dur;
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
-
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
-  const displayStart = start - DISPLAY_BEFORE_DAYS * DAY;
 
-  // Only consider events whose countdown or active windows fall within next FUTURE_DAYS
+  // Only include events whose countdown or active window intersects the next 30 days
+  if (removeAfter < nowUnix) continue; // skip fully past events
+  if (countdownStart > futureLimit) continue; // skip events starting too far in future
+
+  // Countdown window (starts 13 days before event)
   if (countdownStart <= futureLimit) {
-    // Countdown window
     output.push({
       use: "yes",
       timezone: 0,
@@ -97,8 +98,10 @@ for (const ev of schedule) {
       display: `Special Event: **${ev.name}** starts in $$left$$`,
       advenced: "{\"use_timestampt\": \"value_will_be_later_edited\"}"
     });
+  }
 
-    // Active window
+  // Active window
+  if (start <= futureLimit) {
     output.push({
       use: "yes",
       timezone: 0,
