@@ -108,7 +108,7 @@ for (const ev of schedule) {
       start: iso(start),
       ends: iso(end),
       display: `Special Event: **${ev.name}** is now **active**!! Ends in $$left$$`,
-      advenced: "{\"use_timestampt__noted_out\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+      advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
     });
   }
 }
