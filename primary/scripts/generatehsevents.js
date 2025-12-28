@@ -16,6 +16,7 @@ const DUR = {
 };
 
 // ================= REFERENCE SCHEDULE =================
+// Thanks Caprican
 const schedule = [
   { name: "Credit Asteroid", start: 1747440000 },
   { name: "Red Star", start: 1748044800 },
@@ -84,11 +85,10 @@ for (const ev of schedule) {
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
 
-  // Only include events whose countdown or active window intersects the next 30 days
   if (removeAfter < nowUnix) continue; // skip fully past events
   if (countdownStart > futureLimit) continue; // skip events starting too far in future
 
-  // Countdown window (starts 13 days before event)
+  // This is countdown
   if (countdownStart <= futureLimit) {
     output.push({
       use: "yes",
@@ -100,7 +100,7 @@ for (const ev of schedule) {
     });
   }
 
-  // Active window
+  // This is active
   if (start <= futureLimit) {
     output.push({
       use: "yes",
@@ -113,4 +113,6 @@ for (const ev of schedule) {
   }
 }
 
-output;
+output;  // This is output
+// Should be: [{"use":"yes","timezone":0,"start":"2025-12-14T00:00:00Z","ends":"2025-12-27T00:00:00Z","display":"Special Event: **Credit Asteroid** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-27T00:00:00Z","ends":"2025-12-30T00:00:00Z","display":"Special Event: **Credit Asteroid** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-21T00:00:00Z","ends":"2026-01-03T00:00:00Z","display":"Special Event: **Red Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-03T00:00:00Z","ends":"2026-01-06T00:00:00Z","display":"Special Event: **Red Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-28T00:00:00Z","ends":"2026-01-10T00:00:00Z","display":"Special Event: **Blue Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-10T00:00:00Z","ends":"2026-01-13T00:00:00Z","display":"Special Event: **Blue Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-04T00:00:00Z","ends":"2026-01-17T00:00:00Z","display":"Special Event: **Credit Asteroid** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-17T00:00:00Z","ends":"2026-01-20T00:00:00Z","display":"Special Event: **Credit Asteroid** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-11T00:00:00Z","ends":"2026-01-24T00:00:00Z","display":"Special Event: **Blue Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-24T00:00:00Z","ends":"2026-01-27T00:00:00Z","display":"Special Event: **Blue Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-14T00:00:00Z","ends":"2026-01-27T00:00:00Z","display":"Special Event: **White Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-27T00:00:00Z","ends":"2026-01-31T00:00:00Z","display":"Special Event: **White Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"}]
+// I hope it will work forever
