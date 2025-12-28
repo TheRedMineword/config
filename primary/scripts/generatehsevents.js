@@ -1,96 +1,114 @@
-// ================= CONFIG =================
-const FUTURE_DAYS_RANGE = 60;
-const EVENT_DURATION_DAYS = 3;
+// ================= INPUT =================
+const nowUnix = parseInt(atob($input.now_base64), 10);
+
+// ================= CONSTANTS =================
+const DAY = 86400;
 const COUNTDOWN_DAYS = 13;
 const DISPLAY_BEFORE_DAYS = 14;
 const REMOVE_AFTER_HOURS = 24;
-const EVENT_INTERVAL_DAYS = 7;
 
-// Event rotation order
-const EVENT_ROTATION = [
-  "Blue Star",
-  "White Star",
-  "Credit Asteroid",
-  "Red Star"
+// ================= DURATIONS (AUTHORITATIVE) =================
+const DUR = {
+  "White Star": 4 * DAY,
+  "Blue Star": 3 * DAY,
+  "Red Star": 3 * DAY,
+  "Credit Asteroid": 3 * DAY
+};
+
+// ================= REFERENCE SCHEDULE =================
+// START times only
+const schedule = [
+  { name: "Credit Asteroid", start: 1747440000 },
+  { name: "Red Star", start: 1748044800 },
+  { name: "Blue Star", start: 1748649600 },
+  { name: "Credit Asteroid", start: 1749254400 },
+  { name: "White Star", start: 1749513600 },
+  { name: "Blue Star", start: 1749859200 },
+  { name: "Red Star", start: 1750464000 },
+  { name: "Credit Asteroid", start: 1751068800 },
+  { name: "Blue Star", start: 1751673600 },
+  { name: "White Star", start: 1751932800 },
+  { name: "Credit Asteroid", start: 1752278400 },
+  { name: "Red Star", start: 1752883200 },
+  { name: "Blue Star", start: 1753488000 },
+  { name: "Credit Asteroid", start: 1754092800 },
+  { name: "White Star", start: 1754352000 },
+  { name: "Blue Star", start: 1754697600 },
+  { name: "Red Star", start: 1755302400 },
+  { name: "Credit Asteroid", start: 1755907200 },
+  { name: "Blue Star", start: 1756512000 },
+  { name: "White Star", start: 1756771200 },
+  { name: "Credit Asteroid", start: 1757116800 },
+  { name: "Red Star", start: 1757721600 },
+  { name: "Blue Star", start: 1758326400 },
+  { name: "Credit Asteroid", start: 1758931200 },
+  { name: "White Star", start: 1759190400 },
+  { name: "Blue Star", start: 1759536000 },
+  { name: "Red Star", start: 1760140800 },
+  { name: "Credit Asteroid", start: 1760745600 },
+  { name: "Blue Star", start: 1761350400 },
+  { name: "White Star", start: 1761609600 },
+  { name: "Credit Asteroid", start: 1761955200 },
+  { name: "Red Star", start: 1762560000 },
+  { name: "Blue Star", start: 1763164800 },
+  { name: "Credit Asteroid", start: 1763769600 },
+  { name: "White Star", start: 1764028800 },
+  { name: "Blue Star", start: 1764374400 },
+  { name: "Red Star", start: 1764979200 },
+  { name: "Credit Asteroid", start: 1765584000 },
+  { name: "Blue Star", start: 1766188800 },
+  { name: "White Star", start: 1766448000 },
+  { name: "Credit Asteroid", start: 1766793600 },
+  { name: "Red Star", start: 1767398400 },
+  { name: "Blue Star", start: 1768003200 },
+  { name: "Credit Asteroid", start: 1768608000 },
+  { name: "Blue Star", start: 1769212800 },
+  { name: "White Star", start: 1769472000 }
 ];
 
-// Known reference event start (UTC, seconds)
-// Blue Star
-const REFERENCE_EVENT_START = 1769212800;
-
-// =========================================
-
-// Decode base64 unix timestamp (seconds)
-const nowUnix = parseInt(atob($input.now_base64), 10);
-const nowMs = nowUnix * 1000;
-
-const DAY_MS = 86400000;
-
-// Format ISO UTC without milliseconds
-function isoUTC(ms) {
-  return new Date(ms).toISOString().replace(".000", "");
+// ================= HELPERS =================
+function iso(sec) {
+  return new Date(sec * 1000).toISOString().replace(".000", "");
 }
 
-// Calculate where we are in the rotation
-const intervalsSinceRef = Math.floor(
-  (nowUnix - REFERENCE_EVENT_START) / (EVENT_INTERVAL_DAYS * 86400)
-);
-
-// Start a little earlier to catch countdown windows
-let cursorIndex = intervalsSinceRef - 2;
-const futureLimitMs = nowMs + FUTURE_DAYS_RANGE * DAY_MS;
-
+// ================= BUILD OUTPUT =================
 const output = [];
 
-while (true) {
-  const eventStartUnix =
-    REFERENCE_EVENT_START +
-    cursorIndex * EVENT_INTERVAL_DAYS * 86400;
+for (const ev of schedule) {
+  const dur = DUR[ev.name];
+  if (!dur) continue;
 
-  const eventStartMs = eventStartUnix * 1000;
-  if (eventStartMs > futureLimitMs) break;
+  const start = ev.start;
+  const end = start + dur;
+  const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
 
-  const eventEndMs = eventStartMs + EVENT_DURATION_DAYS * DAY_MS;
-  const removeAfterMs = eventEndMs + REMOVE_AFTER_HOURS * 3600000;
+  const countdownStart = start - COUNTDOWN_DAYS * DAY;
+  const displayStart = start - DISPLAY_BEFORE_DAYS * DAY;
 
-  const countdownStartMs =
-    eventStartMs - COUNTDOWN_DAYS * DAY_MS;
-  const displayStartMs =
-    eventStartMs - DISPLAY_BEFORE_DAYS * DAY_MS;
-
-  const eventName =
-    EVENT_ROTATION[
-      ((cursorIndex % EVENT_ROTATION.length) +
-        EVENT_ROTATION.length) %
-        EVENT_ROTATION.length
-    ];
-
-  // Countdown entry
-  if (nowMs >= displayStartMs && nowMs < eventStartMs) {
+  // Countdown window
+  if (nowUnix >= displayStart && nowUnix < start) {
     output.push({
       use: "yes",
       timezone: 0,
-      start: isoUTC(countdownStartMs),
-      ends: isoUTC(eventStartMs),
-      display: `Special Event: **${eventName}** starts in $$left$$`,
+      start: iso(countdownStart),
+      ends: iso(start),
+      display: `Special Event: **${ev.name}** starts in $$left$$`,
       advenced: "{\"use_timestampt\": \"value_will_be_later_edited\"}"
     });
   }
 
-  // Active entry
-  if (nowMs >= eventStartMs && nowMs <= removeAfterMs) {
+  // Active window
+  if (nowUnix >= start && nowUnix <= removeAfter) {
     output.push({
       use: "yes",
       timezone: 0,
-      start: isoUTC(eventStartMs),
-      ends: isoUTC(eventEndMs),
-      display: `Special Event: **${eventName}** is now **active**!! Ends in $$left$$`,
+      start: iso(start),
+      ends: iso(end),
+      display: `Special Event: **${ev.name}** is now **active**!! Ends in $$left$$`,
       advenced: "{\"use_timestampt\": \"value_will_be_later_edited\"}"
     });
   }
-
-  cursorIndex++;
 }
 
-// Return result to Xano
-return output;
+
+output;
