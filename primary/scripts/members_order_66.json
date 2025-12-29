@@ -12,7 +12,7 @@
             "min_server_days": 2
         },
         "kick_if_no_roles_after_days": 7,
-        "sus_names_warn_gone_days": 14999
+        "sus_names_warn_gone_days": 30
     },
     "profile_checks": {
         "require_avatar": true,
