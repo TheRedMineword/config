@@ -308,7 +308,7 @@ if (unusualDM && new Date(unusualDM) > new Date()) {
 
 if (isCommunicationDisabled) {
     triggers.communication_disabled = 1;
-    risk += weights.communication_disabled;
+    risk += cfg.risk_weights.communication_disabled;
     action = config.unusual_activity_checks.communication_disabled_action;
 }
 
