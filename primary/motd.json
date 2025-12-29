@@ -100,7 +100,7 @@
             "timezone": 13,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in New Zealand will happen in $$left$$",
+            "display": "New Year in** New Zealand** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -109,7 +109,7 @@
             "timezone": 11,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Australia will happen in $$left$$",
+            "display": "New Year in **Australia** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -118,7 +118,7 @@
             "timezone": 9,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Japan will happen in $$left$$",
+            "display": "New Year in **Japan** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -127,7 +127,7 @@
             "timezone": 8,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in China will happen in $$left$$",
+            "display": "New Year in **China** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -136,7 +136,7 @@
             "timezone": 5.5,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in India will happen in $$left$$",
+            "display": "New Year in **India** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -145,7 +145,7 @@
             "timezone": 1,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Germany will happen in $$left$$",
+            "display": "New Year in **Germany** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -154,7 +154,7 @@
             "timezone": 1,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Poland will happen in $$left$$",
+            "display": "New Year in **Poland** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -163,7 +163,7 @@
             "timezone": 1,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in France will happen in $$left$$",
+            "display": "New Year in **France** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -172,25 +172,7 @@
             "timezone": 0,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in United Kingdom will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Canada (Toronto)",
-            "use": "yes",
-            "timezone": -5,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Canada will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "United States (New York)",
-            "use": "yes",
-            "timezone": -5,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in United States will happen in $$left$$",
+            "display": "New Year in **United Kingdom** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -199,7 +181,7 @@
             "timezone": -3,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Brazil will happen in $$left$$",
+            "display": "New Year in **Brazil** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
@@ -208,15 +190,34 @@
             "timezone": -3,
             "start": "2025-12-29T09:00:00+00:00",
             "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in Argentina will happen in $$left$$",
+            "display": "New Year in **Argentina **will happen in $$left$$",
+            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
+        },
+        {
+            "country": "Canada (Toronto)",
+            "use": "yes",
+            "timezone": -5,
+            "start": "2025-12-29T09:00:00+00:00",
+            "ends": "2026-01-01T00:00:00+00:00",
+            "display": "New Year in **Canada** will happen in $$left$$",
+            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
+        },
+        {
+            "country": "United States (New York)",
+            "use": "yes",
+            "timezone": -5,
+            "start": "2025-12-29T09:00:00+00:00",
+            "ends": "2026-01-01T00:00:00+00:00",
+            "display": "New Year in** United States** will happen in $$left$$",
             "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
             "use": "yes",
             "timezone": 0,
-            "start": "2026-01-01T05:00+00:00",
+            "start": "2026-01-01T00:00+00:00",
             "ends": "2027-01-01T00:00:00+00:00",
-            "display": "`$$left$$` until the new year..."
+            "display": "`$$left$$` until the new year...",
+            "advenced": "{\"start_tz\": -5, \"end_tz__noted_out\": 0, \"prefix\": \"\\\\-\"}"
         },
         {
             "use": "yes",
