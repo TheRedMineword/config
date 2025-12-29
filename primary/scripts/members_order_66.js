@@ -398,7 +398,7 @@ function buildDiscordTextReport(filteredResults = []) {
     };
   }
 
-  const SEPARATOR = "**- - - -**";
+  const SEPARATOR = "**\- - - -**";
 
   const blocks = filteredResults.map(user => {
     const id = user.user_id;
