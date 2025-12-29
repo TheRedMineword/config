@@ -275,7 +275,7 @@ if (susNameStillApplies) {
     if (
       cfg.server_join_checks.auto_ban_no_roles.enabled &&
       server_age_days !== null &&
-      server_age_days => cfg.server_join_checks.auto_ban_no_roles.min_server_days
+      server_age_days >= cfg.server_join_checks.auto_ban_no_roles.min_server_days
     ) {
       triggers.auto_banned_by_config = "1";
       reasons.push("Auto-ban: new user with no roles");
