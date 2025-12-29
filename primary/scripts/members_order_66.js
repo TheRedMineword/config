@@ -398,7 +398,7 @@ function buildDiscordTextReport(filteredResults = []) {
     };
   }
 
-  const SEPARATOR = "**\- - - -**";
+  const SEPARATOR = "**\\- - - -**";
 
   const blocks = filteredResults.map(user => {
     const id = user.user_id;
@@ -419,23 +419,24 @@ function buildDiscordTextReport(filteredResults = []) {
 
     return [
       SEPARATOR,
-      `-# \`${username}\` (\`${id}\`)`,
-      `-# <@${id}>`,
-      ``,
-      `**Timeout active:** ${timeoutActive ? `Yes (till ${timeoutUntil})` : "No"}`,
-      `**Suspicious DM:** ${suspiciousDm ? `Yes (till ${suspiciousDmUntil})` : "No"}`,
-      ``,
-      `**Flag reasons:**`,
+      `\n`,
+      `-# \`${username}\` (\`${id}\`)\n`,
+      `-# <@${id}>\n`,
+      `\n`,
+      `**Timeout active:** ${timeoutActive ? `Yes (till ${timeoutUntil})` : "No"}\n`,
+      `**Suspicious DM:** ${suspiciousDm ? `Yes (till ${suspiciousDmUntil})` : "No"}\n`,
+      `\n`,
+      `**Flag reasons:**\n`,
       reasons.length
         ? reasons.map(r => `💠 ${r}`).join("\n")
         : "_None_",
-      ``,
-      `**Triggers debug**`,
+      `\n`,
+      `**Triggers debug**\n`,
       "```json",
       JSON.stringify(user.triggers ?? {}, null, 2),
       "```",
       SEPARATOR
-    ].join("\n");
+    ].join("");
   });
 
   const txt = blocks.join("\n");
