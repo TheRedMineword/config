@@ -9,7 +9,7 @@
         "min_server_age_days": 2,
         "auto_ban_no_roles": {
             "enabled": true,
-            "min_server_days": 10
+            "min_server_days": 2
         },
         "kick_if_no_roles_after_days": 7,
         "sus_names_warn_gone_days": 14999
