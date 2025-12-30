@@ -1,7 +1,3 @@
-const output = await (async () => {
-  try {
-
-const Jimp = await import("npm:jimp");
 /*
 REQUIRES:
 https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
@@ -262,34 +258,17 @@ if (symbol.icon) {
 
 
 
-const output2 = await (async () => {
-  const badge = JSON.parse(atob(
-    "eyJCb3JkZXJJZHgiOjEsIkNvbG9yMUlkeCI6MCwiQ29sb3IySWR4IjoxMCwiU3ltYm9sSWR4IjoyNiwiQ29ycG9yYXRpb25JRCI6IjNkZDQ5MDY5Mzk4MjdmYTc1MzdhM2U5NWY4ZDczOTQ4YzA2Yjc1YTk4ZjNjNGFhYjI1M2VhNzk4NTdkMmNlODEiLCJDb3Jwb3JhdGlvbk5hbWUiOiJEZWF0aCBTdGFyIGxsYy4ifQ=="
-  ));
-  const password = "No longer used but i will keep it becuase comedy";
 
-  try {
-    return await renderBadge(badge, password, 512);
-  } catch (err) {
-    console.error("Failed to render badge:", err);
-    return null;
-  }
-})();
-
-output2;  // This is the Lambda return value
-
-
-
-
-  } catch (error) {
-    console.error("Lambda Error:", error);
-    return {
-      status: "error",
-      message: error.message,
-      stack: error.stack
-    };
-  }
-})();
-
-
-output;
+//const badge = JSON.parse(atob(
+//  "eyJCb3JkZXJJZHgiOjEsIkNvbG9yMUlkeCI6MCwiQ29sb3IySWR4IjoxMCwiU3ltYm9sSWR4IjoyNiwiQ29ycG9yYXRpb25JRCI6IjNkZDQ5MDY5Mzk4MjdmYTc1MzdhM2U5NWY4ZDczOTQ4YzA2Yjc1YTk4ZjNjNGFhYjI1M2VhNzk4NTdkMmNlODEiLCJDb3Jwb3JhdGlvbk5hbWUiOiJEZWF0aCBTdGFyIGxsYy4ifQ=="
+//));
+//
+//
+//const password = "No longer used but i will keep it becuase comedy";
+//
+//// render → base64 PNG
+//renderBadge(badge, password, 512).then(base64 => {
+//  console.log(base64);
+//base64
+//});
+//
