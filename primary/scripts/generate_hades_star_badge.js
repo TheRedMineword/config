@@ -258,13 +258,17 @@ if (symbol.icon) {
 
 
 
+export default async function main() {
+  const badge = JSON.parse(atob(
+    "eyJCb3JkZXJJZHgiOjE3LCJDb2xvcjFJZHgiOjEsIkNvbG9yMklkeCI6MTEsIkN5bWJvbElkeCI6MTksIkNvcnBvcmF0aW9uSUQiOiI3NzFjODI3ZWI1OTE4MTNlM2I4OGZmMzhiMDAzMWQwOTUxOWIwZjNkNWZlMDE2NjZhYTQ3MTFiZmQ1MDUyODU3IiwiQ29ycG9yYXRpb25OYW1lIjoiXHUwMDNDYVx1MDAzRei2hei2isKuXHUwMDNDL2FcdTAwM0XlhYnpgJ/ihKEifQ=="
+  ));
 
-const badge = JSON.parse(atob(
-  "eyJCb3JkZXJJZHgiOjEsIkNvbG9yMUlkeCI6MCwiQ29sb3IySWR4IjoxMCwiU3ltYm9sSWR4IjoyNiwiQ29ycG9yYXRpb25JRCI6IjNkZDQ5MDY5Mzk4MjdmYTc1MzdhM2U5NWY4ZDczOTQ4YzA2Yjc1YTk4ZjNjNGFhYjI1M2VhNzk4NTdkMmNlODEiLCJDb3Jwb3JhdGlvbk5hbWUiOiJEZWF0aCBTdGFyIGxsYy4ifQ=="
-));
+  const password = "No longer used but i will keep it becuase comedy";
 
+  // render badge
+  const output = await renderBadge(badge, password, 512);
 
-const password = "No longer used but i will keep it becuase comedy";
-
-const output = await renderBadge(badge, password, 512);
-output; 
+  // return result directly
+  // return output;
+  output
+}
