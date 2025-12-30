@@ -432,7 +432,7 @@ function buildDiscordTextReport(filteredResults = []) {
         : "_None_",
       `\n`,
       `**Triggers debug**\n`,
-      "```json",
+      "```json\n",
       JSON.stringify(user.triggers ?? {}, null, 2),
       "```",
       SEPARATOR
