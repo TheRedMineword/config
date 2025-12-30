@@ -1,7 +1,7 @@
 const output = await (async () => {
   try {
 
-const { createCanvas, loadImage } = await import("npm:canvas");
+const Jimp = await import("npm:jimp");
 /*
 REQUIRES:
 https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
