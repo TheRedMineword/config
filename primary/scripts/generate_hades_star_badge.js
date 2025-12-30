@@ -265,12 +265,6 @@ const badge = JSON.parse(atob(
 
 
 const password = "No longer used but i will keep it becuase comedy";
-const output = null;
-// render → base64 PNG
-renderBadge(badge, password, 512).then(base64 => {
-  console.log(base64);
-let output = base64;
-});
 
-
-output;
+const output = await renderBadge(badge, password, 512);
+output; 
