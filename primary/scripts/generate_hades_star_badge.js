@@ -258,17 +258,18 @@ if (symbol.icon) {
 
 
 
-export default async function main() {
+const output = await (async () => {
   const badge = JSON.parse(atob(
     "eyJCb3JkZXJJZHgiOjE3LCJDb2xvcjFJZHgiOjEsIkNvbG9yMklkeCI6MTEsIkN5bWJvbElkeCI6MTksIkNvcnBvcmF0aW9uSUQiOiI3NzFjODI3ZWI1OTE4MTNlM2I4OGZmMzhiMDAzMWQwOTUxOWIwZjNkNWZlMDE2NjZhYTQ3MTFiZmQ1MDUyODU3IiwiQ29ycG9yYXRpb25OYW1lIjoiXHUwMDNDYVx1MDAzRei2hei2isKuXHUwMDNDL2FcdTAwM0XlhYnpgJ/ihKEifQ=="
   ));
-
   const password = "No longer used but i will keep it becuase comedy";
 
-  // render badge
-  const output = await renderBadge(badge, password, 512);
+  try {
+    return await renderBadge(badge, password, 512);
+  } catch (err) {
+    console.error("Failed to render badge:", err);
+    return null;
+  }
+})();
 
-  // return result directly
-  // return output;
-  output
-}
+output;  // This is the Lambda return value
