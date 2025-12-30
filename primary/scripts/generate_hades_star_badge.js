@@ -1,3 +1,7 @@
+return (async () => {
+  try {
+
+const { createCanvas, loadImage } = await import("npm:canvas");
 /*
 REQUIRES:
 https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
@@ -273,3 +277,16 @@ const output = await (async () => {
 })();
 
 output;  // This is the Lambda return value
+
+
+
+
+  } catch (error) {
+    console.error("Lambda Error:", error);
+    return {
+      status: "error",
+      message: error.message,
+      stack: error.stack
+    };
+  }
+})();
