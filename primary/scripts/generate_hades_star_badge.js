@@ -1,4 +1,4 @@
-return (async () => {
+const output = await (async () => {
   try {
 
 const { createCanvas, loadImage } = await import("npm:canvas");
@@ -262,7 +262,7 @@ if (symbol.icon) {
 
 
 
-const output = await (async () => {
+const output2 = await (async () => {
   const badge = JSON.parse(atob(
     "eyJCb3JkZXJJZHgiOjEsIkNvbG9yMUlkeCI6MCwiQ29sb3IySWR4IjoxMCwiU3ltYm9sSWR4IjoyNiwiQ29ycG9yYXRpb25JRCI6IjNkZDQ5MDY5Mzk4MjdmYTc1MzdhM2U5NWY4ZDczOTQ4YzA2Yjc1YTk4ZjNjNGFhYjI1M2VhNzk4NTdkMmNlODEiLCJDb3Jwb3JhdGlvbk5hbWUiOiJEZWF0aCBTdGFyIGxsYy4ifQ=="
   ));
@@ -276,7 +276,7 @@ const output = await (async () => {
   }
 })();
 
-output;  // This is the Lambda return value
+output2;  // This is the Lambda return value
 
 
 
@@ -290,3 +290,6 @@ output;  // This is the Lambda return value
     };
   }
 })();
+
+
+output;
