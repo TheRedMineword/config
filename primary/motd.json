@@ -11,7 +11,7 @@
             "start": "2024-01-00T00:00:00+00:00",
             "ends": "2026-01-01T10:00:00+00:00",
             "display": "Thank you all for this wonderful year together!\n\n**HAPPY NEW YEAR**!!!",
-            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \""}"
+            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"\"}"
         },
         {
             "use": "yes",
