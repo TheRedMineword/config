@@ -201,7 +201,8 @@ if (user?.bot === true) {
     action: 0,
     action_label: "ignore",
     reasons: ["Bot account"],
-    triggers: {}
+    triggers: {},
+    __debug_user: user
   };
 }
 logDebug(`Unpossible for a bot user ${user.username}`);
@@ -365,6 +366,7 @@ if (
     action_reason_source,
     reasons,
     triggers,
+    __debug_user: user,
   };
 }
 
