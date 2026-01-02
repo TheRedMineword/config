@@ -1,3 +1,21 @@
+
+
+
+
+// NOTE TO PERSON LOOKING AT IT
+// DO WHATEVER THE HELL YOU WANT WICH THIS
+// GOD HAD NO MERCY ON ME WHEN I WAS WORKING ON IT
+// AND I LOST WAY TOO MUCH TIME ON THAT
+// ...
+// ALSO FUCK YOU badge_Symbol_20.png
+
+
+
+
+
+
+
+
 /*
 REQUIRES:
 https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js
