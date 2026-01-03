@@ -70,8 +70,13 @@
                 "msg": "draw"
             }
         }
+    },
+    "ws_init_msg": {
+        "img64": "",
+        "data": {}
     }
 }
+
 
 
 
