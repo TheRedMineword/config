@@ -240,13 +240,6 @@
             "start": "2024-01-00T00:00:00+00:00",
             "ends": "2025-12-01T23:59:01+00:00",
             "display": "- - -"
-        },
-        {
-            "use": "yes",
-            "timezone": 1,
-            "start": "2025-11-21T07:00:00+00:00",
-            "ends": "2025-12-10T11:10:00+00:00",
-            "display": "[TF2 Secret Santa]( https://scrap.tf/santa ) confirm entry at december 10, DrMineword i beg you dont forget\n-# Debug:$$left$$\n\\- - - -"
         }
     ],
     "countdowns_limit": 30,
@@ -380,6 +373,7 @@
     "news": {
         "standard": {
             "month01_day01": "## Quote of the day:\n-# And now we welcome the new year. Full of things that have never been. - **Rainer Maria Rilke**",
+            "month01_day06": "$$insertquoteofthedayhere$$\n\n\n>>> **Happy Three Kings’ Day (Święto Trzech Króli / Epiphany)!**\n Celebrated on January 6th this important day in Polish tradition commemorates the journey of the Three Wise Men—Caspar, Melchior, and Balthazar—who followed the Star of Bethlehem to pay homage to the newborn Jesus. In Poland, it is a public holiday marked by church services, festive parades, and the traditional blessing of chalk, incense, and gold. Homes are often marked with the letters *C+M+B* and the year, symbolizing a prayer for blessing, protection, and peace for the household.\n\n This celebration reminds us of the values the Three Kings represent: faith, wisdom, humility, and generosity. May their journey encourage us to seek truth, welcome others with open hearts, and carry light and hope into the year ahead.",
             "month12_day01": "**✨ December has begun! ✨**\n\nToday marks the first step toward Christmas, a season not only of celebration but of *preparation*. Like lighting the first candle in the dark, we begin a journey of hope, reflection, and renewal.\n\n**Advent** invites us to slow down. In a world that rushes, this season whispers:\n> *“Be still. Something beautiful is coming.”*\n\nLet this month be more than waiting for a date on the calendar. Let it be a time to open your heart:\n- to forgive someone you’ve held in distance\n- to show kindness without expecting anything back\n- to notice the quiet miracles around you\n\n> \"Rejoice in hope, be patient in tribulation, be constant in prayer.\" — **Romans 12:12**\n\nWhether you are filled with excitement, burdened by worries, or simply trying to make it through each day—**you are not walking this season alone.**\n\nLet today be a gentle beginning.\nA spark.\nA promise.\n**Welcome to December.**",
             "month12_day02": "As we move through December, may the humble birth of Jesus remind us that greatness begins in simplicity.",
             "month12_day03": "A single act of kindness can brighten someone's entire season. Be that light today.",
