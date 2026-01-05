@@ -204,6 +204,7 @@
         "When you're digging for gold in the dark stars, it might be worth not having the artifact bonus active?"
     ],
     "raport": "-# Last update at <t:$$unix$$:R>, update took `$$mscount$$`ms!",
+    "clock____to__do": "I beg you compress it to string, also comprese other configs to string",
     "clock": [
         "```fix\n _____  _____       _____  _____ \n|  _  ||  _  |  _  |  _  ||  _  |\n| |/' || |/' | (_) | |/' || |/' |\n|  /| ||  /| |     |  /| ||  /| |\n\\ |_/ /\\ |_/ /  _  \\ |_/ /\\ |_/ /\n \\___/  \\___/  (_)  \\___/  \\___/\n```",
         "```fix\n _____  _____       _____  __  \n|  _  ||  _  |  _  |  _  |/  | \n| |/' || |/' | (_) | |/' |`| | \n|  /| ||  /| |     |  /| | | | \n\\ |_/ /\\ |_/ /  _  \\ |_/ /_| |_\n \\___/  \\___/  (_)  \\___/ \\___/\n```",
