@@ -4,65 +4,14 @@
         "color": "9837889",
         "banner": "https://theredmineword.github.io/portraits/portrait_CorpFlagship.png"
     },
+    "old____countdows": [{"use":"yes","timezone":1,"start":"2024-01-00T00:00:00+00:00","ends":"2026-01-01T10:00:00+00:00","display":"Thank you all for this wonderful year together!\n\n**HAPPY NEW YEAR**!!!","advenced":"{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"\"}"},{"use":"yes","timezone":0,"start":"2024-01-00T00:00:00+00:00","ends":"2025-12-26T00:00:00+00:00","display":"- - -"},{"use":"yes","timezone":0,"start":"2024-01-00T00:00:00+00:00","ends":"2025-12-26T00:00:00+00:00","display":"**Christmas 2025**"},{"use":"yes","timezone":0,"start":"2023-12-24T00:00:00+00:00","ends":"2025-12-24T00:00:00+00:00","display":"Will begun in `$$left$$`"},{"use":"yes","timezone":0,"start":"2025-12-24T00:00:00+00:00","ends":"2025-12-26T00:00:00+00:00","display":"**IS HERE!!**"},{"use":"yes","timezone":1,"start":"2024-01-00T00:00:00+00:00","ends":"2026-01-01T09:00:00+00:00","display":"Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) will return to **Kindom Of Sky** in `$$left$$`\n\\- - - -","advenced":"{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"use":"yes","timezone":1,"start":"2026-01-01T09:00:00+00:00","ends":"2026-01-05T09:00:00+00:00","display":"Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -","advenced":"{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"use":"yes","timezone":0,"start":"2023-11-21T11:00:00+00:00","ends":"2025-12-19T00:00:00+00:00","display":"(Real) Osmium Purge Will Begun in `$$left$$`!!"},{"use":"yes","timezone":0,"start":"2025-12-19T00:00:00+00:00","ends":"2025-12-19T23:59:00+00:00","display":"**Osmium Purge Is Now In Progress**"},{"use":"yes","timezone":0,"start":"2024-01-00T00:00:00+00:00","ends":"2025-12-19T23:59:00+00:00","display":"- - -"},{"use":"yes","timezone":1,"start":"2024-01-00T00:00:00+00:00","ends":"2025-12-29T09:00:00+00:00","display":"The extended countdown to the new year will be available in `$$left$$`"},{"country":"New Zealand (Auckland)","use":"yes","timezone":13,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in** New Zealand** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Australia (Sydney)","use":"yes","timezone":11,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Australia** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Japan","use":"yes","timezone":9,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Japan** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"China (Beijing)","use":"yes","timezone":8,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **China** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"India","use":"yes","timezone":5.5,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **India** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Germany","use":"yes","timezone":1,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Germany** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Poland","use":"yes","timezone":1,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Poland** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"France","use":"yes","timezone":1,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **France** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"United Kingdom","use":"yes","timezone":0,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **United Kingdom** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Brazil (São Paulo)","use":"yes","timezone":-3,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Brazil** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Argentina","use":"yes","timezone":-3,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Argentina **will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"Canada (Toronto)","use":"yes","timezone":-5,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in **Canada** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"country":"United States (New York)","use":"yes","timezone":-5,"start":"2025-12-29T09:00:00+00:00","ends":"2026-01-01T00:00:00+00:00","display":"New Year in** United States** will happen in $$left$$","advenced":"{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"},{"use":"no","timezone":0,"start":"2024-01-00T00:00:00+00:00","ends":"2025-12-01T23:59:01+00:00","display":"- - -"}],
     "countdowns": [
         {
             "use": "yes",
-            "timezone": 1,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2026-01-01T10:00:00+00:00",
-            "display": "Thank you all for this wonderful year together!\n\n**HAPPY NEW YEAR**!!!",
-            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"\"}"
-        },
-        {
-            "use": "yes",
             "timezone": 0,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-26T00:00:00+00:00",
+            "ends": "2029-01-01T00:00:01+00:00",
             "display": "- - -"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-26T00:00:00+00:00",
-            "display": "**Christmas 2025**"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2023-12-24T00:00:00+00:00",
-            "ends": "2025-12-24T00:00:00+00:00",
-            "display": "Will begun in `$$left$$`"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2025-12-24T00:00:00+00:00",
-            "ends": "2025-12-26T00:00:00+00:00",
-            "display": "**IS HERE!!**"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2027-01-01T00:00:01+00:00",
-            "display": "- - -"
-        },
-        {
-            "use": "yes",
-            "timezone": 1,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2026-01-01T09:00:00+00:00",
-            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) will return to **Kindom Of Sky** in `$$left$$`\n\\- - - -",
-            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "use": "yes",
-            "timezone": 1,
-            "start": "2026-01-01T09:00:00+00:00",
-            "ends": "2026-01-05T09:00:00+00:00",
-            "display": "Traveling spirit: [**Ascetic Monk**]( https://sky-planner.com/spirit/EMMZ8KSCjP ) has returned to **Kindom Of Sky** and will leave in `$$left$$`\n\\- - - -",
-            "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
             "script_events_here": "yes"
@@ -71,153 +20,8 @@
             "use": "yes",
             "timezone": 0,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2027-01-01T00:00:01+00:00",
+            "ends": "2029-01-01T00:00:01+00:00",
             "display": "- - -"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2023-11-21T11:00:00+00:00",
-            "ends": "2025-12-19T00:00:00+00:00",
-            "display": "(Real) Osmium Purge Will Begun in `$$left$$`!!"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2025-12-19T00:00:00+00:00",
-            "ends": "2025-12-19T23:59:00+00:00",
-            "display": "**Osmium Purge Is Now In Progress**"
-        },
-        {
-            "use": "yes",
-            "timezone": 0,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-19T23:59:00+00:00",
-            "display": "- - -"
-        },
-        {
-            "use": "yes",
-            "timezone": 1,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-29T09:00:00+00:00",
-            "display": "The extended countdown to the new year will be available in `$$left$$`"
-        },
-        {
-            "country": "New Zealand (Auckland)",
-            "use": "yes",
-            "timezone": 13,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in** New Zealand** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Australia (Sydney)",
-            "use": "yes",
-            "timezone": 11,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Australia** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Japan",
-            "use": "yes",
-            "timezone": 9,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Japan** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "China (Beijing)",
-            "use": "yes",
-            "timezone": 8,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **China** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "India",
-            "use": "yes",
-            "timezone": 5.5,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **India** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Germany",
-            "use": "yes",
-            "timezone": 1,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Germany** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Poland",
-            "use": "yes",
-            "timezone": 1,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Poland** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "France",
-            "use": "yes",
-            "timezone": 1,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **France** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "United Kingdom",
-            "use": "yes",
-            "timezone": 0,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **United Kingdom** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Brazil (São Paulo)",
-            "use": "yes",
-            "timezone": -3,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Brazil** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Argentina",
-            "use": "yes",
-            "timezone": -3,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Argentina **will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "Canada (Toronto)",
-            "use": "yes",
-            "timezone": -5,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in **Canada** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
-        },
-        {
-            "country": "United States (New York)",
-            "use": "yes",
-            "timezone": -5,
-            "start": "2025-12-29T09:00:00+00:00",
-            "ends": "2026-01-01T00:00:00+00:00",
-            "display": "New Year in** United States** will happen in $$left$$",
-            "advenced": "{\"start_tz\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"-# \\\\-\"}"
         },
         {
             "use": "yes",
@@ -231,14 +35,7 @@
             "use": "yes",
             "timezone": 0,
             "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2027-01-01T00:00:00+00:00",
-            "display": "- - -"
-        },
-        {
-            "use": "no",
-            "timezone": 0,
-            "start": "2024-01-00T00:00:00+00:00",
-            "ends": "2025-12-01T23:59:01+00:00",
+            "ends": "2029-01-01T00:00:00+00:00",
             "display": "- - -"
         }
     ],
