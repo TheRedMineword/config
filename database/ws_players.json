@@ -1,168 +1,191 @@
 {
-    "hs_id": {
-        "id": "dc_id_here",
-        "note": "dev note",
-        "exist": "yes"
-    },
-    "3d769addc40f624babdf7e468a72251069628c077ba89e7b426f9f8396ea44c4": {
-        "id": "987284796789116949",
-        "note": "DrMineword",
-        "exist": "yes"
-    },
-    "777242fc7559ccef864f607f6c45c54fd618752bac9afc6494357dc3a1e5efca": {
-        "id": "586771653187600385",
-        "note": "biggocelot123",
-        "exist": "yes"
-    },
-    "2ab2384a72db5154a27dc79008499511c91a521c521593aa6533b4935f3cc533": {
-        "id": "925299896528023573",
-        "note": "The Red Defender",
-        "exist": "yes"
-    },
-    "6616164712829d64d56508336aa8bf6dc7b62a8a20b1e91a15e91c692576aec8": {
-        "id": "1204089658753949726",
-        "note": "kirs734",
-        "exist": "yes"
-    },
-    "9458079578d49e57b7b01f71e98f92c65cbf8eca0da84ce6aa0dd35340dcab22": {
-        "id": "896985936745889843",
-        "note": "MaggotPhRo",
-        "exist": "yes"
-    },
-    "accbc3fddf8abb066f2363e60f61836942c66a6fa17d791ce02471774f0cca30": {
-        "id": "586771653187600385",
-        "note": "smallocelot123",
-        "exist": "yes"
-    },
-    "bc6d094f601017c1b2905c631b6e94b053420ece9a300b685c92e54e5bf82118": {
-        "id": "841499868798124053",
-        "note": "Börk",
-        "exist": "yes"
-    },
-    "b99489f837bb3dcc430dcc6ea5bb826ac95f2cdefeee1f9dab0c5c2c2a4cf463": {
-        "id": "1072092643170975824",
-        "note": "Mulan",
-        "exist": "yes"
-    },
-    "45a9069b770c69e1a8ddf8baca41fa79d9cf09c22611f97261bba34bea2fda38": {
-        "id": "841499868798124053",
-        "note": "BörkBörk",
-        "exist": "yes"
-    },
-    "255f949054c5767e582003b5bbbe3bcaad68c24917239c992d11ccc828c9d6e9": {
-        "id": "1334586637816041655",
-        "note": "Sargento_Paiva",
-        "exist": "yes"
-    },
-    "15eba91d93d61f4d6662cc6e810cd8da423b418864a0fe22c21fbbbcbd3aeaa7": {
-        "id": "728602000354443365",
-        "note": "Stef",
-        "exist": "yes"
-    },
-    "b513404bbc831644892db809dee0014802a7639d5e46febda36e34ddefdcd9e9": {
-        "id": "1003773265971511426",
-        "note": "northernpine81",
-        "exist": "yes"
-    },
-    "f750c1ef461ac99df3a9b3660af7d2a63323b60f8105b8a68d8318268e7eae58": {
-        "id": "260878137972359188",
-        "note": "Chambara",
-        "exist": "yes"
-    },
-    "dd6d3ebd55e138e681eaa5e12cd172ca22220945e2026f0cc5c0824ac707fe60": {
-        "id": "249170098101813248",
-        "note": "hydrogen",
-        "exist": "yes"
-    },
-    "25b341c467dbf593fc19eda84ec9871ffae620020a4e5b06a801f7da543552ce": {
-        "id": "1059538171035144222",
-        "note": "Rajpoot ji",
-        "exist": "yes"
-    },
-    "2ffde0f2d263114ef56aec7c1bc516d77e1c074344341c9ef33f3fecff43647b": {
-        "id": "1188104970948583497",
-        "note": "Suhrat",
-        "exist": "yes"
-    },
-    "50aed866344b171295978afdc6253211df36cb8e46f4cd2b14eb05c24c455027": {
-        "id": "685570800358916129",
-        "note": "Rider21",
-        "exist": "yes"
-    },
-    "cead22b2b5022c04875f7151480a7337bd7f9bc1a4afc74199bae10a856fae17": {
-        "id": "1188104970948583497",
-        "note": "Tahsin",
-        "exist": "yes"
-    },
-    "e93d90265677876843ba3b133e97bdf484021c2b532629c9150047b154a102be": {
-        "id": "468672713364340767",
-        "note": "Mayhem1939",
-        "exist": "yes"
-    },
-    "934566fd0a3db4f642cbd4ed8cdc08751b058225c0cdc9a1d64aab954172265f": {
-        "id": "685570800358916129",
-        "note": "Rider22",
-        "exist": "yes"
-    },
-    "8897d2f296c413986d3821adb9a7dda354c4f2ca4edd1b199d7c4c0d53c75684": {
-        "id": "503668492470321179",
-        "note": "pyrotek",
-        "exist": "yes"
-    },
-    "01af1d3b9d2b1033b5412feaeb3234b6636e67f9d6838f1e0998cb737a045bbf": {
-        "id": "1215093870472462357",
-        "note": "thin man",
-        "exist": "yes"
-    },
-    "affe9cf634e7ddfc84065d24ed615ca518a3aa95351b38a3d487204213f2db2f": {
-        "id": "709129592027218005",
-        "note": "Mister Nos",
-        "exist": "yes"
-    },
-    "3148201a0e0e31de7d102d618b65baa01f783b18a47bc1459b02ab2daf5ccf38": {
-        "id": "1308802340056203284",
-        "note": "ap po ne",
-        "exist": "yes"
-    },
-    "whitelistedplayersatscanstart": {
-        "ban": {
-            "content": "Hi <@$$userid$$>!!",
-            "embeds": [
-                {
-                    "description": "## Notice of removal of access to a private thread",
-                    "color": 15426585,
-                    "footer": {
-                        "text": "Removed from thread: $$CUSTOMID$$",
-                        "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
-                    }
-                },
-                {
-                    "description": "_If you are reading this message...._\nIts means that someone must have added you to the private thread used during the white stars\n\nUnfortunately, due to the information contained in such threads, and the fact that I do not see you on the whitelist...\n\nYour access to this thread has been terminated!!",
-                    "color": 15426585
-                },
-                {
-                    "color": 15426585,
-                    "footer": {
-                        "text": "If you believe this is an error, please contact your first officer",
-                        "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
-                    }
-                }
-            ]
+  "hs_id": {
+    "id": "dc_id_here",
+    "note": "dev note",
+    "exist": "yes"
+  },
+  "3d769addc40f624babdf7e468a72251069628c077ba89e7b426f9f8396ea44c4": {
+    "id": "987284796789116949",
+    "note": "DrMineword",
+    "exist": "yes"
+  },
+  "777242fc7559ccef864f607f6c45c54fd618752bac9afc6494357dc3a1e5efca": {
+    "id": "586771653187600385",
+    "note": "biggocelot123",
+    "exist": "yes"
+  },
+  "2ab2384a72db5154a27dc79008499511c91a521c521593aa6533b4935f3cc533": {
+    "id": "925299896528023573",
+    "note": "The Red Defender",
+    "exist": "yes"
+  },
+  "6616164712829d64d56508336aa8bf6dc7b62a8a20b1e91a15e91c692576aec8": {
+    "id": "1204089658753949726",
+    "note": "kirs734",
+    "exist": "yes"
+  },
+  "9458079578d49e57b7b01f71e98f92c65cbf8eca0da84ce6aa0dd35340dcab22": {
+    "id": "896985936745889843",
+    "note": "MaggotPhRo",
+    "exist": "yes"
+  },
+  "accbc3fddf8abb066f2363e60f61836942c66a6fa17d791ce02471774f0cca30": {
+    "id": "586771653187600385",
+    "note": "smallocelot123",
+    "exist": "yes"
+  },
+  "bc6d094f601017c1b2905c631b6e94b053420ece9a300b685c92e54e5bf82118": {
+    "id": "841499868798124053",
+    "note": "Börk",
+    "exist": "yes"
+  },
+  "b99489f837bb3dcc430dcc6ea5bb826ac95f2cdefeee1f9dab0c5c2c2a4cf463": {
+    "id": "1072092643170975824",
+    "note": "Mulan",
+    "exist": "yes"
+  },
+  "45a9069b770c69e1a8ddf8baca41fa79d9cf09c22611f97261bba34bea2fda38": {
+    "id": "841499868798124053",
+    "note": "BörkBörk",
+    "exist": "yes"
+  },
+  "255f949054c5767e582003b5bbbe3bcaad68c24917239c992d11ccc828c9d6e9": {
+    "id": "1334586637816041655",
+    "note": "Sargento_Paiva",
+    "exist": "yes"
+  },
+  "15eba91d93d61f4d6662cc6e810cd8da423b418864a0fe22c21fbbbcbd3aeaa7": {
+    "id": "728602000354443365",
+    "note": "Stef",
+    "exist": "yes"
+  },
+  "b513404bbc831644892db809dee0014802a7639d5e46febda36e34ddefdcd9e9": {
+    "id": "1003773265971511426",
+    "note": "northernpine81",
+    "exist": "yes"
+  },
+  "f750c1ef461ac99df3a9b3660af7d2a63323b60f8105b8a68d8318268e7eae58": {
+    "id": "260878137972359188",
+    "note": "Chambara",
+    "exist": "yes"
+  },
+  "dd6d3ebd55e138e681eaa5e12cd172ca22220945e2026f0cc5c0824ac707fe60": {
+    "id": "249170098101813248",
+    "note": "hydrogen",
+    "exist": "yes"
+  },
+  "25b341c467dbf593fc19eda84ec9871ffae620020a4e5b06a801f7da543552ce": {
+    "id": "1059538171035144222",
+    "note": "Rajpoot ji",
+    "exist": "yes"
+  },
+  "2ffde0f2d263114ef56aec7c1bc516d77e1c074344341c9ef33f3fecff43647b": {
+    "id": "1188104970948583497",
+    "note": "Suhrat",
+    "exist": "yes"
+  },
+  "50aed866344b171295978afdc6253211df36cb8e46f4cd2b14eb05c24c455027": {
+    "id": "685570800358916129",
+    "note": "Rider21",
+    "exist": "yes"
+  },
+  "cead22b2b5022c04875f7151480a7337bd7f9bc1a4afc74199bae10a856fae17": {
+    "id": "1188104970948583497",
+    "note": "Tahsin",
+    "exist": "yes"
+  },
+  "e93d90265677876843ba3b133e97bdf484021c2b532629c9150047b154a102be": {
+    "id": "468672713364340767",
+    "note": "Mayhem1939",
+    "exist": "yes"
+  },
+  "934566fd0a3db4f642cbd4ed8cdc08751b058225c0cdc9a1d64aab954172265f": {
+    "id": "685570800358916129",
+    "note": "Rider22",
+    "exist": "yes"
+  },
+  "8897d2f296c413986d3821adb9a7dda354c4f2ca4edd1b199d7c4c0d53c75684": {
+    "id": "503668492470321179",
+    "note": "pyrotek",
+    "exist": "yes"
+  },
+  "01af1d3b9d2b1033b5412feaeb3234b6636e67f9d6838f1e0998cb737a045bbf": {
+    "id": "1215093870472462357",
+    "note": "thin man",
+    "exist": "yes"
+  },
+  "affe9cf634e7ddfc84065d24ed615ca518a3aa95351b38a3d487204213f2db2f": {
+    "id": "709129592027218005",
+    "note": "Mister Nos",
+    "exist": "yes"
+  },
+  "3148201a0e0e31de7d102d618b65baa01f783b18a47bc1459b02ab2daf5ccf38": {
+    "id": "1308802340056203284",
+    "note": "ap po ne",
+    "exist": "yes"
+  },
+  "578d8fe71eae1963ed001591bc3462449f35e124c06c38b1e9ffb0e9bd3bc47a": {
+    "id": "1162602310308986962,
+    "note": "Dontravious",
+    "exist": "yes"
+  },
+  "whitelistedplayersatscanstart": {
+    "ban": {
+      "content": "Hi <@$$userid$$>!!",
+      "embeds": [
+        {
+          "description": "## Notice of removal of access to a private thread",
+          "color": 15426585,
+          "footer": {
+            "text": "Removed from thread: $$CUSTOMID$$",
+            "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
+          }
         },
-        "edd3ac94ea8ee1cf441e904ff29c48c21fa5db83af6eb5a6e83ae236b3872b22": {
-            "note": "osmium star",
-            "ids": [
-                "987284796789116949",
-                "925299896528023573",
-                "841499868798124053"
-            ]
+        {
+          "description": "_If you are reading this message...._\nIts means that someone must have added you to the private thread used during the white stars\n\nUnfortunately, due to the information contained in such threads, and the fact that I do not see you on the whitelist...\n\nYour access to this thread has been terminated!!",
+          "color": 15426585
         },
-        "3dd4906939827fa7537a3e95f8d75948c06b75a98f3c4aab253ea79857d2ce81": {
-            "note": "death star",
-            "ids": [
-                "987284796789116949",
-                "1003773265971511426"
-            ]
+        {
+          "color": 15426585,
+          "footer": {
+            "text": "If you believe this is an error, please contact your first officer",
+            "icon_url": "https://theredmineword.github.io/config/primary/src/icon/1024px-Demobot_beta_red.png"
+          }
         }
+      ]
+    },
+    "edd3ac94ea8ee1cf441e904ff29c48c21fa5db83af6eb5a6e83ae236b3872b22": {
+      "note": "osmium star",
+      "ids": [
+        "987284796789116949",
+        "925299896528023573",
+        "841499868798124053"
+      ]
+    },
+    "3dd4906939827fa7537a3e95f8d75948c06b75a98f3c4aab253ea79857d2ce81": {
+      "note": "death star",
+      "ids": [
+        "987284796789116949",
+        "1003773265971511426"
+      ]
+    },
+    "f6cd5aed527efed3a402f931784d68b5b7201b317118a60bd3d81b551ee87330": {
+      "note": "Black Star",
+      "ids": [
+        "987284796789116949"
+      ]
+    },
+    "89b20821cb6e619dced74a6e153a1d3ceafa70b1035fb7d61a6920d375e49f50": {
+      "note": "Winter Star",
+      "ids": [
+        "987284796789116949"
+      ]
+    },
+    "3de5259ba12509e4d02854f1414caacf3d0aaaf79f417b9d843ff20ca35863dd": {
+      "note": "Atlas Star",
+      "ids": [
+        "987284796789116949"
+      ]
     }
+  }
 }
