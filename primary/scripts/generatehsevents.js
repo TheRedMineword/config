@@ -129,30 +129,44 @@ console.log(merged);
 
 // ================= BUILD OUTPUT =================
 const output = [];
-
-
+const ONE_YEAR = 365 * DAY;
 
 for (const ev of merged) {
-  const dur = DUR[ev.name];
-  if (!dur) continue;
+  try {
+    if (!ev || !ev.name || !ev.start) {
+      console.log("Skipping invalid event:", JSON.stringify(ev));
+      continue;
+    }
 
-  const start = ev.start;
-  const end = start + dur;
- // const dura = dur;
-  const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
-// old:  const countdownStart = start - COUNTDOWN_DAYS * DAY;
-if (ev.name === "Yellow Star") {
-    // Always show: countdown starts 1 year before event
-    const countdownStart = start - 365 * DAY;
-  } else {
-    const countdownStart = start - COUNTDOWN_DAYS * DAY;
-  }
+    const dur = DUR[ev.name];
+    if (!dur) {
+      console.log("Missing duration for:", ev.name);
+      continue;
+    }
 
-  
-  if (removeAfter < nowUnix) continue;
-  if (countdownStart > futureLimit) continue;
+    const start = ev.start;
+    const end = start + dur;
+    const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
 
-  // countdown
+    let countdownStart;
+    if (ev.name === "Yellow Star") {
+      countdownStart = start - ONE_YEAR;
+    } else {
+      countdownStart = start - COUNTDOWN_DAYS * DAY;
+    }
+
+    if (removeAfter < nowUnix) continue;
+    if (countdownStart > futureLimit) continue;
+
+    // Optional: log successful processing
+    console.log("Processed event:", JSON.stringify({
+      name: ev.name,
+      start,
+      end,
+      countdownStart
+    }));
+
+     // countdown
   output.push({
     use: "yes",
     timezone: 0,
@@ -171,7 +185,13 @@ if (ev.name === "Yellow Star") {
     display: `Special Event: **${ev.name}** is now **active**!! Ends in $$left$$`,
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });
+
+  } catch (err) {
+    console.log("Error processing event:", JSON.stringify(ev));
+    console.log("Error message:", err?.message || err);
+  }
 }
+
 
 console.log("=== Final output JSON ===");
 console.log(output);
