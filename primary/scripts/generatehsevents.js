@@ -135,7 +135,7 @@ for (const ev of merged) {
 
   const start = ev.start;
   const end = start + dur;
-  const dura = dur
+  const dura = dur;
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
 
