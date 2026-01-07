@@ -1,4 +1,5 @@
-// Ver.2.0.1 - Unofficial
+// Ver.2.0.1½ - Unofficial
+// CONTENT WILL BE STILL UPDATED
 
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -15,6 +16,7 @@ const DUR = {
   "Blue Star": 3 * DAY,
   "Red Star": 3 * DAY,
   "Credit Asteroid": 3 * DAY
+  "Yellow Star": 99 * DAY
 };
 
 // ================= REFERENCE SCHEDULE =================
@@ -65,7 +67,9 @@ const schedule = [
   { name: "Blue Star", start: 1768003200 },
   { name: "Credit Asteroid", start: 1768608000 },
   { name: "Blue Star", start: 1769212800 },
-  { name: "White Star", start: 1768867200 }
+  { name: "White Star", start: 1768867200 },
+  // By DrMineword:
+  { name: "Yellow Star", start: 1772668800 }
 ];
 
 // ================= HELPERS =================
@@ -144,7 +148,7 @@ for (const ev of merged) {
     start: iso(countdownStart),
     ends: iso(start),
     display: `Special Event: **${ev.name}** starts in $$left$$`,
-    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\\n-# Active for `${ev.dur} Days`\"}"
   });
 
   // active
