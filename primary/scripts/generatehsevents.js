@@ -1,3 +1,5 @@
+// Ver.2.0.1 - Unofficial
+
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 
@@ -70,65 +72,60 @@ const schedule = [
 function iso(sec) {
   return new Date(sec * 1000).toISOString().replace(".000", "");
 }
-// ================= LEARN DELTAS =================
-const deltas = [];
-for (let i = 0; i < schedule.length - 1; i++) {
-  deltas.push({
-    name: schedule[i].name,
-    gap: schedule[i + 1].start - schedule[i].start
-  });
+// ================= SPLIT SCHEDULE BY EVENT TYPE =================
+const byType = {};
+for (const ev of schedule) {
+  byType[ev.name] ??= [];
+  byType[ev.name].push(ev.start);
 }
 
-// ================= FIND REPEATING CYCLE =================
-// Find smallest suffix that matches prefix
-function findCycle(data) {
-  for (let size = 2; size <= data.length / 2; size++) {
-    let match = true;
-    for (let i = 0; i < size; i++) {
-      const a = data[data.length - size + i];
-      const b = data[i];
-      if (a.name !== b.name || a.gap !== b.gap) {
-        match = false;
-        break;
-      }
-    }
-    if (match) return data.slice(0, size);
+// ================= LEARN CADENCE PER TYPE =================
+const cadence = {};
+for (const type in byType) {
+  const times = byType[type];
+  const gaps = [];
+
+  for (let i = 1; i < times.length; i++) {
+    gaps.push(times[i] - times[i - 1]);
   }
-  return null;
+
+  cadence[type] = gaps.length
+    ? Math.round(gaps.reduce((a, b) => a + b, 0) / gaps.length)
+    : null;
 }
 
-const cycle = findCycle(deltas);
+console.log("=== Learned cadence per event (seconds) ===");
+console.log(cadence);
 
-console.log("Detected cycle:");
-console.log(cycle);
-
-// ================= GENERATE FUTURE EVENTS =================
-const generated = [...schedule];
-let lastEvent = generated[generated.length - 1];
-
+// ================= GENERATE FUTURE EVENTS PER TYPE =================
 const futureLimit = nowUnix + FUTURE_DAYS * DAY;
+const generated = [];
 
-if (cycle) {
-  let idx = 0;
-  while (lastEvent.start < futureLimit) {
-    const step = cycle[idx % cycle.length];
-    const nextStart = lastEvent.start + step.gap;
+for (const type in byType) {
+  const times = byType[type];
+  const step = cadence[type];
+  if (!step) continue;
 
-    const next = {
-      name: step.name,
-      start: nextStart
-    };
+  let last = times[times.length - 1];
 
-    generated.push(next);
-    lastEvent = next;
-    idx++;
+  while (last < futureLimit) {
+    last += step;
+    generated.push({ name: type, start: last });
   }
 }
+
+// ================= MERGE + SORT =================
+const merged = [...schedule, ...generated]
+  .filter(ev => ev.start + (DUR[ev.name] || 0) > nowUnix)
+  .sort((a, b) => a.start - b.start);
+
+console.log("=== Merged future schedule (sorted) ===");
+console.log(merged);
 
 // ================= BUILD OUTPUT =================
 const output = [];
 
-for (const ev of generated) {
+for (const ev of merged) {
   const dur = DUR[ev.name];
   if (!dur) continue;
 
@@ -160,5 +157,8 @@ for (const ev of generated) {
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });
 }
+
+console.log("=== Final output JSON ===");
+console.log(output);
 
 output;
