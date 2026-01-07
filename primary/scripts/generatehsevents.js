@@ -3,9 +3,9 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 
 // ================= CONSTANTS =================
 const DAY = 86400;
-const COUNTDOWN_DAYS = 14.65;
+const COUNTDOWN_DAYS = 34.65;
 const REMOVE_AFTER_HOURS = 2;
-const FUTURE_DAYS = 31; // generate events only within next 30 days
+const FUTURE_DAYS = 91; // generate events only within next 30 days
 
 // ================= DURATIONS =================
 const DUR = {
@@ -63,7 +63,7 @@ const schedule = [
   { name: "Blue Star", start: 1768003200 },
   { name: "Credit Asteroid", start: 1768608000 },
   { name: "Blue Star", start: 1769212800 },
-  { name: "White Star", start: 1769472000 }
+  { name: "White Star", start: 1768867200 }
 ];
 
 
