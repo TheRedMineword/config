@@ -66,17 +66,75 @@ const schedule = [
   { name: "White Star", start: 1768867200 }
 ];
 
-
 // ================= HELPERS =================
 function iso(sec) {
   return new Date(sec * 1000).toISOString().replace(".000", "");
 }
 
-// ================= BUILD OUTPUT =================
-const output = [];
+// ================= ANALYZE PATTERN =================
+const diffs = [];
+
+for (let i = 0; i < schedule.length - 1; i++) {
+  diffs.push({
+    name: schedule[i].name,
+    deltaDays: (schedule[i + 1].start - schedule[i].start) / DAY
+  });
+}
+
+// Log differences
+console.log("=== Event deltas (days) ===");
+diffs.forEach(d =>
+  console.log(`${d.name} → next in ${d.deltaDays} days`)
+);
+
+// Detect repeating cycle (simple rolling match)
+function detectCycle(arr) {
+  for (let size = 2; size <= arr.length / 2; size++) {
+    let ok = true;
+    for (let i = 0; i < arr.length - size; i++) {
+      if (
+        arr[i].name !== arr[i + size].name ||
+        arr[i].deltaDays !== arr[i + size].deltaDays
+      ) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) return arr.slice(0, size);
+  }
+  return null;
+}
+
+const cycle = detectCycle(diffs);
+
+console.log("=== Detected cycle ===");
+console.log(cycle);
+
+// ================= GENERATE FUTURE EVENTS =================
+const generated = [...schedule];
+let last = generated[generated.length - 1];
 const futureLimit = nowUnix + FUTURE_DAYS * DAY;
 
-for (const ev of schedule) {
+if (cycle) {
+  let i = 0;
+  while (last.start < futureLimit) {
+    const step = cycle[i % cycle.length];
+    const nextStart = last.start + step.deltaDays * DAY;
+
+    generated.push({
+      name: step.name,
+      start: nextStart
+    });
+
+    last = generated[generated.length - 1];
+    i++;
+  }
+}
+
+// ================= BUILD OUTPUT =================
+const output = [];
+
+for (const ev of generated) {
   const dur = DUR[ev.name];
   if (!dur) continue;
 
@@ -85,34 +143,27 @@ for (const ev of schedule) {
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
 
-  if (removeAfter < nowUnix) continue; // skip fully past events
-  if (countdownStart > futureLimit) continue; // skip events starting too far in future
+  if (removeAfter < nowUnix) continue;
+  if (countdownStart > futureLimit) continue;
 
-  // This is countdown
-  if (countdownStart <= futureLimit) {
-    output.push({
-      use: "yes",
-      timezone: 0,
-      start: iso(countdownStart),
-      ends: iso(start),
-      display: `Special Event: **${ev.name}** starts in $$left$$`,
-      advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
-    });
-  }
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart),
+    ends: iso(start),
+    display: `Special Event: **${ev.name}** starts in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
 
-  // This is active
-  if (start <= futureLimit) {
-    output.push({
-      use: "yes",
-      timezone: 0,
-      start: iso(start),
-      ends: iso(end),
-      display: `Special Event: **${ev.name}** is now **active**!! Ends in $$left$$`,
-      advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
-    });
-  }
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(start),
+    ends: iso(end),
+    display: `Special Event: **${ev.name}** is now **active**!! Ends in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
 }
 
-output;  // This is output
-// Should be: [{"use":"yes","timezone":0,"start":"2025-12-14T00:00:00Z","ends":"2025-12-27T00:00:00Z","display":"Special Event: **Credit Asteroid** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-27T00:00:00Z","ends":"2025-12-30T00:00:00Z","display":"Special Event: **Credit Asteroid** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-21T00:00:00Z","ends":"2026-01-03T00:00:00Z","display":"Special Event: **Red Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-03T00:00:00Z","ends":"2026-01-06T00:00:00Z","display":"Special Event: **Red Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2025-12-28T00:00:00Z","ends":"2026-01-10T00:00:00Z","display":"Special Event: **Blue Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-10T00:00:00Z","ends":"2026-01-13T00:00:00Z","display":"Special Event: **Blue Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-04T00:00:00Z","ends":"2026-01-17T00:00:00Z","display":"Special Event: **Credit Asteroid** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-17T00:00:00Z","ends":"2026-01-20T00:00:00Z","display":"Special Event: **Credit Asteroid** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-11T00:00:00Z","ends":"2026-01-24T00:00:00Z","display":"Special Event: **Blue Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-24T00:00:00Z","ends":"2026-01-27T00:00:00Z","display":"Special Event: **Blue Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-14T00:00:00Z","ends":"2026-01-27T00:00:00Z","display":"Special Event: **White Star** starts in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"},{"use":"yes","timezone":0,"start":"2026-01-27T00:00:00Z","ends":"2026-01-31T00:00:00Z","display":"Special Event: **White Star** is now **active**!! Ends in $$left$$","advenced":"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"}]
-// I hope it will work forever
+output;
+
