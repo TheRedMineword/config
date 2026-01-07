@@ -5,9 +5,9 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 
 // ================= CONSTANTS =================
 const DAY = 86400;
-const COUNTDOWN_DAYS = 14.65;
+const COUNTDOWN_DAYS = 329.65;
 const REMOVE_AFTER_HOURS = 2;
-const FUTURE_DAYS = 41; // generate events only within next 30 days
+const FUTURE_DAYS = 330; // generate events only within next 30 days
 
 // ================= DURATIONS =================
 const DUR = {
