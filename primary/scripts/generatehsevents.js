@@ -135,6 +135,7 @@ for (const ev of merged) {
 
   const start = ev.start;
   const end = start + dur;
+  const dura = dur
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
   const countdownStart = start - COUNTDOWN_DAYS * DAY;
 
@@ -148,7 +149,7 @@ for (const ev of merged) {
     start: iso(countdownStart),
     ends: iso(start),
     display: `Special Event: **${ev.name}** starts in $$left$$`,
-    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\\n-# Active for `${ev.dur} Days`\"}"
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\\n-# Active for ${ev.dura} Days\"}"
   });
 
   // active
