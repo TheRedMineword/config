@@ -70,64 +70,58 @@ const schedule = [
 function iso(sec) {
   return new Date(sec * 1000).toISOString().replace(".000", "");
 }
-
-// ================= ANALYZE PATTERN =================
-const diffs = [];
-
+// ================= LEARN DELTAS =================
+const deltas = [];
 for (let i = 0; i < schedule.length - 1; i++) {
-  diffs.push({
+  deltas.push({
     name: schedule[i].name,
-    deltaDays: (schedule[i + 1].start - schedule[i].start) / DAY
+    gap: schedule[i + 1].start - schedule[i].start
   });
 }
 
-// Log differences
-console.log("=== Event deltas (days) ===");
-diffs.forEach(d =>
-  console.log(`${d.name} → next in ${d.deltaDays} days`)
-);
-
-// Detect repeating cycle (simple rolling match)
-function detectCycle(arr) {
-  for (let size = 2; size <= arr.length / 2; size++) {
-    let ok = true;
-    for (let i = 0; i < arr.length - size; i++) {
-      if (
-        arr[i].name !== arr[i + size].name ||
-        arr[i].deltaDays !== arr[i + size].deltaDays
-      ) {
-        ok = false;
+// ================= FIND REPEATING CYCLE =================
+// Find smallest suffix that matches prefix
+function findCycle(data) {
+  for (let size = 2; size <= data.length / 2; size++) {
+    let match = true;
+    for (let i = 0; i < size; i++) {
+      const a = data[data.length - size + i];
+      const b = data[i];
+      if (a.name !== b.name || a.gap !== b.gap) {
+        match = false;
         break;
       }
     }
-    if (ok) return arr.slice(0, size);
+    if (match) return data.slice(0, size);
   }
   return null;
 }
 
-const cycle = detectCycle(diffs);
+const cycle = findCycle(deltas);
 
-console.log("=== Detected cycle ===");
+console.log("Detected cycle:");
 console.log(cycle);
 
 // ================= GENERATE FUTURE EVENTS =================
 const generated = [...schedule];
-let last = generated[generated.length - 1];
+let lastEvent = generated[generated.length - 1];
+
 const futureLimit = nowUnix + FUTURE_DAYS * DAY;
 
 if (cycle) {
-  let i = 0;
-  while (last.start < futureLimit) {
-    const step = cycle[i % cycle.length];
-    const nextStart = last.start + step.deltaDays * DAY;
+  let idx = 0;
+  while (lastEvent.start < futureLimit) {
+    const step = cycle[idx % cycle.length];
+    const nextStart = lastEvent.start + step.gap;
 
-    generated.push({
+    const next = {
       name: step.name,
       start: nextStart
-    });
+    };
 
-    last = generated[generated.length - 1];
-    i++;
+    generated.push(next);
+    lastEvent = next;
+    idx++;
   }
 }
 
@@ -146,6 +140,7 @@ for (const ev of generated) {
   if (removeAfter < nowUnix) continue;
   if (countdownStart > futureLimit) continue;
 
+  // countdown
   output.push({
     use: "yes",
     timezone: 0,
@@ -155,6 +150,7 @@ for (const ev of generated) {
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });
 
+  // active
   output.push({
     use: "yes",
     timezone: 0,
@@ -166,4 +162,3 @@ for (const ev of generated) {
 }
 
 output;
-
