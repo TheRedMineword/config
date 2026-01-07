@@ -15,7 +15,7 @@ const DUR = {
   "White Star": 4 * DAY,
   "Blue Star": 3 * DAY,
   "Red Star": 3 * DAY,
-  "Credit Asteroid": 3 * DAY
+  "Credit Asteroid": 3 * DAY,
   "Yellow Star": 99 * DAY
 };
 
@@ -149,7 +149,7 @@ for (const ev of merged) {
     start: iso(countdownStart),
     ends: iso(start),
     display: `Special Event: **${ev.name}** starts in $$left$$`,
-    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\\n-# Active for ${ev.dura} Days\"}"
+    advenced: `"{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\\n-# Active for ${ev.dura} Days\"}"`
   });
 
   // active
