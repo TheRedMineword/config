@@ -143,9 +143,9 @@ for (const ev of merged) {
 // old:  const countdownStart = start - COUNTDOWN_DAYS * DAY;
 if (ev.name === "Yellow Star") {
     // Always show: countdown starts 1 year before event
-    countdownStart = start - 365 * DAY;
+    const countdownStart = start - 365 * DAY;
   } else {
-    countdownStart = start - COUNTDOWN_DAYS * DAY;
+    const countdownStart = start - COUNTDOWN_DAYS * DAY;
   }
 
   
