@@ -129,7 +129,7 @@ console.log(merged);
 
 // ================= BUILD OUTPUT =================
 const output = [];
-const ONE_YEAR = 365 * DAY;
+
 
 
 for (const ev of merged) {
@@ -143,7 +143,7 @@ for (const ev of merged) {
 // old:  const countdownStart = start - COUNTDOWN_DAYS * DAY;
 if (ev.name === "Yellow Star") {
     // Always show: countdown starts 1 year before event
-    countdownStart = start - ONE_YEAR;
+    countdownStart = start - 365 * DAY;
   } else {
     countdownStart = start - COUNTDOWN_DAYS * DAY;
   }
