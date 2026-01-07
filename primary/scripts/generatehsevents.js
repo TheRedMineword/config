@@ -129,6 +129,8 @@ console.log(merged);
 
 // ================= BUILD OUTPUT =================
 const output = [];
+const ONE_YEAR = 365 * DAY;
+
 
 for (const ev of merged) {
   const dur = DUR[ev.name];
@@ -138,8 +140,15 @@ for (const ev of merged) {
   const end = start + dur;
  // const dura = dur;
   const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
-  const countdownStart = start - COUNTDOWN_DAYS * DAY;
+// old:  const countdownStart = start - COUNTDOWN_DAYS * DAY;
+if (ev.name === "Yellow Star") {
+    // Always show: countdown starts 1 year before event
+    countdownStart = start - ONE_YEAR;
+  } else {
+    countdownStart = start - COUNTDOWN_DAYS * DAY;
+  }
 
+  
   if (removeAfter < nowUnix) continue;
   if (countdownStart > futureLimit) continue;
 
