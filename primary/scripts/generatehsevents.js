@@ -68,6 +68,7 @@ const schedule = [
   { name: "Credit Asteroid", start: 1768608000 },
   { name: "Blue Star", start: 1769212800 },
   { name: "White Star", start: 1768867200 },
+  { name: "Yellow Star", start: 1758153600 }, // By Caprican: Yellow Star Credits event starts <t:1758153600:R>! For 2 days, all delivered Yellow Star shipments will yield 3× the usual credits. Bonus ends <t:1758326400:f> — make them count!
   // By DrMineword:
   { name: "Yellow Star", start: 1772668800 }
 ];
