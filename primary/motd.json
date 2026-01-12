@@ -18,7 +18,7 @@
     "timezone": 1,
     "start": "2026-01-12T00:00:00+00:00",
     "ends": "2026-01-16T19:00:00+00:00",
-    "display": "***TMP*** $$left$$",
+    "display": "**Season of Lightmending** will begin in **Kindom Of Sky** in `$$left$$`",
     "advenced": "{\"start_tz__noted_out\": 1, \"end_tz__noted_out\": 0, \"prefix\": \"\", \"use_timestampt\": \"-# <t:$$unix$$:D> <t:$$unix$$:t>)\n-# \\- - -\"}"
   },
         {
