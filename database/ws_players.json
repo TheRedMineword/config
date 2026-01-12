@@ -129,6 +129,11 @@
     "note": "Dontravious",
     "exist": "yes"
   },
+  "5e1be45f84b6f68d2f6583d8c4d44afa99b23007dc9ddcafda4b2039ebd49e7d":{
+    "id": "810810179452796998,
+    "note": "Ghost Boy",
+    "exist": "yes"
+  },
   "whitelistedplayersatscanstart": {
     "ban": {
       "content": "Hi <@$$userid$$>!!",
