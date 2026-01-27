@@ -16,7 +16,8 @@ const DUR = {
   "Blue Star": 3 * DAY,
   "Red Star": 3 * DAY,
   "Credit Asteroid": 3 * DAY,
-  "Yellow Star": 99 * DAY
+  "Yellow Star": 99 * DAY,
+  "TurnamentOfHades": 60 * DAY
 };
 
 // ================= REFERENCE SCHEDULE =================
@@ -70,7 +71,8 @@ const schedule = [
   { name: "White Star", start: 1768867200 },
   { name: "Yellow Star", start: 1758153600 }, // By Caprican: Yellow Star Credits event starts <t:1758153600:R>! For 2 days, all delivered Yellow Star shipments will yield 3× the usual credits. Bonus ends <t:1758326400:f> — make them count!
   // By DrMineword:
-  { name: "Yellow Star", start: 1772668800 }
+  { name: "Yellow Star", start: 1772668800 },
+  { name: "TurnamentOfHades", start: 2079648000 },
 ];
 
 // ================= HELPERS =================
