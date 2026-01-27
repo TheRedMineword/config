@@ -164,6 +164,7 @@ for (const ev of merged) {
     let countdownStart;
     if (check(ev.name) === true) {
       countdownStart = start - ONE_YEAR;
+      console.log("Rare One");
     } else {
       countdownStart = start - COUNTDOWN_DAYS * DAY;
     }
