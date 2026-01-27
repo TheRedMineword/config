@@ -8,7 +8,9 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 const DAY = 86400;
 const COUNTDOWN_DAYS = 13.65;
 const REMOVE_AFTER_HOURS = 2;
-const FUTURE_DAYS = 41; // generate events only within next 30 days
+// const FUTURE_DAYS = 41; // generate events only within next 30 days
+const FUTURE_DAYS = 1920; // Few years for TurnamentOfHades!
+
 
 // ================= DURATIONS =================
 const DUR = {
