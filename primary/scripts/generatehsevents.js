@@ -16,7 +16,7 @@ const DUR = {
   "Blue Star": 3 * DAY,
   "Red Star": 3 * DAY,
   "Credit Asteroid": 3 * DAY,
-  "Yellow Star": 99 * DAY,
+  "Yellow Star": 2 * DAY,
   "TurnamentOfHades": 60 * DAY
 };
 
