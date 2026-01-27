@@ -72,7 +72,8 @@ const schedule = [
   { name: "Yellow Star", start: 1758153600 }, // By Caprican: Yellow Star Credits event starts <t:1758153600:R>! For 2 days, all delivered Yellow Star shipments will yield 3× the usual credits. Bonus ends <t:1758326400:f> — make them count!
   // By DrMineword:
   { name: "Yellow Star", start: 1772668800 },
-  { name: "TurnamentOfHades", start: 2079648000 },
+  { name: "TurnamentOfHades", start: 1764288000 }, // first
+  { name: "TurnamentOfHades", start: 2079648000 }, // Second
 ];
 
 // ================= HELPERS =================
@@ -131,7 +132,15 @@ console.log(merged);
 
 // ================= BUILD OUTPUT =================
 const output = [];
-const ONE_YEAR = 365 * DAY;
+// const ONE_YEAR = 365 * DAY;
+const ONE_YEAR = 1917 * DAY;
+
+
+function check(name) {
+  return name === "Yellow Star" || name === "TurnamentOfHades";
+}
+
+
 
 for (const ev of merged) {
   try {
@@ -151,7 +160,7 @@ for (const ev of merged) {
     const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
 
     let countdownStart;
-    if (ev.name === "Yellow Star") {
+    if (check(ev.name) === true) {
       countdownStart = start - ONE_YEAR;
     } else {
       countdownStart = start - COUNTDOWN_DAYS * DAY;
