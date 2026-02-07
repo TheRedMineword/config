@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.1.0 - Bug fix: time drift"
+const version = "Ver.2.1.1 - Bug fix: time drift - hotfix: more console logs"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -82,7 +82,23 @@ const schedule = [
 function iso(sec) {
   return new Date(sec * 1000).toISOString().replace(".000", "");
 }
+
+const DEBUG = true;
+
+function debug(fn, msg, data) {
+  if (!DEBUG) return;
+  const prefix = `[DEBUG!${fn}]`;
+  if (data !== undefined) {
+    console.log(prefix, msg, data);
+  } else {
+    console.log(prefix, msg);
+  }
+}
+
+
 // ================= SPLIT SCHEDULE BY EVENT TYPE =================
+debug("splitByType", "Starting schedule split");
+
 const byType = {};
 
 for (const ev of schedule) {
@@ -90,9 +106,9 @@ for (const ev of schedule) {
   byType[ev.name].push(ev.start);
 }
 
-// 🔥 FIX: Always sort timestamps before learning cadence
 for (const type in byType) {
   byType[type].sort((a, b) => a - b);
+  debug("splitByType", `Sorted timestamps for ${type}`, byType[type]);
 }
 
 
@@ -109,8 +125,13 @@ function mode(arr) {
       best = v;
     }
   }
+
+  debug("mode", "Frequency table", freq);
+  debug("mode", "Selected mode", best);
   return best;
 }
+
+debug("learnCadence", "Learning cadence per event type");
 
 const cadence = {};
 
@@ -120,11 +141,16 @@ for (const type in byType) {
 
   for (let i = 1; i < times.length; i++) {
     const gap = times[i] - times[i - 1];
-    if (gap > 0) gaps.push(gap); // ignore negative/zero gaps just in case
+    if (gap > 0) gaps.push(gap);
   }
 
+  debug("learnCadence", `Gaps for ${type}`, gaps);
+
   cadence[type] = gaps.length ? mode(gaps) : null;
+
+  debug("learnCadence", `Cadence for ${type}`, cadence[type]);
 }
+
 
 console.log("=== Learned cadence per event (seconds) ===");
 console.log(cadence);
@@ -133,9 +159,14 @@ console.log(cadence);
 // ================= GENERATE FUTURE EVENTS PER TYPE =================
 
 function snapToMidnight(sec) {
-  return Math.floor(sec / DAY) * DAY;
+  const snapped = Math.floor(sec / DAY) * DAY;
+  debug("snapToMidnight", "Snapped time", { before: sec, after: snapped });
+  return snapped;
 }
 
+
+
+debug("generateFuture", "Generating future events");
 
 const futureLimit = nowUnix + FUTURE_DAYS * DAY;
 const generated = [];
@@ -143,17 +174,20 @@ const generated = [];
 for (const type in byType) {
   const times = byType[type];
   const step = cadence[type];
-  if (!step) continue;
+  if (!step) {
+    debug("generateFuture", `Skipping ${type} (no cadence)`);
+    continue;
+  }
 
   let last = times[times.length - 1];
+  debug("generateFuture", `Starting from last event for ${type}`, last);
 
   while (last < futureLimit) {
     last += step;
-
-    // 🔥 FIX: Prevent long-term second drift
     last = snapToMidnight(last);
 
     generated.push({ name: type, start: last });
+    debug("generateFuture", `Generated event for ${type}`, last);
   }
 }
 
