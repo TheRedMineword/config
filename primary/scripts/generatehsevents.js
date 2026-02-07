@@ -1,9 +1,9 @@
-// Ver.2.0.1½ - Unofficial
 // CONTENT WILL BE STILL UPDATED
-
+const version = "Ver.2.1.0 - Bug fix: time drift"
+console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
-
+console.log(nowUnix);
 // ================= CONSTANTS =================
 const DAY = 86400;
 const COUNTDOWN_DAYS = 13.65;
@@ -84,30 +84,59 @@ function iso(sec) {
 }
 // ================= SPLIT SCHEDULE BY EVENT TYPE =================
 const byType = {};
+
 for (const ev of schedule) {
   byType[ev.name] ??= [];
   byType[ev.name].push(ev.start);
 }
 
+// 🔥 FIX: Always sort timestamps before learning cadence
+for (const type in byType) {
+  byType[type].sort((a, b) => a - b);
+}
+
+
 // ================= LEARN CADENCE PER TYPE =================
+function mode(arr) {
+  const freq = {};
+  let best = null;
+  let max = 0;
+
+  for (const v of arr) {
+    freq[v] = (freq[v] || 0) + 1;
+    if (freq[v] > max) {
+      max = freq[v];
+      best = v;
+    }
+  }
+  return best;
+}
+
 const cadence = {};
+
 for (const type in byType) {
   const times = byType[type];
   const gaps = [];
 
   for (let i = 1; i < times.length; i++) {
-    gaps.push(times[i] - times[i - 1]);
+    const gap = times[i] - times[i - 1];
+    if (gap > 0) gaps.push(gap); // ignore negative/zero gaps just in case
   }
 
-  cadence[type] = gaps.length
-    ? Math.round(gaps.reduce((a, b) => a + b, 0) / gaps.length)
-    : null;
+  cadence[type] = gaps.length ? mode(gaps) : null;
 }
 
 console.log("=== Learned cadence per event (seconds) ===");
 console.log(cadence);
 
+
 // ================= GENERATE FUTURE EVENTS PER TYPE =================
+
+function snapToMidnight(sec) {
+  return Math.floor(sec / DAY) * DAY;
+}
+
+
 const futureLimit = nowUnix + FUTURE_DAYS * DAY;
 const generated = [];
 
@@ -120,9 +149,14 @@ for (const type in byType) {
 
   while (last < futureLimit) {
     last += step;
+
+    // 🔥 FIX: Prevent long-term second drift
+    last = snapToMidnight(last);
+
     generated.push({ name: type, start: last });
   }
 }
+
 
 // ================= MERGE + SORT =================
 const merged = [...schedule, ...generated]
