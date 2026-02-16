@@ -160,6 +160,7 @@ function processMember(m) {
   const user = member.user ?? {};
   logDebug("Processing member", user);
 
+  const userjson = member;
   const userId = String(g(user, "id") ?? "");
   const username = g(user, "username") ?? "";
   const globalName = g(user, "global_name") ?? "";
@@ -202,7 +203,8 @@ if (user?.bot === true) {
     action_label: "ignore",
     reasons: ["Bot account"],
     triggers: {},
-    __debug_user: user
+    __debug_user: user,
+    __debug_json: userjson
   };
 }
 logDebug(`Unpossible for a bot user ${user.username}`);
@@ -367,6 +369,7 @@ if (
     reasons,
     triggers,
     __debug_user: user,
+    __debug_json: userjson
   };
 }
 
