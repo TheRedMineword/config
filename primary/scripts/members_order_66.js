@@ -204,7 +204,7 @@ if (user?.bot === true) {
     reasons: ["Bot account"],
     triggers: {},
     __debug_user: user,
-    __debug_json: userjson
+    raw: userjson
   };
 }
 logDebug(`Unpossible for a bot user ${user.username}`);
@@ -369,7 +369,7 @@ if (
     reasons,
     triggers,
     __debug_user: user,
-    __debug_json: userjson
+    raw: userjson
   };
 }
 
