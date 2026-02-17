@@ -6,9 +6,9 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 console.log(nowUnix);
 // ================= CONSTANTS =================
 const DAY = 86400;
-const COUNTDOWN_DAYS = 13.65;
-const REMOVE_AFTER_HOURS = 2;
-const FUTURE_DAYS = 41; // generate events only within next 30 days
+const COUNTDOWN_DAYS = 20.5;
+const REMOVE_AFTER_HOURS = 12;
+const FUTURE_DAYS = 56; // generate events only within next 30 days
 //const FUTURE_DAYS = 1920; // Few years for TurnamentOfHades!
 
 
@@ -78,7 +78,6 @@ const schedule = [
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
   // New data because generation is off?
   { name: "Credit Asteroid", start: 1771628400 },
-  { name: "Red Star", start: 0 }
 ];
 
 // ================= HELPERS =================
