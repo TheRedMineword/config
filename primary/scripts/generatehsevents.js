@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.1.1 - Bug fix: time drift - hotfix: more console logs"
+const version = "Ver.2.2.0 - new data"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -76,6 +76,9 @@ const schedule = [
   { name: "Yellow Star", start: 1772668800 },
   { name: "TurnamentOfHades", start: 1764288000 }, // first
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
+  // New data because generation is off?
+  { name: "Credit Asteroid", start: 1771628400 },
+  { name: "Red Star", start: 0 }
 ];
 
 // ================= HELPERS =================
