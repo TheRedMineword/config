@@ -214,7 +214,8 @@ console.log(merged);
 const output = [];
 // const ONE_YEAR = 365 * DAY;
 const ONE_YEAR = 1917 * DAY;
-
+let windowSeparatorPlaced = false;
+          
 
 function check(name) {
   return name === "Yellow Star" || name === "TurnamentOfHades";
@@ -261,7 +262,7 @@ for (const ev of merged) {
       countdownStart
     }));
     
-  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
+  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm && !windowSeparatorPlaced) {
   console.log("we are inside the extended rare countdown window");
 output.push({
     use: "yes",
