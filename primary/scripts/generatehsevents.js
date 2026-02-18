@@ -240,11 +240,14 @@ for (const ev of merged) {
     const removeAfter = end + REMOVE_AFTER_HOURS * 3600;
 
     let countdownStart;
+    let countdownStartNorm;
     if (check(ev.name) === true) {
       countdownStart = start - ONE_YEAR;
+      countdownStartNorm = start - COUNTDOWN_DAYS * DAY - 1;
       console.log("Rare One");
     } else {
       countdownStart = start - COUNTDOWN_DAYS * DAY;
+      countdownStartNorm = start - COUNTDOWN_DAYS * DAY - 1;
     }
 
     if (removeAfter < nowUnix) continue;
@@ -309,7 +312,7 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
 } else if (ev.name === "Yellow Star") {
 
-  if (countdownStart > COUNTDOWN_DAYS * DAY) {
+  if (countdownStart < countdownStartNorm) {
   output.push({
     use: "yes",
     timezone: 0,
