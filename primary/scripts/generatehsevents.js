@@ -174,27 +174,38 @@ console.log(cadence);
 //  return snapped;
 //}
 
-function snapToPacificMidnight(sec) {
-  const date = new Date(sec * 1000);
+function getPacificMidnight(sec) {
+  const d = new Date(sec * 1000);
 
-  // Convert to Pacific time string
   const pacific = new Date(
-    date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+    d.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
   );
 
-  // Set to 00:00 Pacific
   pacific.setHours(0, 0, 0, 0);
 
-  // Convert back to UTC unix
-  const snapped = Math.floor(pacific.getTime() / 1000);
+  return Math.floor(pacific.getTime() / 1000);
+}
 
-  debug("snapToPacificMidnight", "Snapped to PT midnight", {
+function snapToMidnight(sec) {
+  const utcMidnight = Math.floor(sec / DAY) * DAY;
+  const pacificMidnight = getPacificMidnight(sec);
+
+  const diffUTC = Math.abs(sec - utcMidnight);
+  const diffPT  = Math.abs(sec - pacificMidnight);
+
+  const snapped = diffPT < diffUTC ? pacificMidnight : utcMidnight;
+
+  debug("snapToMidnight", "Smart snap result", {
     before: sec,
-    after: snapped
+    utcMidnight,
+    pacificMidnight,
+    chosen: snapped,
+    mode: diffPT < diffUTC ? "Pacific" : "UTC"
   });
 
   return snapped;
 }
+
 
 
 
