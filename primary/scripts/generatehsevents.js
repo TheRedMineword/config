@@ -260,7 +260,18 @@ for (const ev of merged) {
       end,
       countdownStart
     }));
-
+    
+  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
+  console.log("we are inside the extended rare countdown window");
+output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart - 100),
+    ends: iso(start),
+    display: "- - -",
+    advenced: "{}"
+  });
+  }
 
 if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
@@ -312,17 +323,17 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
 } else if (ev.name === "Yellow Star") {
 
-  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
-  // we are inside the extended rare countdown window
-output.push({
-    use: "yes",
-    timezone: 0,
-    start: iso(countdownStart - 100),
-    ends: iso(start),
-    display: "- - -",
-    advenced: "{}"
-  });
-}
+//  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
+//  console.log("we are inside the extended rare countdown window");
+//output.push({
+//    use: "yes",
+//    timezone: 0,
+//    start: iso(countdownStart - 100),
+//    ends: iso(start),
+//    display: "- - -",
+//    advenced: "{}"
+//  });
+//}
 
 
      // countdown
