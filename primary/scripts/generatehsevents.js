@@ -6,7 +6,7 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 console.log(nowUnix);
 // ================= CONSTANTS =================
 const DAY = 86400;
-const PACIFIC_WINDOW = 2.5 * 3600; 
+// const PACIFIC_WINDOW = 2.5 * 3600; 
 const COUNTDOWN_DAYS = 20.5;
 const REMOVE_AFTER_HOURS = 12;
 const FUTURE_DAYS = 56; // generate events only within next 30 days
@@ -85,8 +85,8 @@ const schedule = [
 
 
   // sky cotl
-  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1770883200 },
-  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1772092800 },
+//  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1770883200 },
+//  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1772092800 },
 ];
 
 // ================= HELPERS =================
@@ -169,35 +169,12 @@ console.log(cadence);
 
 // ================= GENERATE FUTURE EVENTS PER TYPE =================
 
-//function snapToMidnight(sec) {
- // const snapped = Math.floor(sec / DAY) * DAY;
-//  debug("snapToMidnight", "Snapped time", { before: sec, after: snapped });
-//  return snapped;
-//}
-
-function getPacificMidnight(sec) {
-  const d = new Date(sec * 1000);
-  const pacific = new Date(
-    d.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
-  );
-  pacific.setHours(0, 0, 0, 0);
-  return Math.floor(pacific.getTime() / 1000);
-}
-
 function snapToMidnight(sec) {
-  const utcMidnight = Math.floor(sec / DAY) * DAY;
-  const pacificMidnight = getPacificMidnight(sec);
-
-  const diff = Math.abs(sec - pacificMidnight);
-
-  if (diff <= PACIFIC_WINDOW) {
-    // Close enough to Pacific reset → snap to PT
-    return pacificMidnight;
-  } else {
-    // Otherwise snap to UTC
-    return utcMidnight;
-  }
+ const snapped = Math.floor(sec / DAY) * DAY;
+  debug("snapToMidnight", "Snapped time", { before: sec, after: snapped });
+ return snapped;
 }
+
 
 
 
