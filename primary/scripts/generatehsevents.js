@@ -218,7 +218,7 @@ let windowSeparatorPlaced = false;
           
 
 function check(name) {
-  return name === "Yellow Star" || name === "TurnamentOfHades";
+  return name === "Yellow Star" || name === "TurnamentOfHades" || name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)";
 }
 
 
