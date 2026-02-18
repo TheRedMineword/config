@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.2½ - updated outputs"
+const version = "Ver.2.2.2⅔ - updated outputs + seperator"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -257,6 +257,8 @@ for (const ev of merged) {
       end,
       countdownStart
     }));
+
+
 if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
        // countdown
@@ -306,6 +308,18 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
   });  
 
 } else if (ev.name === "Yellow Star") {
+
+  if (countdownStart > COUNTDOWN_DAYS * DAY) {
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart - 100),
+    ends: iso(start),
+    display: "- - -",
+    advenced: "{}"
+  });
+}
+
 
      // countdown
   output.push({
