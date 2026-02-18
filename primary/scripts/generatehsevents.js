@@ -243,11 +243,11 @@ for (const ev of merged) {
     let countdownStartNorm;
     if (check(ev.name) === true) {
       countdownStart = start - ONE_YEAR;
-      countdownStartNorm = start - COUNTDOWN_DAYS * DAY - 1;
+      countdownStartNorm = start - COUNTDOWN_DAYS * DAY;
       console.log("Rare One");
     } else {
       countdownStart = start - COUNTDOWN_DAYS * DAY;
-      countdownStartNorm = start - COUNTDOWN_DAYS * DAY - 1;
+      countdownStartNorm = start - COUNTDOWN_DAYS * DAY;
     }
 
     if (removeAfter < nowUnix) continue;
@@ -312,7 +312,7 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
 } else if (ev.name === "Yellow Star") {
 
-  if (countdownStart < countdownStartNorm) {
+  if (countdownStart != countdownStartNorm) {
   output.push({
     use: "yes",
     timezone: 0,
