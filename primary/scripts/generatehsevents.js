@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.½ - new data - maybe sky cotl?"
+const version = "Ver.2.2.2 - updated outputs"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -257,6 +257,57 @@ for (const ev of merged) {
       end,
       countdownStart
     }));
+if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
+
+       // countdown
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart),
+    ends: iso(start),
+    display: `**${ev.name}** will retun to **Kindom Of Sky** in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
+
+  // active
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(start),
+    ends: iso(end),
+    display: `**${ev.name}** is now visits **Kindom Of Sky** and will leave in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
+
+} else if (ev.name === "placeholder") {
+
+  console.log("Error");
+
+} else if (ev.name === "Red Star") {
+
+     // countdown
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart),
+    ends: iso(start),
+    display: `**Corporations Red Star Event** starts in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
+
+  // active
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(start),
+    ends: iso(end),
+    display: `**Corporations Red Star Event** is now **active**!! Ends in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });  
+
+} else {
+
+  // Default for everything else
 
      // countdown
   output.push({
@@ -278,6 +329,8 @@ for (const ev of merged) {
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });
 
+  }
+    
   } catch (err) {
     console.log("Error processing event:", JSON.stringify(ev));
     console.log("Error message:", err?.message || err);
