@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.0 - new data"
+const version = "Ver.2.2.½ - new data - maybe sky cotl?"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -19,7 +19,8 @@ const DUR = {
   "Red Star": 3 * DAY,
   "Credit Asteroid": 3 * DAY,
   "Yellow Star": 2 * DAY,
-  "TurnamentOfHades": 60 * DAY
+  "TurnamentOfHades": 60 * DAY,
+  "[Traveling Spirit]( http://bit.ly/TravelingSpirits)": 345600
 };
 
 // ================= REFERENCE SCHEDULE =================
@@ -78,6 +79,13 @@ const schedule = [
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
   // New data because generation is off?
   { name: "Credit Asteroid", start: 1771628400 },
+
+
+
+
+  // sky cotl
+  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1770883200 },
+  { name: "[Traveling Spirit]( http://bit.ly/TravelingSpirits)", start: 1772092800 },
 ];
 
 // ================= HELPERS =================
