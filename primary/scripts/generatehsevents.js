@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.2 - updated outputs"
+const version = "Ver.2.2.2½ - updated outputs"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -302,6 +302,28 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
     start: iso(start),
     ends: iso(end),
     display: `**Corporations Red Star Event** is now **active**!! Ends in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });  
+
+} else if (ev.name === "Yellow Star") {
+
+     // countdown
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(countdownStart),
+    ends: iso(start),
+    display: `**Yellow Star Shipments** credits multiplier starts in $$left$$`,
+    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
+  });
+
+  // active
+  output.push({
+    use: "yes",
+    timezone: 0,
+    start: iso(start),
+    ends: iso(end),
+    display: `**Yellow Star Shipments** credits multiplier is now **active**!! Ends in $$left$$`,
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });  
 
