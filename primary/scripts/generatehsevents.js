@@ -272,6 +272,7 @@ output.push({
     display: "- - -",
     advenced: "{}"
   });
+    windowSeparatorPlaced = true; 
   }
 
 if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
