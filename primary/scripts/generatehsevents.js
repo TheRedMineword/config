@@ -312,8 +312,9 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
 
 } else if (ev.name === "Yellow Star") {
 
-  if (countdownStart != countdownStartNorm) {
-  output.push({
+  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
+  // we are inside the extended rare countdown window
+output.push({
     use: "yes",
     timezone: 0,
     start: iso(countdownStart - 100),
