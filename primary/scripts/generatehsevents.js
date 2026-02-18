@@ -168,9 +168,31 @@ console.log(cadence);
 
 // ================= GENERATE FUTURE EVENTS PER TYPE =================
 
-function snapToMidnight(sec) {
-  const snapped = Math.floor(sec / DAY) * DAY;
-  debug("snapToMidnight", "Snapped time", { before: sec, after: snapped });
+//function snapToMidnight(sec) {
+ // const snapped = Math.floor(sec / DAY) * DAY;
+//  debug("snapToMidnight", "Snapped time", { before: sec, after: snapped });
+//  return snapped;
+//}
+
+function snapToPacificMidnight(sec) {
+  const date = new Date(sec * 1000);
+
+  // Convert to Pacific time string
+  const pacific = new Date(
+    date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+  );
+
+  // Set to 00:00 Pacific
+  pacific.setHours(0, 0, 0, 0);
+
+  // Convert back to UTC unix
+  const snapped = Math.floor(pacific.getTime() / 1000);
+
+  debug("snapToPacificMidnight", "Snapped to PT midnight", {
+    before: sec,
+    after: snapped
+  });
+
   return snapped;
 }
 
