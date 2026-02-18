@@ -6,6 +6,7 @@ const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
 console.log(nowUnix);
 // ================= CONSTANTS =================
 const DAY = 86400;
+const PACIFIC_WINDOW = 2.5 * 3600; 
 const COUNTDOWN_DAYS = 20.5;
 const REMOVE_AFTER_HOURS = 12;
 const FUTURE_DAYS = 56; // generate events only within next 30 days
@@ -176,13 +177,10 @@ console.log(cadence);
 
 function getPacificMidnight(sec) {
   const d = new Date(sec * 1000);
-
   const pacific = new Date(
     d.toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
   );
-
   pacific.setHours(0, 0, 0, 0);
-
   return Math.floor(pacific.getTime() / 1000);
 }
 
@@ -190,20 +188,15 @@ function snapToMidnight(sec) {
   const utcMidnight = Math.floor(sec / DAY) * DAY;
   const pacificMidnight = getPacificMidnight(sec);
 
-  const diffUTC = Math.abs(sec - utcMidnight);
-  const diffPT  = Math.abs(sec - pacificMidnight);
+  const diff = Math.abs(sec - pacificMidnight);
 
-  const snapped = diffPT < diffUTC ? pacificMidnight : utcMidnight;
-
-  debug("snapToMidnight", "Smart snap result", {
-    before: sec,
-    utcMidnight,
-    pacificMidnight,
-    chosen: snapped,
-    mode: diffPT < diffUTC ? "Pacific" : "UTC"
-  });
-
-  return snapped;
+  if (diff <= PACIFIC_WINDOW) {
+    // Close enough to Pacific reset → snap to PT
+    return pacificMidnight;
+  } else {
+    // Otherwise snap to UTC
+    return utcMidnight;
+  }
 }
 
 
