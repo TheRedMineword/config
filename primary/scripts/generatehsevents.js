@@ -79,7 +79,7 @@ const schedule = [
   { name: "TurnamentOfHades", start: 1764288000 }, // first
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
   // New data because generation is off?
- { name: "Credit Asteroid", start: 1771545600 },
+ { name: "Credit Asteroid", start: 1771632000 },
 
 
 
