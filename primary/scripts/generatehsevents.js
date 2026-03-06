@@ -20,6 +20,7 @@ const DUR = {
   "Red Star": 3 * DAY,
   "Credit Asteroid": 3 * DAY,
   "Yellow Star": 2 * DAY,
+  "DEBUG#BlueStarCredits": 3 * DAY,
   "TurnamentOfHades": 60 * DAY,
   "[Traveling Spirit]( http://bit.ly/TravelingSpirits)": 345600
 };
@@ -75,11 +76,12 @@ const schedule = [
   { name: "White Star", start: 1768867200 },
   { name: "Yellow Star", start: 1758153600 }, // By Caprican: Yellow Star Credits event starts <t:1758153600:R>! For 2 days, all delivered Yellow Star shipments will yield 3× the usual credits. Bonus ends <t:1758326400:f> — make them count!
   // By DrMineword:
-  { name: "Yellow Star", start: 1772668800 },
+ // { name: "Yellow Star", start: 1772668800 }, // Cancelled?
   { name: "TurnamentOfHades", start: 1764288000 }, // first
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
   // New data because generation is off?
  { name: "Credit Asteroid", start: 1771632000 },
+  { name: "DEBUG#BlueStarCredits", start: 1772841600 },
 
 
 
