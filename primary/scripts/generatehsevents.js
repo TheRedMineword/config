@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.2⅔ - updated outputs + seperator"
+const version = "Ver.2.2.3 - DEBUG#BlueStarCredits"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
