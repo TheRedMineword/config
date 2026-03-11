@@ -371,6 +371,8 @@ if (
     action_label: actionLabel(action),
     action_reason_source,
     reasons,
+    timeout_until: timeout_until,
+    unusual_dm_until: unusual_dm_until,
     triggers,
     __debug_user: user,
     raw: userjson
