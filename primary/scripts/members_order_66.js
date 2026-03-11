@@ -310,7 +310,7 @@ if (unusualDM && new Date(unusualDM) > new Date()) {
     new Date(member.communication_disabled_until) > new Date();
 
 if (isCommunicationDisabled) {
-    triggers.communication_disabled = 1;
+    triggers.communication_disabled = "1";
     risk += cfg.risk_weights.communication_disabled;
   reasons.push("Communication disabled");
    // action = cfg.unusual_activity_checks.communication_disabled_action;
@@ -417,7 +417,7 @@ function buildDiscordTextReport(filteredResults = []) {
       : "N/A";
 
     // Suspicious DM status
-    const suspiciousDm = user.triggers?.unusual_dm === "1";
+    const suspiciousDm = user.triggers?.unusual_dm === "1;"
     const suspiciousDmUntil = user.unusual_dm_until
       ? `<t:${Math.floor(new Date(user.unusual_dm_until).getTime() / 1000)}:F>`
       : "N/A";
