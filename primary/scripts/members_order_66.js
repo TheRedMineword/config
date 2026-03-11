@@ -192,6 +192,8 @@ const unusualDM = g(member, "unusual_dm_activity_until");
 
   const reasons = [];
   let risk = 0;
+  let timeout_until = null;
+  let unusual_dm_until = null;
 
 logDebug(`Check bot user ${user.username}`);
 if (user?.bot === true) {
@@ -294,6 +296,7 @@ if (susNameStillApplies) {
 // const unusualDM = g(member, "unusual_dm_activity_until"); // Yeah it fuck up script so keep it noted out
 if (unusualDM && new Date(unusualDM) > new Date()) {
     triggers.unusual_dm = "1";
+  unusual_dm_until = new Date(unusualDM);
     reasons.push("Unusual DM activity");
     risk += cfg.risk_weights.unusual_dm;
 }
@@ -311,6 +314,7 @@ if (unusualDM && new Date(unusualDM) > new Date()) {
 
 if (isCommunicationDisabled) {
     triggers.communication_disabled = "1";
+  timeout_until = member.communication_disabled_until;
     risk += cfg.risk_weights.communication_disabled;
   reasons.push("Communication disabled");
    // action = cfg.unusual_activity_checks.communication_disabled_action;
