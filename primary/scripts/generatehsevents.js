@@ -81,7 +81,7 @@ const schedule = [
   { name: "TurnamentOfHades", start: 2079648000 }, // Second
   // New data because generation is off?
  { name: "Credit Asteroid", start: 1771632000 },
-  { name: "Blսe Star", start: 1772841600 },
+  { name: "Blue Star", start: 1774051200 },
 
 
 
@@ -360,41 +360,6 @@ if (ev.name === "[Traveling Spirit]( http://bit.ly/TravelingSpirits)") {
     start: iso(start),
     ends: iso(end),
     display: `**Yellow Star Shipments** credits multiplier is now **active**!! Ends in $$left$$`,
-    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
-  });  
-
-} else if (ev.name === "Blսe Star") {
-
-//  if (nowUnix >= countdownStart && nowUnix < countdownStartNorm) {
-//  console.log("we are inside the extended rare countdown window");
-//output.push({
-//    use: "yes",
-//    timezone: 0,
-//    start: iso(countdownStart - 100),
-//    ends: iso(start),
-//    display: "- - -",
-//    advenced: "{}"
-//  });
-//}
-
-
-     // countdown
-  output.push({
-    use: "yes",
-    timezone: 0,
-    start: iso(countdownStart),
-    ends: iso(start),
-    display: `**Blue Star** credits multiplier starts in $$left$$`,
-    advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
-  });
-
-  // active
-  output.push({
-    use: "yes",
-    timezone: 0,
-    start: iso(start),
-    ends: iso(end),
-    display: `**Blue Star** credits multiplier is now **active**!! Ends in $$left$$`,
     advenced: "{\"use_timestampt\": \"-# (<t:$$unix$$:D> <t:$$unix$$:t>)\"}"
   });  
 
