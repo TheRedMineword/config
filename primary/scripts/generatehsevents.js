@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.2.3 - DEBUG#BlueStarCredits"
+const version = "Ver.2.3.0 - Added new tinestamp, changed generation settings"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -7,9 +7,9 @@ console.log(nowUnix);
 // ================= CONSTANTS =================
 const DAY = 86400;
 // const PACIFIC_WINDOW = 2.5 * 3600; 
-const COUNTDOWN_DAYS = 20.5;
+const COUNTDOWN_DAYS = 30.5;
 const REMOVE_AFTER_HOURS = 12;
-const FUTURE_DAYS = 56; // generate events only within next 30 days
+const FUTURE_DAYS = 3 * COUNTDOWN_DAYS; // generate events only within next 30 days
 //const FUTURE_DAYS = 1920; // Few years for TurnamentOfHades!
 
 
