@@ -1,6 +1,7 @@
 let output = {};
 const logs = [];
 
+
 function timestamp() {
   return new Date().toISOString();
 }
