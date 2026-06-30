@@ -1,5 +1,5 @@
 // CONTENT WILL BE STILL UPDATED
-const version = "Ver.2.3.0 - Added new tinestamp, changed generation settings"
+const version = "Ver.2.3.1 - Added new timestamp"
 console.log(version);
 // ================= INPUT =================
 const nowUnix = parseInt(atob("$$NOWUNIXHERE$$"), 10);
@@ -82,7 +82,8 @@ const schedule = [
   // New data because generation is off?
  { name: "Credit Asteroid", start: 1771632000 },
   { name: "Blue Star", start: 1774051200 },
-   { name: "Credit Asteroid", start: 1776470400 } // Data fix, generation is off few days
+   { name: "Credit Asteroid", start: 1776470400 }, // Data fix, generation is off few days
+  { name: "Credit Asteroid", start: 1783123200 }
 
 
 
