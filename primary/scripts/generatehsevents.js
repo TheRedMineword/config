@@ -83,7 +83,8 @@ const schedule = [
  { name: "Credit Asteroid", start: 1771632000 },
   { name: "Blue Star", start: 1774051200 },
    { name: "Credit Asteroid", start: 1776470400 }, // Data fix, generation is off few days
-  { name: "Credit Asteroid", start: 1783123200 }
+  { name: "Credit Asteroid", start: 1783123200 },
+  { name: "Blue Star", start: 1782518400 }
 
 
 
